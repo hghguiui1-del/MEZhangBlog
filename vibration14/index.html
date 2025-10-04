@@ -1,0 +1,1136 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MEZhang的机械振动学习笔记博客">
+      
+      
+        <meta name="author" content="MEZhang">
+      
+      
+        <link rel="canonical" href="https://mezhangblog.github.io/MechanicalVibration/vibration14/">
+      
+      
+        <link rel="prev" href="../vibration13/">
+      
+      
+        <link rel="next" href="../vibration15/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>第14篇 - 机械振动学习笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="机械振动学习笔记" class="md-header__button md-logo" aria-label="机械振动学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            机械振动学习笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第14篇
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../vibration11/" class="md-tabs__link">
+          
+  
+  
+  学习笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="机械振动学习笔记" class="md-nav__button md-logo" aria-label="机械振动学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    机械振动学习笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    学习笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第11篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第12篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第13篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第14篇
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第14篇
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 二自由度系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 二自由度系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 耦合平移
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 耦合平移">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1 运动方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2 自由振动·固有模态
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第15篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第16篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第17篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第18篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 二自由度系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 二自由度系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 耦合平移
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 耦合平移">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1 运动方程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2 自由振动·固有模态
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>第14篇</h1>
+
+<h2 id="4">4. 二自由度系统</h2>
+<p>振动系统的自由度等于完全描述其运动所需的独立坐标数。</p>
+<p>本章将两自由度系统作为离散系统中最简单的情况进行分析，并作为引入具有更多自由度系统的入门。为了为多自由度系统做准备，引入了矩阵表示法，作为表达运动方程和动态响应的紧凑方式。</p>
+<p>第2章表明，无阻尼单自由度系统的自由振动是一种在系统固有频率下的简谐运动，称为固有振动。相比之下，无阻尼多自由度系统的自由振动是周期性的，由多个不同固有频率下的振动组成。它可以表示为谐波分量的总和，每个分量对应一个特定的固有频率和位移构型，称为固有振型。在固有振型中的运动在所有系统坐标上是同步且简谐的。</p>
+<p>离散系统的动态响应可以用联立常微分方程描述。通过适当选择坐标，称为主坐标或模态坐标，方程可以解耦并独立求解。模态坐标表示实际位移的线性组合。反之，运动也可以视为由模态坐标定义的固有振型振动的叠加。</p>
+<p>两自由度系统有两个固有频率，在受迫振动中，对于小阻尼，可能会出现两个共振。对初始激励的自由响应和对外部激励的受迫响应可以用固有振型表示，其形状由相对于质量和刚度矩阵相互正交的向量定义。对简谐激励的受迫响应也可以通过简单地使用克拉默法则计算。当激励频率等于系统的任一固有频率时，发生共振。反共振也可能发生在等于质量-弹簧子系统固有频率的频率处。</p>
+<p>本章内容主要涉及固有频率和振型的计算。首先使用模态分析和直接频谱分析技术研究无阻尼系统的受迫振动。然后考虑阻尼受迫振动。</p>
+<h3 id="41">4.1 耦合平移</h3>
+<p>以下考虑两自由度质量-弹簧系统，其中集中质量具有单向平移运动。</p>
+<h4 id="411">4.1.1 运动方程</h4>
+<p>考虑图4.1所示的系统，<span class="arithmatex">\(a\)</span>它由两个质量<span class="arithmatex">\({m}_{1}\)</span>和<span class="arithmatex">\({m}_{2}\)</span>组成，通过弹簧<span class="arithmatex">\({k}_{1}\)</span>和<span class="arithmatex">\({k}_{3}\)</span>连接到固定点，并通过“耦合弹簧”<span class="arithmatex">\({k}_{2}\)</span>连接在一起。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_101_496_1083_617_461_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_101_496_1083_617_461_0.jpg" /></p>
+<p>图4.1</p>
+<p>假设质量被引导仅沿水平方向移动，系统的构型完全由它们相对于平衡位置的瞬时位移<span class="arithmatex">\({x}_{1}\)</span>和<span class="arithmatex">\({x}_{2}\)</span>决定。该系统具有两个自由度。</p>
+<p>利用图4.1的受力图，<span class="arithmatex">\(b\)</span>和达朗贝尔原理(外力和惯性力的动态平衡)，可以写出运动方程</p>
+<div class="arithmatex">\[
+{m}_{1}{\ddot{x}}_{1} + {k}_{1}{x}_{1} + {k}_{2}\left( {{x}_{1} - {x}_{2}}\right)  = 0,
+\]</div>
+<div class="arithmatex">\[
+{m}_{2}{\ddot{x}}_{2} + {k}_{3}{x}_{2} - {k}_{2}\left( {{x}_{1} - {x}_{2}}\right)  = 0.
+\]</div>
+<p>重新整理后，这些方程变为</p>
+<div class="arithmatex">\[
+{m}_{1}{\ddot{x}}_{1} + \left( {{k}_{1} + {k}_{2}}\right) {x}_{1} - {k}_{2}{x}_{2} = 0,
+\]</div>
+<div class="arithmatex">\[
+{m}_{2}{\ddot{x}}_{2} - {k}_{2}{x}_{1} + \left( {{k}_{3} + {k}_{2}}\right) {x}_{2} = 0. \tag{4.1}
+\]</div>
+<p>这是一组“耦合”的二阶线性常系数微分方程。两个坐标之间的耦合是由于刚度<span class="arithmatex">\({k}_{2}\)</span>。如果<span class="arithmatex">\({k}_{2} = 0\)</span>，方程(4.1)变为独立的，图4.1的系统退化为两个单自由度系统。</p>
+<p>方程(4.1)可以写成</p>
+<div class="arithmatex">\[
+\left\lbrack  \begin{matrix} {m}_{1} &amp; 0 \\  0 &amp; {m}_{2} \end{matrix}\right\rbrack  \left\{  \begin{array}{l} {\ddot{x}}_{1} \\  {\ddot{x}}_{2} \end{array}\right\}   + \left\lbrack  \begin{matrix} {k}_{1} + {k}_{2} &amp;  - {k}_{2} \\   - {k}_{2} &amp; {k}_{3} + {k}_{2} \end{matrix}\right\rbrack  \left\{  \begin{array}{l} {x}_{1} \\  {x}_{2} \end{array}\right\}   = \left\{  \begin{array}{l} 0 \\  0 \end{array}\right\}  , \tag{4.2}
+\]</div>
+<p>或以紧凑形式</p>
+<div class="arithmatex">\[
+\left\lbrack  m\right\rbrack  \{ \ddot{x}\}  + \left\lbrack  k\right\rbrack  \{ x\}  = \{ 0\} , \tag{4.3}
+\]</div>
+<p>其中<span class="arithmatex">\(\left\lbrack  m\right\rbrack\)</span>为质量矩阵(mass matrix)，<span class="arithmatex">\(\left\lbrack  k\right\rbrack\)</span>为刚度矩阵(stiffness matrix)，<span class="arithmatex">\(\{ x\}\)</span>为位移列向量(column vector of displacements)。注意，方阵用方括号表示，列向量用花括号表示。质量矩阵和刚度矩阵始终对称，因此它们等于各自的转置。</p>
+<div class="arithmatex">\[
+\left\lbrack  m\right\rbrack   = {\left\lbrack  m\right\rbrack  }^{\mathrm{T}},\;\left\lbrack  k\right\rbrack   = {\left\lbrack  k\right\rbrack  }^{\mathrm{T}}. \tag{4.4}
+\]</div>
+<p>质量矩阵为对角矩阵。耦合由刚度矩阵的非对角元素产生。</p>
+<h4 id="412">4.1.2 自由振动·固有模态</h4>
+<p>我们来考察两个质量作同步简谐运动的条件，即系统在自然振动中表现为单自由度系统的情况。</p>
+<p>我们假设解的形式为</p>
+<div class="arithmatex">\[
+{x}_{1}\left( t\right)  = {a}_{1}\cos \left( {{\omega t} - \varphi }\right) , \tag{4.5}
+\]</div>
+<div class="arithmatex">\[
+{x}_{2}\left( t\right)  = {a}_{2}\cos \left( {{\omega t} - \varphi }\right) ,
+\]</div>
+<p>并研究这种运动得以成立的条件。我们所寻求的运动，是两个瞬时位移之比在整个运动过程中保持恒定。</p>
+<div class="arithmatex">\[
+{x}_{1}\left( t\right) /{x}_{2}\left( t\right)  = {a}_{1}/{a}_{2} = \text{ const. } \tag{4.6}
+\]</div>
+<p>系统构形在运动过程中保持不变，其挠曲形状在任何时刻都保持相似。</p>
+<p>将解(4.5)代入微分方程(4.1)，得到代数方程</p>
+<div class="arithmatex">\[
+\left( {{k}_{1} + {k}_{2} - {m}_{1}{\omega }^{2}}\right) {a}_{1} - {k}_{2}{a}_{2} = 0, \tag{4.7}
+\]</div>
+<div class="arithmatex">\[
+-{k}_{2}{a}_{1} + \left( {{k}_{3} + {k}_{2} - {m}_{2}{\omega }^{2}}\right) {a}_{2} = 0.
+\]</div>
+<p>联立齐次方程(4.7)存在非平凡解的条件是系数<span class="arithmatex">\({a}_{1}\)</span>和<span class="arithmatex">\({a}_{2}\)</span>的行列式为零。</p>
+<div class="arithmatex">\[
+\left| \begin{matrix} {k}_{1} + {k}_{2} - {m}_{1}{\omega }^{2} &amp;  - {k}_{2} \\   - {k}_{2} &amp; {k}_{3} + {k}_{2} - {m}_{2}{\omega }^{2} \end{matrix}\right|  = 0. \tag{4.8}
+\]</div>
+<p>可写成</p>
+<div class="arithmatex">\[
+{\omega }^{4} - \left( {\frac{{k}_{1} + {k}_{2}}{{m}_{1}} + \frac{{k}_{3} + {k}_{2}}{{m}_{2}}}\right) {\omega }^{2} + \frac{{k}_{1}{k}_{3} + \left( {{k}_{1} + {k}_{3}}\right) {k}_{2}}{{m}_{1}{m}_{2}} = 0 \tag{4.9}
+\]</div>
+<p>这是关于<span class="arithmatex">\({\omega }^{2}\)</span>的二次方程，称为特征方程(characteristic equation)或频率方程(frequency equation)。其根<span class="arithmatex">\({\omega }_{1}^{2}\)</span>和<span class="arithmatex">\({\omega }_{2}^{2}\)</span>为实数且为正。<span class="arithmatex">\({\omega }_{1}\)</span>和<span class="arithmatex">\({\omega }_{2}\)</span>称为固有频率(natural frequencies)或本征频率(eigenfrequencies)，因为它们仅取决于系统的质量和刚度参数。</p>
+<p>由于方程组(4.7)为齐次，振幅<span class="arithmatex">\({a}_{1}\)</span>和<span class="arithmatex">\({a}_{2}\)</span>无法单独确定，只能确定它们的比值<span class="arithmatex">\(\mu  = {a}_{2}/{a}_{1}\)</span>。</p>
+<p>对于<span class="arithmatex">\({\omega }_{1}\)</span>，振幅比为</p>
+<div class="arithmatex">\[
+{\mu }_{1} = {\left( \frac{{a}_{2}}{{a}_{1}}\right) }_{1} = \frac{{k}_{3} + {k}_{2} - {m}_{2}{\omega }_{1}^{2}}{{k}_{2}} \tag{4.10}
+\]</div>
+<p>对于<span class="arithmatex">\({\omega }_{2}\)</span>，振幅比为</p>
+<div class="arithmatex">\[
+{\mu }_{2} = {\left( \frac{{a}_{2}}{{a}_{1}}\right) }_{2} = \frac{{k}_{3} + {k}_{2} - {m}_{2}{\omega }_{2}^{2}}{{k}_{2}}. \tag{4.11}
+\]</div>
+<p>比值(4.10)和(4.11)分别决定了系统以频率<span class="arithmatex">\({\omega }_{1}\)</span>和<span class="arithmatex">\({\omega }_{2}\)</span>作同步运动时的形状。若给每个比值中的一个元素赋予任意值，则另一元素的值可由上述表达式得出，此过程称为归一化(normalisation)。</p>
+<p>固有频率及相应的振幅比决定了实现同步简谐运动的条件，即振动的固有模态。一个振动模态由两个参数定义:固有频率和模态形状(mode shape)。模态形状可用列向量表示</p>
+<div class="arithmatex">\[
+\{ a{\} }_{1} = \left\{  \begin{array}{l} {a}_{1} \\  {a}_{2} \end{array}\right\}   = {\left( {a}_{1}\right) }_{1}\left\{  \begin{matrix} 1 \\  {u}_{1} \end{matrix}\right\}   = {C}_{1}\{ u{\} }_{1}, \tag{4.12}
+\]</div>
+<div class="arithmatex">\[
+\{ a{\} }_{2} = {\left\{  \begin{array}{l} {a}_{1} \\  {a}_{2} \end{array}\right\}  }_{2} = {\left( {a}_{1}\right) }_{2}\left\{  \begin{matrix} 1 \\  {u}_{2} \end{matrix}\right\}   = {C}_{2}\{ u{\} }_{2},
+\]</div>
+<p>称为模态向量(modal vectors)。</p>
+<p>在(4.12)中，模态向量以第一个元素等于1进行归一化。归一化后的向量被称为表示正则模态的振型。</p>
+<p>两种可能的同步运动由下式给出</p>
+<div class="arithmatex">\[
+\{ x\left( t\right) {\} }_{1} = {C}_{1}\{ u{\} }_{1}\cos \left( {{\omega }_{1}t - {\varphi }_{1}}\right) ,
+\]</div>
+<div class="arithmatex">\[
+\{ x\left( t\right) {\} }_{2} = {C}_{2}\{ u{\} }_{2}\cos \left( {{\omega }_{2}t - {\varphi }_{2}}\right)  \tag{4.13}
+\]</div>
+<p>自由振动的通解为</p>
+<div class="arithmatex">\[
+\{ x\left( t\right) \}  = \{ x\left( t\right) {\} }_{1} + \{ x\left( t\right) {\} }_{2} = {C}_{1}\{ u{\} }_{1}\cos \left( {{\omega }_{1}t - {\varphi }_{1}}\right)  + {C}_{2}\{ u{\} }_{2}\cos \left( {{\omega }_{2}t - {\varphi }_{2}}\right) .\tag{4.14}
+\]</div>
+<p>在(4.14)中，四个积分常数<span class="arithmatex">\({C}_{1},{C}_{2},{\varphi }_{1},{\varphi }_{2}\)</span>由四个初始条件——<span class="arithmatex">\(t = 0\)</span>时刻的位移和速度——确定。</p>
+<p>对于任意初始条件，二自由度系统的自由振动是一种周期运动，由系统的两个固有振动模态叠加而成，即两个频率等于系统固有频率的谐波运动。可以证明，若初始速度为零且初始位移与某一模态振型相似，则自由运动为同步且纯谐波，并以该模态的固有频率进行。若初始变形形状与模态振型相似，系统即可按纯模态振动。例4.1</p>
+<p>考虑图4.2所示系统，求其固有振动模态。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_104_594_1664_537_213_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_104_594_1664_537_213_0.jpg" /></p>
+<p>图4.2</p>
+<p>解:运动方程可写为</p>
+<div class="arithmatex">\[
+\left\lbrack  \begin{matrix} {2m} &amp; 0 \\  0 &amp; m \end{matrix}\right\rbrack  \left\{  \begin{array}{l} {\ddot{x}}_{1} \\  {\ddot{x}}_{2} \end{array}\right\}   + \left\lbrack  \begin{matrix} {3k} &amp;  - k \\   - k &amp; k \end{matrix}\right\rbrack  \left\{  \begin{array}{l} {x}_{1} \\  {x}_{2} \end{array}\right\}   = \left\{  \begin{array}{l} 0 \\  0 \end{array}\right\}  .
+\]</div>
+<p>假设解的形式为</p>
+<div class="arithmatex">\[
+\{ x\}  = \{ u\} \cos \left( {{\omega t} - \varphi }\right)
+\]</div>
+<p>得到</p>
+<div class="arithmatex">\[
+\left( {{3k} - 2{\omega }^{2}m}\right) {u}_{1} - k{u}_{2} = 0,
+\]</div>
+<div class="arithmatex">\[
+-k{u}_{1} + \left( {k - {\omega }^{2}m}\right) {u}_{2} = 0,
+\]</div>
+<p>或除以<span class="arithmatex">\(k\)</span>，</p>
+<div class="arithmatex">\[
+\left( {3 - {2\alpha }}\right) {u}_{1} - {u}_{2} = 0,
+\]</div>
+<div class="arithmatex">\[
+-{u}_{1} + \left( {1 - \alpha }\right) {u}_{2} = 0,
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+\alpha  = m{\omega }^{2}/k
+\]</div>
+<p>存在非零解的条件为</p>
+<div class="arithmatex">\[
+\left| \begin{matrix} 3 - {2\alpha } &amp;  - 1 \\   - 1 &amp; 1 - \alpha  \end{matrix}\right|  = 0,\;2{\alpha }^{2} - {5\alpha } + 2 = 0
+\]</div>
+<p>其解为</p>
+<div class="arithmatex">\[
+{\alpha }_{1} = 1/2,\;{\alpha }_{2} = 2.
+\]</div>
+<p>固有频率为</p>
+<div class="arithmatex">\[
+{\omega }_{1} = \frac{1}{\sqrt{2}}\sqrt{\frac{k}{m}},\;{\omega }_{2} = \sqrt{2}\sqrt{\frac{k}{m}}.
+\]</div>
+<p>将第一个元素设为1，第一阶模态向量(modal vector)表示为</p>
+<div class="arithmatex">\[
+\left\lbrack  \begin{matrix} 3 - 2{\alpha }_{1} &amp;  - 1 \\   - 1 &amp; 1 - {\alpha }_{1} \end{matrix}\right\rbrack  {\left\{  \begin{array}{l} {u}_{1} \\  {u}_{2} \end{array}\right\}  }_{1} = \left\lbrack  \begin{matrix} 2 &amp;  - 1 \\   - 1 &amp; \frac{1}{2} \end{matrix}\right\rbrack  \left\{  \begin{array}{l} 1 \\  2 \end{array}\right\}   = 0
+\]</div>
+<p>第二个模态向量由以下公式计算得出</p>
+<div class="arithmatex">\[
+\left\lbrack  \begin{matrix} 3 - 2{\alpha }_{2} &amp;  - 1 \\   - 1 &amp; 1 - {\alpha }_{2} \end{matrix}\right\rbrack  {\left\{  \begin{array}{l} {u}_{1} \\  {u}_{2} \end{array}\right\}  }_{2} = \left\lbrack  \begin{matrix}  - 1 &amp;  - 1 \\   - 1 &amp;  - 1 \end{matrix}\right\rbrack  \left\{  \begin{matrix} 1 \\   - 1 \end{matrix}\right\}   = 0.
+\]</div>
+<p>振型(mode shapes)如图4.3所示。在第一阶模态中，两个质量块同向运动，要么都向右，要么都向左，质量块<span class="arithmatex">\(m\)</span>的位移始终是质量块<span class="arithmatex">\({2m}\)</span>的两倍。在第二阶模态中，两个质量块反向运动，位移大小相同。弹簧<span class="arithmatex">\(k\)</span>的中点保持静止，因此它是一个节点(nodal point)。若将该点固定，运动状态不会发生变化。第二根弹簧被拆分为两根刚度为<span class="arithmatex">\({2k}\)</span>的弹簧。于是，质量块<span class="arithmatex">\({2m}\)</span>通过两根并联的刚度为<span class="arithmatex">\({2k}\)</span>的弹簧与地相连，等效刚度为<span class="arithmatex">\({4k}\)</span>；而质量块<span class="arithmatex">\(m\)</span>则通过一根刚度为<span class="arithmatex">\({2k}\)</span>的弹簧连接。两个子系统的固有频率(natural frequency)均为<span class="arithmatex">\({\omega }_{2}\)</span>。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_106_543_766_508_456_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_106_543_766_508_456_0.jpg" /></p>
+<p>图4.3</p>
+<p>总结来说，第一阶固有模态(normal mode)具有固有频率(natural frequency)<span class="arithmatex">\({\omega }_{1} = \frac{1}{\sqrt{2}}\sqrt{\frac{k}{m}}\)</span>和模态振型(mode shape)<span class="arithmatex">\(\{ u{\} }_{1} = \left\{  \begin{array}{l} 1 \\  2 \end{array}\right\}\)</span>，而第二阶固有模态具有固有频率<span class="arithmatex">\({\omega }_{2} = \sqrt{2}\sqrt{\frac{k}{m}}\)</span>和模态振型<span class="arithmatex">\(\{ u{\} }_{2} = \left\{  \begin{matrix} 1 \\   - 1 \end{matrix}\right\}\)</span>。若系统受到初始扰动<span class="arithmatex">\({x}_{1} = 1\)</span>和<span class="arithmatex">\({x}_{2} = 2\)</span>后释放，其随后的运动将是以频率<span class="arithmatex">\({\omega }_{1} = {0.207}\sqrt{k/m}\)</span>的纯简谐运动。若初始位移为<span class="arithmatex">\({x}_{1} = 1\)</span>和<span class="arithmatex">\({x}_{2} =  - 1\)</span>，则运动将以频率<span class="arithmatex">\({\omega }_{2} = {1.414}\sqrt{k/m}\)</span>的简谐形式进行。</p>
+<h4 id="matlab-demo">Matlab Demo</h4>
+<p>取 <span class="arithmatex">\(m = 1 kg\)</span>, <span class="arithmatex">\(k = 2 N /m\)</span>,给出一个算例的数值解，并合理绘制了振型。 (第一阶振型): 两个质量块（蓝色方块）相对于其平衡位置（空心方块）都向右移动，且第二个质量块的移动距离是第一个的两倍。红色的箭头都指向右方，清晰地表示这是同向运动。(第二阶振型): 第一个质量块向右移动，而第二个质量块向左移动了相同的距离。红色箭头方向相反，表示这是反相运动。</p>
+<p><img alt="vibration14模态振型示意图" src="../images/vibration14%E6%A8%A1%E6%80%81%E6%8C%AF%E5%9E%8B%E7%A4%BA%E6%84%8F.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">% --- 清除变量和图形 ---</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">clear</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">clc</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">close</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w"> </span><span class="c">% 关闭所有已打开的图形窗口</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c">% --- 数值计算部分 (与上一问相同) ---</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">m</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c">% 质量 (kg)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">k</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c">% 弹簧刚度 (N/m)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">M</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">];</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">K</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">k</span><span class="p">;</span><span class="w"> </span><span class="o">-</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">];</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">[</span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">eig</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">);</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">natural_frequencies_rad_s</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="nb">diag</span><span class="p">(</span><span class="n">D</span><span class="p">));</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c">% --- 排序并归一化振型 ---</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">if</span><span class="w"> </span><span class="n">natural_frequencies_rad_s</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">natural_frequencies_rad_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="n">omega1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">natural_frequencies_rad_s</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="n">omega2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">natural_frequencies_rad_s</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="n">u1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">V</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% 提取并归一化第一阶振型</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="n">u2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V</span><span class="p">(:,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">V</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c">% 提取并归一化第二阶振型</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">else</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="n">omega1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">natural_frequencies_rad_s</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="n">omega2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">natural_frequencies_rad_s</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="n">u1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V</span><span class="p">(:,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">V</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="n">u2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">V</span><span class="p">(:,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">V</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="k">end</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c">% --- 可视化部分 ---</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nb">figure</span><span class="p">(</span><span class="s">&#39;Name&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;系统振型可视化&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Position&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="mi">600</span><span class="p">]);</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="c">% 定义平衡位置坐标以便绘图</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="n">x_eq</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">];</span><span class="w"> </span><span class="c">% m1 和 m2 的平衡位置 x 坐标</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="n">y_pos</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">     </span><span class="c">% y 坐标</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="c">% --- 绘制第一阶振型 ---</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="n">grid</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="c">% 绘制平衡位置 (虚线表示)</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="nb">plot</span><span class="p">(</span><span class="n">x_eq</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;s&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerEdgeColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;k&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerFaceColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;none&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;--&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="nb">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">x_eq</span><span class="p">(</span><span class="mi">1</span><span class="p">)],</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;k--&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="nb">plot</span><span class="p">([</span><span class="n">x_eq</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">x_eq</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;k--&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="nb">text</span><span class="p">(</span><span class="n">x_eq</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">y_pos</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;m1_{eq}&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;HorizontalAlignment&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;center&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="nb">text</span><span class="p">(</span><span class="n">x_eq</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">y_pos</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;m2_{eq}&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;HorizontalAlignment&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;center&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="c">% 绘制振动位移 (实线表示)</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="n">scale_factor</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">;</span><span class="w"> </span><span class="c">% 缩放因子，让位移更明显</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="n">displaced_pos_1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x_eq</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scale_factor</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u1</span><span class="o">&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="nb">plot</span><span class="p">(</span><span class="n">displaced_pos_1</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;s&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerEdgeColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerFaceColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="nb">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">displaced_pos_1</span><span class="p">(</span><span class="mi">1</span><span class="p">)],</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="nb">plot</span><span class="p">([</span><span class="n">displaced_pos_1</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">displaced_pos_1</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="nb">text</span><span class="p">(</span><span class="n">displaced_pos_1</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">y_pos</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;m1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;HorizontalAlignment&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;center&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="nb">text</span><span class="p">(</span><span class="n">displaced_pos_1</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">y_pos</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;m2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;HorizontalAlignment&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;center&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="c">% 绘制位移箭头</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">    </span><span class="nb">quiver</span><span class="p">(</span><span class="n">x_eq</span><span class="p">(</span><span class="nb">i</span><span class="p">),</span><span class="w"> </span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">scale_factor</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u1</span><span class="p">(</span><span class="nb">i</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;AutoScale&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;off&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MaxHeadSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="k">end</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="nb">title</span><span class="p">(</span><span class="nb">sprintf</span><span class="p">(</span><span class="s">&#39;第一阶振型 (ω₁ = %.2f rad/s) - 同向运动&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">omega1</span><span class="p">));</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;位移 (x)&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="nb">yticks</span><span class="p">([]);</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="nb">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">]);</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="nb">ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]);</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="nb">legend</span><span class="p">(</span><span class="s">&#39;平衡位置&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;振动位移&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;位移方向&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="n">hold</span><span class="w"> </span><span class="s">off</span><span class="p">;</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="c">% --- 绘制第二阶振型 ---</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="n">grid</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="c">% 绘制平衡位置 (虚线表示)</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a><span class="nb">plot</span><span class="p">(</span><span class="n">x_eq</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;s&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerEdgeColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;k&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerFaceColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;none&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;--&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="nb">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">x_eq</span><span class="p">(</span><span class="mi">1</span><span class="p">)],</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;k--&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="nb">plot</span><span class="p">([</span><span class="n">x_eq</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">x_eq</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;k--&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="nb">text</span><span class="p">(</span><span class="n">x_eq</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">y_pos</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;m1_{eq}&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;HorizontalAlignment&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;center&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="nb">text</span><span class="p">(</span><span class="n">x_eq</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">y_pos</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;m2_{eq}&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;HorizontalAlignment&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;center&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="c">% 绘制振动位移 (实线表示)</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a><span class="n">displaced_pos_2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">x_eq</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scale_factor</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u2</span><span class="o">&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a><span class="nb">plot</span><span class="p">(</span><span class="n">displaced_pos_2</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;s&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerEdgeColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerFaceColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a><span class="nb">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">displaced_pos_2</span><span class="p">(</span><span class="mi">1</span><span class="p">)],</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a><span class="nb">plot</span><span class="p">([</span><span class="n">displaced_pos_2</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">displaced_pos_2</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span><span class="w"> </span><span class="p">[</span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">y_pos</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a><span class="nb">text</span><span class="p">(</span><span class="n">displaced_pos_2</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">y_pos</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;m1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;HorizontalAlignment&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;center&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a><span class="nb">text</span><span class="p">(</span><span class="n">displaced_pos_2</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">y_pos</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;m2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;HorizontalAlignment&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;center&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>
+<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a><span class="c">% 绘制位移箭头</span>
+<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a><span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span>
+<a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a><span class="w">    </span><span class="nb">quiver</span><span class="p">(</span><span class="n">x_eq</span><span class="p">(</span><span class="nb">i</span><span class="p">),</span><span class="w"> </span><span class="n">y_pos</span><span class="p">,</span><span class="w"> </span><span class="n">scale_factor</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u2</span><span class="p">(</span><span class="nb">i</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;AutoScale&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;off&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MaxHeadSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a><span class="k">end</span>
+<a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>
+<a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a><span class="nb">title</span><span class="p">(</span><span class="nb">sprintf</span><span class="p">(</span><span class="s">&#39;第二阶振型 (ω₂ = %.2f rad/s) - 反向运动&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">omega2</span><span class="p">));</span>
+<a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;位移 (x)&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a><span class="nb">yticks</span><span class="p">([]);</span>
+<a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a><span class="nb">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">]);</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a><span class="nb">ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]);</span>
+<a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a><span class="nb">legend</span><span class="p">(</span><span class="s">&#39;平衡位置&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;振动位移&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;位移方向&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a><span class="n">hold</span><span class="w"> </span><span class="s">off</span><span class="p">;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../vibration13/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 第13篇">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                第13篇
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../vibration15/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第15篇">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                第15篇
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

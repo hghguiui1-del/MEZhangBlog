@@ -1,0 +1,1082 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MEZhang的机械振动学习笔记博客">
+      
+      
+        <meta name="author" content="MEZhang">
+      
+      
+        <link rel="canonical" href="https://mezhangblog.github.io/MechanicalVibration/vibration13/">
+      
+      
+        <link rel="prev" href="../vibration12/">
+      
+      
+        <link rel="next" href="../vibration14/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>第13篇 - 机械振动学习笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="机械振动学习笔记" class="md-header__button md-logo" aria-label="机械振动学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            机械振动学习笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第13篇
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../vibration11/" class="md-tabs__link">
+          
+  
+  
+  学习笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="机械振动学习笔记" class="md-nav__button md-logo" aria-label="机械振动学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    机械振动学习笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    学习笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第11篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第12篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第13篇
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第13篇
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 简单非线性系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 简单非线性系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 非线性谐波响应
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      立方刚度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      非线性阻尼
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="非线性阻尼">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32-cubic-stiffness" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 立方刚度(Cubic Stiffness)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 立方刚度(Cubic Stiffness)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-harmonic-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 谐波响应(Harmonic Response)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 频率响应特性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第14篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第15篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第16篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第17篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第18篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 简单非线性系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 简单非线性系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 非线性谐波响应
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      立方刚度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      非线性阻尼
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="非线性阻尼">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32-cubic-stiffness" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 立方刚度(Cubic Stiffness)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 立方刚度(Cubic Stiffness)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-harmonic-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 谐波响应(Harmonic Response)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 频率响应特性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>第13篇</h1>
+
+<h2 id="3">3. 简单非线性系统</h2>
+<p>基于频率响应曲线分析，给出了参数估计方法。仅考虑简单非线性系统，以展示系统轻微非线性特性对频率响应曲线的畸变。这并非对振动结构非线性动力行为的全面论述，全面处理需另著专书。</p>
+<h3 id="31">3.1 非线性谐波响应</h3>
+<p>若非线性系统受简谐力激励，其稳态响应并非如线性系统那样为简谐，而是周期性的，因此可表示为谐波分量之和。对于具有局部弱非线性的系统，谐波平衡法是一种方便的分析工具，其基本假设是响应以基波分量为主。稳态响应被视为激励频率下的单一谐波，忽略次谐波或超谐波。仅在所谓主共振附近研究受迫响应。等效线性化法和描述函数概念亦可得到类似结果。</p>
+<p>非线性恢复力函数由等效弹簧力和阻尼力近似。对于线性系统，恢复力函数(省略负号)可表示为</p>
+<div class="arithmatex">\[
+{f}_{R,\text{ lin }}\left( {x,\dot{x}, t}\right)  = c\dot{x}\left( t\right)  + {kx}\left( t\right) ,
+\]</div>
+<p>包含粘性阻尼和线性弹簧的贡献。</p>
+<p>对于轻微非线性系统，恢复力可表示为</p>
+<div class="arithmatex">\[
+{f}_{R}\left( {x,\dot{x}, t}\right)  \cong  {c}_{eq}\dot{x}\left( t\right)  + {k}_{eq}x\left( t\right) ,
+\]</div>
+<p>其中<span class="arithmatex">\({c}_{eq}\)</span>为等效粘性阻尼系数，<span class="arithmatex">\({k}_{eq}\)</span>为等效刚度。也可采用等效结构阻尼模型。</p>
+<h2 id="_1">立方刚度</h2>
+<p>对于无预加载且无间隙的系统，弹性力可用立方刚度律(cubic stiffness law)表示</p>
+<div class="arithmatex">\[
+{f}_{e} = k\left( {x + \mu {x}^{3}}\right) , \tag{3.1}
+\]</div>
+<p>其中<span class="arithmatex">\(k\)</span>为刚度函数在原点处的斜率，<span class="arithmatex">\(\mu\)</span>为非线性系数，正值对应硬化弹簧(hardening spring)，负值对应软化弹簧(softening spring)。</p>
+<p>对于简谐位移</p>
+<div class="arithmatex">\[
+x\left( t\right)  = a\cos {\omega t}, \tag{3.2}
+\]</div>
+<p>弹性力(3.1)变为<span class="arithmatex">\({f}_{e} = {ka}\left( {\cos {\omega t} + \mu {a}^{2}{\cos }^{3}{\omega t}}\right)\)</span>。</p>
+<p>将<span class="arithmatex">\({\cos }^{3}{\omega t} = \frac{3}{4}\cos {\omega t} + \frac{1}{4}\cos {3\omega t}\)</span>代入，并忽略<span class="arithmatex">\(\cos {3\omega t}\)</span>中的高次谐波项，得到</p>
+<div class="arithmatex">\[
+{f}_{e} \cong  {ka}\left( {\cos {\omega t} + \mu {a}^{2}\frac{3}{4}\cos {\omega t} + \ldots }\right)  = {k}_{eq}x,
+\]</div>
+<p>其中等效刚度为</p>
+<div class="arithmatex">\[
+{k}_{eq} = k\left( {1 + \frac{3}{4}\mu {a}^{2}}\right) . \tag{3.3}
+\]</div>
+<p>将该与振幅相关的刚度代入线性系统所得方程，即可得到非线性系统的动态响应。</p>
+<h2 id="_2">非线性阻尼</h2>
+<p>非线性阻尼(non-linear damping)可借助等效粘性阻尼(equivalent viscous damping)概念进行研究。该方法将非线性阻尼力近似为等效的线性粘性阻尼力。等效准则是:非线性阻尼元件在一个振动周期内耗散的能量<span class="arithmatex">\({W}_{d}\)</span>应等于经历相同谐波相对位移的等效粘性阻尼器所耗散的能量<span class="arithmatex">\({\pi \omega }{c}_{eq}{a}^{2}\)</span>。</p>
+<p>当<span class="arithmatex">\({W}_{d} = \pi {h}_{eq}{a}^{2}\)</span>时，也可基于等效结构阻尼(equivalent structural damping)概念进行类似分析。</p>
+<p>在等效粘性阻尼假设下得到的稳态解已被证明与采用Ritz平均法所得结果完全一致。利用非线性阻尼力时间历程的傅里叶级数展开第一项系数亦可得到相同数值。</p>
+<p>广义非线性阻尼力在数学上可描述为与阻尼器两端相对速度的<span class="arithmatex">\(n\)</span>次幂成正比。</p>
+<div class="arithmatex">\[
+{f}_{d} = {c}_{n}{\left| \dot{x}\right| }^{n}\operatorname{sgn}\left( \dot{x}\right) , \tag{3.4}
+\]</div>
+<p>其中<span class="arithmatex">\({c}_{n}\)</span>定义为速度-n次幂阻尼系数(velocity-nth power damping coefficient)。</p>
+<p>指数<span class="arithmatex">\(n\)</span>和阻尼系数<span class="arithmatex">\({c}_{n}\)</span>根据阻尼元件的性质确定。<span class="arithmatex">\(n = 0\)</span>的取值对应库仑阻尼器(Coulomb damper)，此时阻尼系数<span class="arithmatex">\({c}_{0}\)</span>等于干摩擦力<span class="arithmatex">\(R\)</span>。类似地，<span class="arithmatex">\(n = 1\)</span>和<span class="arithmatex">\(n = 2\)</span>分别表示粘性阻尼和平方阻尼，此时<span class="arithmatex">\({c}_{n}\)</span>分别成为阻尼系数<span class="arithmatex">\(c\)</span>和<span class="arithmatex">\({c}_{2}\)</span>。</p>
+<p>指数<span class="arithmatex">\(n\)</span>的其他取值可用于表征其他非线性阻尼特性。例如，汽车减振器产生的阻尼可用介于2.0至3.0之间的<span class="arithmatex">\(n\)</span>值描述，具体取决于系统配置。</p>
+<h3 id="32-cubic-stiffness">3.2 立方刚度(Cubic Stiffness)</h3>
+<p>图3.1所示为一个具有非线性弹簧和线性结构阻尼元件的单自由度系统。采用正系数的立方律作为描述硬化弹簧(hardening spring)特性的首次近似。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_76_684_1484_380_303_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_76_684_1484_380_303_0.jpg" /></p>
+<p>图3.1</p>
+<p>结构阻尼(structural damping)是一种线性阻尼现象，其阻尼力与相对速度同相，但与阻尼器两端的相对位移成正比。</p>
+<h4 id="321-harmonic-response">3.2.1 谐波响应(Harmonic Response)</h4>
+<p>若质量受到幅值为<span class="arithmatex">\({F}_{0}\)</span>、频率为<span class="arithmatex">\(\omega\)</span>的谐波力作用，则振动质量的Duffing型运动方程可写为</p>
+<div class="arithmatex">\[
+m\ddot{x} + \frac{h}{\omega }\dot{x} + k\left( {x + \mu {x}^{3}}\right)  = {F}_{0}{e}^{\mathrm{i}{\omega t}}, \tag{3.5}
+\]</div>
+<p>其中<span class="arithmatex">\(h = {gk}\)</span>，且<span class="arithmatex">\(g\)</span>可为等效结构阻尼因子(equivalent structural damping factor)。</p>
+<p>响应的首次谐波近似选取如下形式</p>
+<div class="arithmatex">\[
+x = \widetilde{a}{e}^{\mathrm{i}{\omega t}} = \left( {{a}_{R} + \mathrm{i}{a}_{I}}\right) {e}^{\mathrm{i}{\omega t}} = a{e}^{\mathrm{i}\left( {{\omega t} + \theta }\right) }. \tag{3.6}
+\]</div>
+<p>采用谐波线性化方法，忽略高次谐波项，故有</p>
+<div class="arithmatex">\[
+{x}^{3} \cong  \frac{3}{4}{a}^{2}x \tag{3.7}
+\]</div>
+<p>将(3.6)和(3.7)代入(3.5)得到位移的实部和虚部</p>
+<div class="arithmatex">\[
+{a}_{R} = \left( {1 + \frac{3}{4}\mu {a}^{2} - {\eta }^{2}}\right) \frac{k}{{F}_{0}}{a}^{2} =  \mp  \sqrt{{a}^{2} - {\left( \frac{{gk}{a}^{2}}{{F}_{0}}\right) }^{2}}, \tag{3.8}
+\]</div>
+<div class="arithmatex">\[
+{a}_{I} =  - g\frac{k}{{F}_{0}}{a}^{2}, \tag{3.9}
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+\eta  = \frac{\omega }{{\omega }_{n}},\;{\omega }_{n} = \sqrt{\frac{k}{m}}. \tag{3.10}
+\]</div>
+<p>位移幅值</p>
+<div class="arithmatex">\[
+a = \sqrt{{a}_{R}^{2} + {a}_{I}^{2}} \tag{3.11}
+\]</div>
+<p>由以下隐式给出</p>
+<div class="arithmatex">\[
+{\eta }^{2} = 1 + \frac{3}{4}\mu {a}^{2} \pm  \sqrt{\frac{{F}_{0}^{2}}{{k}^{2}{a}^{2}} - {g}^{2}}. \tag{3.12}
+\]</div>
+<p>相位角由以下公式计算</p>
+<div class="arithmatex">\[
+\tan \theta  = \frac{g}{{\eta }^{2} - 1 - \frac{3}{4}\mu {a}^{2}} = \frac{g}{\pm \sqrt{\frac{{F}_{0}^{2}}{{k}^{2}{a}^{2}} - {g}^{2}}}. \tag{3.13}
+\]</div>
+<p>在方程(3.8)和(3.9)之间消去<span class="arithmatex">\(a\)</span>和<span class="arithmatex">\({\eta }^{2}\)</span>，得到向量<span class="arithmatex">\(\widetilde{a}\)</span>端点在Argand平面上的轨迹，其方程为圆</p>
+<div class="arithmatex">\[
+{a}_{R}^{2} + {\left( {a}_{I} + \frac{1}{2g}\frac{{F}_{0}}{k}\right) }^{2} = {\left( \frac{1}{2g}\frac{{F}_{0}}{k}\right) }^{2}. \tag{3.14}
+\]</div>
+<p>它与线性系统导出的方程(2.82)相同。</p>
+<p>在方程(3.9)和(3.11)之间消去<span class="arithmatex">\(a\)</span>，得到响应的正交分量<span class="arithmatex">\({a}_{I}\)</span>的频率依赖性</p>
+<div class="arithmatex">\[
+{\eta }^{2} = 1 + \frac{3}{4}\mu \frac{{F}_{0}}{gk}\left( {-{a}_{I}}\right)  \pm  g\sqrt{\frac{{F}_{0}}{gk}\frac{1}{\left( -{a}_{I}\right) } - 1}. \tag{3.15}
+\]</div>
+<p>类似地，响应的同相分量<span class="arithmatex">\({a}_{R}\)</span>的频率依赖性可表示为</p>
+<div class="arithmatex">\[
+{\eta }^{2} = 1 + {3\mu }{\left( \frac{{F}_{0}}{2gk}\right) }^{2} - \frac{{3\mu }{\left( \frac{{F}_{0}}{2gk}\right) }^{2}{a}_{R}^{2} + \frac{{F}_{0}}{k}{a}_{R}}{2{\left( \frac{{F}_{0}}{2gk}\right) }^{2}\left\lbrack  {1 \pm  \sqrt{1 - {\left( \frac{2gk}{{F}_{0}}\right) }^{2}{a}_{R}^{2}}}\right\rbrack  }. \tag{3.16}
+\]</div>
+<h4 id="322">3.2.2 频率响应特性</h4>
+<p>基于方程(3.12)，图3.2展示了固定阻尼<span class="arithmatex">\(g =\)</span> const.和多个谐波力幅值<span class="arithmatex">\({F}_{0}\)</span>下的幅频曲线。</p>
+<p>响应曲线相对于方程的"骨架曲线"对称分布</p>
+<div class="arithmatex">\[
+{\omega }^{2} = {\omega }_{n}^{2}\left( {1 + \frac{3}{4}\mu {a}^{2}}\right)  \tag{3.17}
+\]</div>
+<p>该曲线通过最大振幅点。对于线性系统，它是横坐标为<span class="arithmatex">\(\omega  = {\omega }_{n}\)</span>的垂直线。对于具有硬化刚度<span class="arithmatex">\(\left( {\mu  &gt; 0}\right)\)</span>的系统，骨架曲线向更高频率弯曲。对于具有软化刚度<span class="arithmatex">\(\left( {\mu  &lt; 0}\right)\)</span>的系统，它向更低频率弯曲。</p>
+<p>幅频曲线垂直切点轨迹由方程给出</p>
+<div class="arithmatex">\[
+{\eta }^{2} = 1 + \frac{3}{4}\mu {a}^{2} \pm  \sqrt{\frac{9}{16}{\mu }^{2}{a}^{4} - {g}^{2}} \tag{3.18}
+\]</div>
+<p>并定义了"稳定性边界"<span class="arithmatex">\({XLKY}\)</span>(图3.2)。</p>
+<p>该曲线限定的区域内点定义了不稳定振动状态。在响应曲线上，它们用虚线表示。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_79_382_544_871_488_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_79_382_544_871_488_0.jpg" /></p>
+<p>相同的信息也包含在图3.3中，该图在<span class="arithmatex">\(g =\)</span>为常数的情况下，于多个频率绘制了力-位移曲线。这些曲线称为恒频线或等时线(isochrones)。这些曲线水平切点的轨迹定义了稳定性边界。点<span class="arithmatex">\(K\)</span>定义了无论位移大小如何振动均能保持稳定的最大力幅值。点<span class="arithmatex">\(L\)</span>定义了无论力水平如何振动均能保持稳定的最大位移幅值。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_79_569_1353_497_529_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_79_569_1353_497_529_0.jpg" /></p>
+<p>图3.4</p>
+<p>图3.4的相频曲线基于方程(3.13)。</p>
+<p>同样，可以定义一条稳定性边界<span class="arithmatex">\({XLKY}\)</span>，其方程为</p>
+<div class="arithmatex">\[
+{\eta }^{2} = 1 + \frac{g}{2}\left( {\tan \theta  + \frac{3}{\tan \theta }}\right)  \tag{3.19}
+\]</div>
+<p>它是相频曲线垂直切点的轨迹。</p>
+<p>同相(实部)分量的频率响应曲线如图3.5所示，基于方程(3.16)。此时，稳定性边界<span class="arithmatex">\({XKY}\)</span>的方程为</p>
+<div class="arithmatex">\[
+{\eta }^{2} = 1 + \frac{{g}^{2}}{3\mu }\frac{1}{{a}_{R}^{2}} + \frac{9\mu }{4}{a}_{R}^{2} \tag{3.20}
+\]</div>
+<p>且适用于<span class="arithmatex">\({a}_{R} &lt; 0\)</span>。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_80_335_981_433_514_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_80_335_981_433_514_0.jpg" /></p>
+<p>图3.5</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_80_851_995_450_500_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_80_851_995_450_500_0.jpg" /></p>
+<p>图3.6</p>
+<p>正交(虚部)分量的频率响应曲线如图3.6所示，基于方程(3.15)。稳定性边界<span class="arithmatex">\({XKY}\)</span>由方程</p>
+<div class="arithmatex">\[
+{\eta }^{2} = 1 + \frac{3}{4}\mu {a}_{I}^{2} + \frac{{g}^{2}}{\mu {a}_{I}^{2}} \tag{3.21}
+\]</div>
+<p>给出，并适用于<span class="arithmatex">\({a}_{R} &lt; 0\)</span>。</p>
+<p>表示频率响应数据的最佳方式是将位移的矢量分量<span class="arithmatex">\({a}_{R}\)</span>和<span class="arithmatex">\({a}_{I}\)</span>(方程(3.8)和(3.9))绘制在阿冈图(Argand diagram)上，如图3.7所示。结果得到一族由方程(3.14)描述的圆。</p>
+<p>极坐标图的优势在于将幅值、相位和激励频率的信息整合在一张图中。同时，主共振附近感兴趣的区域被放大，两种“跳跃”现象也更容易解释。</p>
+<p>对于非线性系统，重要的是绘制响应位移分量，而不是易感性(位移/力)或其他频响函数(FRFs)。复平面上表示的每个点由两个参数定义——激励频率<span class="arithmatex">\(\omega\)</span>和输入力的幅值<span class="arithmatex">\({F}_{0}\)</span>。因此，需要绘制两组响应轨迹，即等时线(isochrones)——连接恒频点，以及奈奎斯特图(Nyquist plots)——连接恒定激励水平的点。由于位移幅值和相角都对力幅敏感，这些曲线的畸变可用于指示非线性行为。相位对非线性比幅值更敏感。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_81_537_995_553_551_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_81_537_995_553_551_0.jpg" /></p>
+<p>图3.7</p>
+<p>在图3.7中，等时线用虚线绘制。其方程通过从方程(3.8)和(3.9)中消去<span class="arithmatex">\({F}_{0}\)</span>得到，结果为</p>
+<div class="arithmatex">\[
+{a}_{R} = \left\lbrack  {{\eta }^{2} - 1 - \frac{3}{4}\mu \left( {{a}_{R}^{2} + {a}_{I}^{2}}\right) }\right\rbrack  \frac{{a}_{I}}{g}. \tag{3.22}
+\]</div>
+<p>对于<span class="arithmatex">\(\mu  = 0\)</span>，即线性系统，方程(3.22)描述的是从坐标原点发散的直线。对于<span class="arithmatex">\(\mu  \neq  0\)</span>，方程(3.22)描述的是通过原点的曲线，随着<span class="arithmatex">\({F}_{0}\)</span>增大而愈加扭曲。当<span class="arithmatex">\({F}_{0}\)</span>增大时，等时线弯曲到与响应曲线相切。</p>
+<p>奈奎斯特图与等时线相切点的轨迹定义了稳定性边界<span class="arithmatex">\({XLKY}\)</span>。这是一条双曲线，其方程为</p>
+<div class="arithmatex">\[
+{a}_{R}{a}_{I} = \frac{2g}{3\mu } \tag{3.23}
+\]</div>
+<p>(仅对<span class="arithmatex">\({a}_{R} &lt; 0,{a}_{I} &lt; 0\)</span>定义)，且关于坐标轴的角平分线<span class="arithmatex">\({a}_{R} = {a}_{I}\)</span>对称。</p>
+<p>稳定性边界<span class="arithmatex">\({XLKY}\)</span>与角平分线<span class="arithmatex">\({a}_{R} = {a}_{I}\)</span>在点<span class="arithmatex">\(L\)</span>相交，该点频率为<span class="arithmatex">\({\omega }_{L} = {\omega }_{n}\sqrt{1 + {2g}}\)</span>，距原点距离为<span class="arithmatex">\({a}_{L} = \sqrt{{4g}/{3\mu }}\)</span>。对于更低频率或更小位移幅值，跳跃现象不会发生。</p>
+<p>点<span class="arithmatex">\(K\)</span>，即稳定性边界与参数<span class="arithmatex">\({F}_{0} = k\sqrt{{32}{g}^{3}/\left( {9\sqrt{3}\mu }\right) }\)</span>的极坐标图以及参数<span class="arithmatex">\({\omega }_{K} = {\omega }_{n}\sqrt{1 + \sqrt{3g}}\)</span>的等时线相切之处，指示了不稳定振动能够发生的最低力幅和激励频率。它对应于相位角<span class="arithmatex">\({\theta }_{K} =  - {120}^{0}\)</span>。点<span class="arithmatex">\(K\)</span>和<span class="arithmatex">\(L\)</span>对应于图3.5–3.7中标记的点。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_82_392_1199_850_461_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_82_392_1199_850_461_0.jpg" /></p>
+<p>图3.8</p>
+<p>非线性刚度的影响是沿圆形奈奎斯特图平移频率:软化弹簧顺时针，硬化弹簧逆时针。主共振频率不再位于最大响应幅值处，如图3.8所示。对于相等的频率增量，相邻点之间的最大间距不再出现在主共振处，因此Kennedy-Pancu准则无法用于定位共振。</p>
+<p>引入新的无量纲非线性系数<span class="arithmatex">\(\gamma  = \mu {F}_{0}^{2}/{g}^{3}{k}^{2}\)</span>，这意味着对于<span class="arithmatex">\(\gamma  &gt; {\gamma }_{K} = {32}/9\sqrt{3}\)</span>或<span class="arithmatex">\(\omega  &gt; {\omega }_{K}\)</span>，稳定性边界都会穿过奈奎斯特图和等时线。我们可以把满足<span class="arithmatex">\(\gamma  &lt; {\gamma }_{K}\)</span>的系统视为弱非线性系统，把满足<span class="arithmatex">\(\gamma  &gt; {\gamma }_{K}\)</span>的系统视为强非线性系统。按此分类，弱非线性仅沿响应曲线产生频率偏移，而强非线性将产生跳跃现象。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_83_414_788_872_918_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_83_414_788_872_918_0.jpg" /></p>
+<p>图3.9</p>
+<p>一般而言，对于具有立方刚度和结构阻尼的单自由度系统，奈奎斯特图与线性系统一样呈圆形，只有等时线的“顶点”形状表明非线性行为。硬化刚度时它们逆时针弯曲，软化刚度时顺时针弯曲(图3.9)。通常所有等时线都以相同方式弯曲，主共振处不存在直线等时线。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../vibration12/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 第12篇">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                第12篇
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../vibration14/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第14篇">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                第14篇
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1003 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MEZhang的机械振动学习笔记博客">
+      
+      
+        <meta name="author" content="MEZhang">
+      
+      
+        <link rel="canonical" href="https://mezhangblog.github.io/MechanicalVibration/vibration11/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../vibration12/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>第11篇 - 机械振动学习笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#249" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="机械振动学习笔记" class="md-header__button md-logo" aria-label="机械振动学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            机械振动学习笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第11篇
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  学习笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="机械振动学习笔记" class="md-nav__button md-logo" aria-label="机械振动学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    机械振动学习笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    学习笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第11篇
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第11篇
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#249" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.9 阻尼系统中的传递率
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2410" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.10 振动式仪器原理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第12篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第13篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第14篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第15篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第16篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第17篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第18篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#249" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.9 阻尼系统中的传递率
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2410" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.10 振动式仪器原理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>第11篇</h1>
+
+<h4 id="249">2.4.9 阻尼系统中的传递率</h4>
+<p>若质量-弹簧-阻尼系统受到给定的基础运动<span class="arithmatex">\({x}_{1} = {X}_{1}{e}^{\mathrm{i}{\omega t}}\)</span>激励，则传递到质量的运动为<span class="arithmatex">\({x}_{2} = {\bar{X}}_{2}{e}^{\mathrm{i}{\omega t}}\)</span>，其中<span class="arithmatex">\({\bar{X}}_{2} = \left| {\bar{X}}_{2}\right| {e}^{-\mathrm{i}\varphi }\)</span>为复振幅。其运动微分方程为</p>
+<div class="arithmatex">\[
+m{\ddot{x}}_{2} =  - k\left( {{x}_{2} - {x}_{1}}\right)  - c\left( {{\dot{x}}_{2} - {\dot{x}}_{1}}\right)
+\]</div>
+<p>可整理为</p>
+<div class="arithmatex">\[
+m{\ddot{x}}_{2} + c{\dot{x}}_{2} + k{x}_{2} = c{\dot{x}}_{1} + k{x}_{1}. \tag{2.100}
+\]</div>
+<p>振幅比为</p>
+<div class="arithmatex">\[
+\frac{{\bar{X}}_{2}}{{X}_{1}} = \frac{k + \mathrm{i}{\omega c}}{k - m{\omega }^{2} + \mathrm{i}{\omega c}}. \tag{2.101}
+\]</div>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_56_403_1312_885_599_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_56_403_1312_885_599_0.jpg" /></p>
+<p>图2.39</p>
+<p>运动传递率为</p>
+<div class="arithmatex">\[
+{TR} = \frac{\left| {\bar{X}}_{2}\right| }{{X}_{1}} = \frac{\sqrt{1 + {\left( 2\zeta \omega /{\omega }_{n}\right) }^{2}}}{\sqrt{{\left\lbrack  1 - {\left( \omega /{\omega }_{n}\right) }^{2}\right\rbrack  }^{2} + {\left( 2\zeta \omega /{\omega }_{n}\right) }^{2}}}, \tag{2.102}
+\]</div>
+<p>相移由下式给出</p>
+<div class="arithmatex">\[
+\tan \varphi  = \frac{{2\zeta }{\left( \omega /{\omega }_{n}\right) }^{3}}{1 - {\left( \omega /{\omega }_{n}\right) }^{2} + {\left( 2\zeta \omega /{\omega }_{n}\right) }^{2}}. \tag{2.103}
+\]</div>
+<p>式(2.102)和(2.103)在图2.39中针对不同阻尼比<span class="arithmatex">\(\zeta\)</span>进行了图示。</p>
+<p>当<span class="arithmatex">\(\omega /{\omega }_{n} &gt; \sqrt{2},{TR}\)</span>小于1时，如图2.17所示，但随着阻尼增加，传递率上升，意味着隔振性能恶化。降低阻尼并非良策，因为系统必须在<span class="arithmatex">\(\omega /{\omega }_{n} &gt; \sqrt{2}\)</span>区域运行，而为此需穿越共振区，此时振幅需由阻尼抑制。某些情况下，会设置轻微阻尼，并通过限位器或快速穿越共振来限制大振幅。</p>
+<p>类似问题可针对基础固定的质量激励系统(图2.26)建立。若需隔离的驱动力为<span class="arithmatex">\({F}_{0}{e}^{\mathrm{i}{\omega t}}\)</span>(2.73)，稳态复位移振幅为<span class="arithmatex">\(\bar{X}\)</span>(2.74)，则通过弹簧与阻尼器传递的力亦为谐波，其振幅为</p>
+<div class="arithmatex">\[
+{F}_{T} = \sqrt{{\left( kX\right) }^{2} + {\left( c\omega X\right) }^{2}} \tag{2.104}
+\]</div>
+<p>于是力传递率</p>
+<div class="arithmatex">\[
+{TR} = {F}_{T}/{F}_{0} \tag{2.105}
+\]</div>
+<p>由式(2.102)给出。</p>
+<p>注意，通过弹簧与阻尼器传递的力相对于弹性力与阻尼力存在相移。</p>
+<h4 id="2410">2.4.10 振动式仪器原理</h4>
+<p>振动测量有两种基本不同的仪器:a) 固定参考仪器或准静态装置，其振动运动是相对于某一固定参考点测量的；b) 振动式(seismic)仪器，其振动运动是相对于附加在振动结构上的质量-弹簧-阻尼器系统的质量来测量的。</p>
+<p>振动式仪器(图2.40)由外壳<span class="arithmatex">\(S\)</span>(刚性固定在振动系统上)、质量-弹簧-阻尼器<span class="arithmatex">\(m - k - c\)</span>系统以及测量振动质量与外壳之间相对运动的传感器<span class="arithmatex">\(T\)</span>组成。</p>
+<p>假设振动系统(即仪器基座)作简谐运动</p>
+<div class="arithmatex">\[
+{x}_{1}\left( t\right)  = {X}_{1}\cos {\omega t} \tag{2.106}
+\]</div>
+<p>忽略瞬态项，质量<span class="arithmatex">\(m\)</span>与外壳<span class="arithmatex">\(S\)</span>之间的相对位移可表示为</p>
+<div class="arithmatex">\[
+{x}_{r}\left( t\right)  = {X}_{r}\cos \left( {{\omega t} - \varphi }\right) . \tag{2.107}
+\]</div>
+<p>质量<span class="arithmatex">\(m\)</span>相对于固定参考点的绝对位移为</p>
+<div class="arithmatex">\[
+{x}_{2} = {x}_{1} + {x}_{r}
+\]</div>
+<p>其绝对加速度为</p>
+<div class="arithmatex">\[
+{\ddot{x}}_{2} = {\ddot{x}}_{1} + {\ddot{x}}_{r}.
+\]</div>
+<p>质量<span class="arithmatex">\(m\)</span>的运动方程可写成</p>
+<div class="arithmatex">\[
+m\left( {{\ddot{x}}_{1} + {\ddot{x}}_{r}}\right)  + c{\dot{x}}_{r} + k{x}_{r} = 0
+\]</div>
+<p>或</p>
+<div class="arithmatex">\[
+m{\ddot{x}}_{r} + c{\dot{x}}_{r} + k{x}_{r} =  - m{\ddot{x}}_{1} = m{X}_{1}{\omega }^{2}\cos {\omega t}. \tag{2.108}
+\]</div>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_58_588_1345_588_348_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_58_588_1345_588_348_0.jpg" /></p>
+<p>图2.40</p>
+<p>方程(2.108)具有稳态解，满足</p>
+<div class="arithmatex">\[
+\frac{{X}_{r}}{{X}_{1}} = \frac{{\left( \omega /{\omega }_{n}\right) }^{2}}{\sqrt{{\left\lbrack  1 - {\left( \omega /{\omega }_{n}\right) }^{2}\right\rbrack  }^{2} + {\left( 2\zeta \omega /{\omega }_{n}\right) }^{2}}}, \tag{2.109}
+\]</div>
+<div class="arithmatex">\[
+\tan \varphi = \frac{2 \zeta \omega / \omega_n}{ 1 - \left(  \omega / \omega_n \right) ^ 2} \tag{2.110}
+\]</div>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_59_465_540_804_672_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_59_465_540_804_672_0.jpg" /></p>
+<p>图2.41</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_59_416_1293_802_615_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_59_416_1293_802_615_0.jpg" /></p>
+<p>图2.42</p>
+<p>图2.41给出了振幅比(2.109)随<span class="arithmatex">\(\omega /{\omega }_{n}\)</span>变化的曲线，对应两种阻尼比。图2.42给出了相移<span class="arithmatex">\(\varphi\)</span>随<span class="arithmatex">\(\omega /{\omega }_{n}\)</span>变化的曲线。</p>
+<p>根据所用频率范围，仪器可指示位移、速度或加速度。</p>
+<p>测振仪。在区域III内，当<span class="arithmatex">\(\omega  &gt;  &gt; {\omega }_{n}\)</span>时，可见<span class="arithmatex">\({X}_{r} \cong  {X}_{1}\)</span>，因此质量与外壳之间的相对运动<span class="arithmatex">\({X}_{r}\)</span>(由传感器感知)与被测结构的位移<span class="arithmatex">\({X}_{1}\)</span>几乎相同。图2.42表明，在此频率范围内，轻阻尼<span class="arithmatex">\(\left( {\zeta  \rightarrow  0}\right)\)</span>时的相移为<span class="arithmatex">\(\varphi  = \pi\)</span>，故外壳与质量<span class="arithmatex">\(m\)</span>反相振动。相对于惯性坐标系(固定参考点)，质量<span class="arithmatex">\(m\)</span>几乎保持静止(成为空间中的固定点)，而外壳的运动则相对于它进行测量。</p>
+<p>当<span class="arithmatex">\(T\)</span>为位移传感器时，该仪器即为振动式绝对位移拾取器(测振仪)。当<span class="arithmatex">\(T\)</span>为速度传感器时，仪器则成为速度拾取器。</p>
+<p>振动位移测量仪器应具有极低的固有频率(1至<span class="arithmatex">\(5\mathrm{\;{Hz}}\)</span>)，这通过<span class="arithmatex">\(k\)</span>取较小值实现，即采用柔软的振动质量悬挂，并相应使用相对较大的质量<span class="arithmatex">\(m\)</span>。</p>
+<p>加速度计。在区间I内，当<span class="arithmatex">\(\omega  &lt;  &lt; {\omega }_{n}\)</span>时，方程(2.109)变为</p>
+<div class="arithmatex">\[
+{X}_{r}/{X}_{1} \cong  {\left( \omega /{\omega }_{n}\right) }^{2},
+\]</div>
+<p>或</p>
+<div class="arithmatex">\[
+{X}_{r} \cong  \frac{1}{{\omega }_{n}^{2}}\left( {{X}_{1}{\omega }^{2}}\right) , \tag{2.111}
+\]</div>
+<p>其中<span class="arithmatex">\({X}_{1}{\omega }^{2}\)</span>为被测结构的加速度。</p>
+<p>在此情况下，仪器测量与结构绝对加速度成正比的量，称为加速度计。其固有频率较高，通过小振动质量和硬弹簧实现。</p>
+<p>在频率区间II，当<span class="arithmatex">\(\omega  \cong  {\omega }_{n}\)</span>时，质量呈现大幅振动，该特性用于设计簧片式频率指示振动计及用于测量滚动轴承缺陷的加速度计。</p>
+<p>幅值失真。为无失真地复现复杂信号，所有谐波分量必须沿频率轴被同等放大。若幅值比<span class="arithmatex">\({X}_{r}/{X}_{1}\)</span>几乎恒定即可实现。因此，每个拾振器都给出频率响应范围，以使失真保持在规定限值内。</p>
+<p>图2.43为图2.41的放大局部，绘制了四种阻尼比的曲线。阻尼比为<span class="arithmatex">\(\zeta  = {0.7}\)</span>的仪器响应曲线在<span class="arithmatex">\(\omega /{\omega }_{n} = 4\)</span>以下保持水平。幅值失真给定位移测量仪器设定了下限频率。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_61_483_736_723_425_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_61_483_736_723_425_0.jpg" /></p>
+<p>图2.43</p>
+<p>相位失真。为无形状变化地复现复杂信号，其谐波分量的相位必须沿时间轴被同等平移。若相位角<span class="arithmatex">\(\varphi\)</span>随频率线性增加即可实现。</p>
+<p>对于振动计，比值<span class="arithmatex">\(\omega /{\omega }_{n}\)</span>相对较大，且对所有谐波<span class="arithmatex">\(\varphi\)</span>≈<span class="arithmatex">\({180}^{0}\)</span>，故无相位失真。对于加速度计，当阻尼比约为0.7时，相位角与频率呈近似线性关系，<span class="arithmatex">\(\varphi  \cong  \left( {\pi /2}\right) \left( {\omega /{\omega }_{n}}\right)\)</span>。该阻尼值亦用于最小化仪器的瞬态响应。</p>
+<h4 id="matlab-demo">Matlab Demo</h4>
+<p>以估计的pcb品牌某加速度计为例，给出参考的分析代码。这是是一个经典的、工作在“区域 I”的加速度计。其卓越性能的关键在于拥有一个远超其工作范围的极高自然频率，从而保证了在宽广频带内的测量精度和平坦响应。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">%% 结合教科书理论与PCB参数的加速度计建模</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c">% 清理工作区和命令窗口</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">clear</span><span class="p">;</span><span class="w"> </span><span class="nb">clc</span><span class="p">;</span><span class="w"> </span><span class="n">close</span><span class="w"> </span><span class="s">all</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c">%% 1. 定义估算的工业加速度计参数 (参考 PCB Piezotronics)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;--- 工业加速度计估算参数 (结合2.4.10节理论) ---\n&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">fn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">25000</span><span class="p">;</span><span class="w">      </span><span class="c">% 自然频率 (Hz), f_n. 对应 wn</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">zeta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.02</span><span class="p">;</span><span class="w">     </span><span class="c">% 阻尼比 (Damping Ratio), ζ. 典型的轻阻尼</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">S_mV_per_g</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="c">% 灵敏度 (mV/g), Sensitivity</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c">% 单位转换</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">g</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">9.81</span><span class="p">;</span><span class="w">      </span><span class="c">% 重力加速度 (m/s^2)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">S</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">S_mV_per_g</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">1000</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">g</span><span class="p">;</span><span class="w"> </span><span class="c">% 将灵敏度转换为 V/(m/s^2)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c">% 计算角频率</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">wn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">pi</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fn</span><span class="p">;</span><span class="w"> </span><span class="c">% 自然角频率 (rad/s), ω_n</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;自然频率 (fn): %d Hz\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fn</span><span class="p">);</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;阻尼比 (zeta): %.3f\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">zeta</span><span class="p">);</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;灵敏度 (S): %d mV/g\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">S_mV_per_g</span><span class="p">);</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;--------------------------------------------------\n\n&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c">%% 2. 建立加速度计的传递函数模型</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c">% 根据教科书理论，仪器输出(电压)与内部相对位移 x_r 成正比，</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c">% 而 x_r 由外部加速度 a_1 = x_1_ddot 驱动。</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c">% V_out(s) / A_1(s) 的传递函数形式为: G(s) = S / (1 + 2*zeta*(s/wn) + (s/wn)^2)</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c">% 等效于: G(s) = S * wn^2 / (s^2 + 2*zeta*wn*s + wn^2)</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c">% 注意：实际物理模型带负号，G(s) = -S*wn^2 / ...，这会带来180度相移，</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c">% 但在标准的dB振幅图上看不出区别。我们这里主要关注振幅特性。</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="n">num</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">wn</span><span class="o">^</span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="n">den</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">*</span><span class="n">zeta</span><span class="o">*</span><span class="n">wn</span><span class="p">,</span><span class="w"> </span><span class="n">wn</span><span class="o">^</span><span class="mi">2</span><span class="p">];</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="c">% 创建传递函数对象</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="n">accelerometer_tf</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tf</span><span class="p">(</span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="n">den</span><span class="p">);</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;加速度计传递函数模型已建立。\n&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="nb">disp</span><span class="p">(</span><span class="n">accelerometer_tf</span><span class="p">);</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="c">%% 3. 计算并绘制频率响应 (波德图)</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="c">% 创建一个新的图形窗口</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="nb">figure</span><span class="p">(</span><span class="s">&#39;Name&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;工业加速度计频率响应 (理论结合实际)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NumberTitle&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;off&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;w&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="c">% 设置波德图选项</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="n">bode_opts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">bodeoptions</span><span class="p">;</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="n">bode_opts</span><span class="p">.</span><span class="n">Title</span><span class="p">.</span><span class="n">String</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sprintf</span><span class="p">(</span><span class="s">&#39;加速度计频率响应 (fn = %d kHz, zeta = %.2f)&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fn</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="n">zeta</span><span class="p">);</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="n">bode_opts</span><span class="p">.</span><span class="n">Title</span><span class="p">.</span><span class="n">FontSize</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">14</span><span class="p">;</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="n">bode_opts</span><span class="p">.</span><span class="n">FreqUnits</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;Hz&#39;</span><span class="p">;</span><span class="w"> </span><span class="c">% 设置频率单位为 Hz</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="n">bode_opts</span><span class="p">.</span><span class="n">Grid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;on&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="n">w</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">{</span><span class="mf">1e-1</span><span class="p">,</span><span class="w"> </span><span class="mf">1e5</span><span class="p">};</span><span class="w"> </span><span class="c">% 频率范围：0.1 Hz 到 100 kHz</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="c">% 绘制波德图</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="n">bodeplot</span><span class="p">(</span><span class="n">accelerometer_tf</span><span class="p">,</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">bode_opts</span><span class="p">);</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="c">%% 4. 结合教科书术语对图进行分析和标记</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="c">% 获取绘图句柄</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="n">ax_handles</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">findall</span><span class="p">(</span><span class="nb">gcf</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;type&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;axes&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="n">ax_mag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ax_handles</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c">% 振幅图</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="n">ax_phase</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ax_handles</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c">% 相位图</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="nb">hold</span><span class="p">(</span><span class="n">ax_mag</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;on&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="c">% --- 在振幅图上标记理论区域 ---</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="n">ylim_mag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">get</span><span class="p">(</span><span class="n">ax_mag</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;YLim&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="n">xlim_mag</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">get</span><span class="p">(</span><span class="n">ax_mag</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;XLim&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="c">% 标记区域 I: 加速度计工作区</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="nb">fill</span><span class="p">(</span><span class="n">ax_mag</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">xlim_mag</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">fn</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">fn</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">xlim_mag</span><span class="p">(</span><span class="mi">1</span><span class="p">)],</span><span class="w"> </span><span class="p">[</span><span class="n">ylim_mag</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">ylim_mag</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">ylim_mag</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">ylim_mag</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span><span class="w"> </span><span class="k">...</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="w">     </span><span class="s">&#39;g&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FaceAlpha&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;EdgeColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;none&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;区域 I: 加速度计工作区 (ω &lt;&lt; ωn)&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="c">% 标记区域 II: 共振区</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="n">fn_range_start</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fn</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="n">fn_range_end</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">fn</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="nb">fill</span><span class="p">(</span><span class="n">ax_mag</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">fn_range_start</span><span class="p">,</span><span class="w"> </span><span class="n">fn_range_end</span><span class="p">,</span><span class="w"> </span><span class="n">fn_range_end</span><span class="p">,</span><span class="w"> </span><span class="n">fn_range_start</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="n">ylim_mag</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">ylim_mag</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">ylim_mag</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">ylim_mag</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span><span class="w"> </span><span class="k">...</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a><span class="w">     </span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FaceAlpha&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;EdgeColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;none&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;区域 II: 共振区 (ω ≈ ωn)&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="c">% 标记谐振峰</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="nb">plot</span><span class="p">(</span><span class="n">ax_mag</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">fn</span><span class="p">,</span><span class="w"> </span><span class="n">fn</span><span class="p">],</span><span class="w"> </span><span class="n">ylim_mag</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r--&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">sprintf</span><span class="p">(</span><span class="s">&#39;谐振频率 fn = %d kHz&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">fn</span><span class="o">/</span><span class="mi">1000</span><span class="p">));</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="nb">text</span><span class="p">(</span><span class="n">ax_mag</span><span class="p">,</span><span class="w"> </span><span class="n">fn</span><span class="o">*</span><span class="mf">0.9</span><span class="p">,</span><span class="w"> </span><span class="n">ylim_mag</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;必须避免在此区域测量&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;HorizontalAlignment&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;right&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="c">% 更新图例</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a><span class="nb">legend</span><span class="p">(</span><span class="n">ax_mag</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;show&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;southwest&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">);</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a><span class="nb">hold</span><span class="p">(</span><span class="n">ax_mag</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;off&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>
+<a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a><span class="c">%% 程序结束</span>
+<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;\n绘图完成。\n&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;该图展示了高性能加速度计如何在极宽的&quot;区域 I&quot;内实现平坦响应。\n&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p><img alt="pcb加速度计估计" src="../images/vibration11pcb%E5%8A%A0%E9%80%9F%E5%BA%A6%E8%AE%A1%E4%BC%B0%E8%AE%A1.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="上一页: 首页">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                首页
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../vibration12/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第12篇">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                第12篇
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

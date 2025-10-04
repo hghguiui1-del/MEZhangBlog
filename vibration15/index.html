@@ -1,0 +1,1255 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MEZhang的机械振动学习笔记博客">
+      
+      
+        <meta name="author" content="MEZhang">
+      
+      
+        <link rel="canonical" href="https://mezhangblog.github.io/MechanicalVibration/vibration15/">
+      
+      
+        <link rel="prev" href="../vibration14/">
+      
+      
+        <link rel="next" href="../vibration16/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>第15篇 - 机械振动学习笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#413-orthogonality-of-natural-modes" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="机械振动学习笔记" class="md-header__button md-logo" aria-label="机械振动学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            机械振动学习笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第15篇
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../vibration11/" class="md-tabs__link">
+          
+  
+  
+  学习笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="机械振动学习笔记" class="md-nav__button md-logo" aria-label="机械振动学习笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    机械振动学习笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    学习笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第11篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第12篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第13篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第14篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第15篇
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第15篇
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#413-orthogonality-of-natural-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3 自然模态的正交性(Orthogonality of Natural Modes)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#414-modal-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4 模态坐标(Modal Coordinates)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#415" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.5 对谐波激励的响应
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      个人理解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="个人理解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-problem-coupled-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 核心问题：混乱的合奏 (The Problem: Coupled Equations)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-natural-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 解决方案第一步：找到“和弦” (Natural Modes / 振型)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-orthogonality" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 解决方案第二步：神奇的“正交性”规则 (Orthogonality)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-modal-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 解决方案第三步：用“和弦”来谱写“乐曲” (Modal Coordinates / 模态坐标)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-decoupling-modal-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 最终结果：解耦与模态分析 (Decoupling &amp; Modal Analysis)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结与类比
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结与类比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4151" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.5.1 模态分析法求解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第16篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第17篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第18篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#413-orthogonality-of-natural-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3 自然模态的正交性(Orthogonality of Natural Modes)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#414-modal-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4 模态坐标(Modal Coordinates)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#415" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.5 对谐波激励的响应
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      个人理解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="个人理解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-the-problem-coupled-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 核心问题：混乱的合奏 (The Problem: Coupled Equations)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-natural-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 解决方案第一步：找到“和弦” (Natural Modes / 振型)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-orthogonality" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 解决方案第二步：神奇的“正交性”规则 (Orthogonality)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-modal-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 解决方案第三步：用“和弦”来谱写“乐曲” (Modal Coordinates / 模态坐标)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-decoupling-modal-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 最终结果：解耦与模态分析 (Decoupling &amp; Modal Analysis)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结与类比
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="总结与类比">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#4151" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.5.1 模态分析法求解
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>第15篇</h1>
+
+<h4 id="413-orthogonality-of-natural-modes">4.1.3 自然模态的正交性(Orthogonality of Natural Modes)</h4>
+<p>将解(4.13)代入方程(4.3)，我们得到</p>
+<div class="arithmatex">\[
+\left\lbrack  k\right\rbrack  \{ u{\} }_{1} = {\omega }_{1}^{2}\left\lbrack  m\right\rbrack  \{ u{\} }_{1}, \tag{4.15, a}
+\]</div>
+<div class="arithmatex">\[
+\left\lbrack  k\right\rbrack  \{ u{\} }_{2} = {\omega }_{2}^{2}\left\lbrack  m\right\rbrack  \{ u{\} }_{2}. \tag{4.15, b}
+\]</div>
+<p>将(4.15, a)左乘<span class="arithmatex">\(\{ u{\} }_{2}^{\mathrm{T}}\)</span>得到</p>
+<div class="arithmatex">\[
+\{ u{\} }_{2}^{\mathrm{T}}\left\lbrack  k\right\rbrack  \{ u{\} }_{1} = {\omega }_{1}^{2}\{ u{\} }_{2}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{1}. \tag{4.16}
+\]</div>
+<p>对(4.15, b)取转置并在右侧乘以<span class="arithmatex">\(\{ u{\} }_{1}\)</span>，我们得到</p>
+<div class="arithmatex">\[
+\{ u{\} }_{2}^{\mathrm{T}}\left\lbrack  k\right\rbrack  \{ u{\} }_{1} = {\omega }_{2}^{2}\{ u{\} }_{2}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{1}. \tag{4.17}
+\]</div>
+<p>将(4.16)与(4.17)相减，对于<span class="arithmatex">\({\omega }_{1} \neq  {\omega }_{2}\)</span>，我们得到</p>
+<div class="arithmatex">\[
+\{ u{\} }_{2}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{1} = 0, \tag{4.18}
+\]</div>
+<p>并取其转置</p>
+<div class="arithmatex">\[
+\{ u{\} }_{1}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{2} = 0 \tag{4.19}
+\]</div>
+<p>将(4.18)代入(4.16)可得</p>
+<div class="arithmatex">\[
+\{ u{\} }_{2}^{\mathrm{T}}\left\lbrack  k\right\rbrack  \{ u{\} }_{1} = 0 \tag{4.20}
+\]</div>
+<p>并取其转置</p>
+<div class="arithmatex">\[
+\{ u{\} }_{1}^{\mathrm{T}}\left\lbrack  k\right\rbrack  \{ u{\} }_{2} = 0 \tag{4.21}
+\]</div>
+<p>方程(4.18)-(4.21)表明，模态向量(modal vectors)关于质量矩阵(mass matrix)和刚度矩阵(stiffness matrix)是正交的。注意这与两个向量<span class="arithmatex">\(\{ a\}\)</span>和<span class="arithmatex">\(\{ b\}\)</span>的普通正交性不同，后者记为<span class="arithmatex">\(\{ a{\} }^{\mathrm{T}}\{ b\}  = 0\)</span>。</p>
+<h4 id="414-modal-coordinates">4.1.4 模态坐标(Modal Coordinates)</h4>
+<p>在(4.13)中记作</p>
+<div class="arithmatex">\[
+{q}_{1}\left( t\right)  = {C}_{1}\cos \left( {{\omega }_{1}t - {\varphi }_{1}}\right) ,
+\]</div>
+<div class="arithmatex">\[
+{q}_{2}\left( t\right)  = {C}_{2}\cos \left( {{\omega }_{2}t - {\varphi }_{2}}\right)  \tag{4.22}
+\]</div>
+<p>使得(4.14)变为</p>
+<div class="arithmatex">\[
+\{ x\left( t\right) \}  = \{ u{\} }_{1}{q}_{1} + \{ u{\} }_{2}{q}_{2}. \tag{4.23}
+\]</div>
+<p>方程(4.23)可写成</p>
+<div class="arithmatex">\[
+\{ x\left( t\right) \}  = \left\lbrack  {\{ u{\} }_{1}\{ u{\} }_{2}}\right\rbrack  \left\{  \begin{array}{l} {q}_{1} \\  {q}_{2} \end{array}\right\}   = \left\lbrack  u\right\rbrack  \{ q\}  \tag{4.23, a}
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+\left\lbrack  u\right\rbrack   = \left\lbrack  {\{ u{\} }_{1}\{ u{\} }_{2}}\right\rbrack   \tag{4.24}
+\]</div>
+<p>称为模态矩阵(modal matrix)。</p>
+<p>将(4.23)代入(4.3)，左乘<span class="arithmatex">\(\{ u{\} }_{r}^{\mathrm{T}}\left( {r = 1,2}\right)\)</span>并利用正交性，我们得到</p>
+<div class="arithmatex">\[
+{M}_{r}{\ddot{q}}_{r} + {K}_{r}{q}_{r} = 0, \tag{4.25}
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+{M}_{r} = \{ u{\} }_{r}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{r},{K}_{r} = \{ u{\} }_{r}^{\mathrm{T}}\left\lbrack  k\right\rbrack  \{ u{\} }_{r} \tag{4.26}
+\]</div>
+<p>分别为模态质量(modal masses)和模态刚度(modal stiffnesses)。</p>
+<p>模态质量和模态刚度的取值取决于模态向量的归一化方式。当给定模态质量时，称这些向量为质量归一化(mass-normalized)。若模态质量取单位值，则模态刚度等于相应固有频率的平方。</p>
+<p>由方程(4.15)可得用模态向量表示的固有频率</p>
+<div class="arithmatex">\[
+{\omega }_{r}^{2} = \frac{\{ u{\} }_{r}^{\mathrm{T}}\left\lbrack  k\right\rbrack  \{ u{\} }_{r}}{\{ u{\} }_{r}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{r}}.\;r = 1,2 \tag{4.27}
+\]</div>
+<p>瑞利商(Rayleigh's quotient)定义为</p>
+<div class="arithmatex">\[
+R\left( {\{ u\} }\right)  = \frac{\{ u{\} }^{\mathrm{T}}\left\lbrack  k\right\rbrack  \{ u\} }{\{ u{\} }^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u\} }. \tag{4.28}
+\]</div>
+<p>若向量<span class="arithmatex">\(\{ u\}\)</span>与系统的某一模态向量重合，则该商等于相应固有频率的平方。瑞利商在模态向量附近具有驻值。若<span class="arithmatex">\(\{ u\}\)</span>为与第一阶模态向量略有差异的试探向量，则<span class="arithmatex">\(R\left( \{ \right) u\}\)</span>)非常接近基频的平方，且总是略高。</p>
+<p>线性变换(4.23)使运动方程解耦。使运动方程相互独立的坐标(4.22)称为主坐标(principal coordinates)或模态坐标(modal coordinates)。</p>
+<p>将(4.23, a)代入(4.3)并左乘<span class="arithmatex">\({\left\lbrack  u\right\rbrack  }^{\mathrm{T}}\)</span>得</p>
+<div class="arithmatex">\[
+{\left\lbrack  u\right\rbrack  }^{\mathrm{T}}\left\lbrack  m\right\rbrack  \left\lbrack  u\right\rbrack  \{ \ddot{q}\}  + {\left\lbrack  u\right\rbrack  }^{\mathrm{T}}\left\lbrack  k\right\rbrack  \left\lbrack  u\right\rbrack  \{ q\}  = \{ 0\} , \tag{4.29}
+\]</div>
+<p>或</p>
+<div class="arithmatex">\[
+\left\lbrack  M\right\rbrack  \{ \ddot{q}\}  + \left\lbrack  K\right\rbrack  \{ q\}  = \{ 0\} , \tag{4.29, a}
+\]</div>
+<p>其中对角矩阵</p>
+<div class="arithmatex">\[
+\left\lbrack  M\right\rbrack   = {\left\lbrack  u\right\rbrack  }^{\mathrm{T}}\left\lbrack  m\right\rbrack  \left\lbrack  u\right\rbrack  \text{ and }\left\lbrack  K\right\rbrack   = {\left\lbrack  u\right\rbrack  }^{\mathrm{T}}\left\lbrack  k\right\rbrack  \left\lbrack  u\right\rbrack   \tag{4.30}
+\]</div>
+<p>分别为模态质量矩阵(modal mass matrix)和模态刚度矩阵(modal stiffness matrix)。</p>
+<p>坐标变换(4.23, a)同时对质量矩阵和刚度矩阵进行对角化。在分别求解解耦方程(4.29, a)后，可将模态坐标代回(4.23, a)以获得构形空间中的物理坐标。该技术称为模态分析(modal analysis)。模态分析利用基于模态矩阵(modal matrix)的线性坐标变换，将振动系统的运动方程解耦。</p>
+<h4 id="415">4.1.5 对谐波激励的响应</h4>
+<p>考虑图4.4所示系统在分别作用于质量<span class="arithmatex">\({m}_{1}\)</span>的力<span class="arithmatex">\({f}_{1}\left( t\right)\)</span>和<span class="arithmatex">\({f}_{2}\left( t\right)\)</span>作用下的受迫振动。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_109_527_1078_598_227_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_109_527_1078_598_227_0.jpg" /></p>
+<p>图4.4</p>
+<p>运动方程为</p>
+<div class="arithmatex">\[
+{m}_{1}{\ddot{x}}_{1} + \left( {{k}_{1} + {k}_{2}}\right) {x}_{1} - {k}_{2}{x}_{2} = {f}_{1},
+\]</div>
+<div class="arithmatex">\[
+{m}_{2}{\ddot{x}}_{2} - {k}_{2}{x}_{1} + \left( {{k}_{3} + {k}_{2}}\right) {x}_{2} = {f}_{2}, \tag{4.31}
+\]</div>
+<p>或以紧凑的矩阵形式表示为</p>
+<div class="arithmatex">\[
+\left\lbrack  m\right\rbrack  \{ \ddot{x}\}  + \left\lbrack  k\right\rbrack  \{ x\}  = \{ f\} , \tag{4.31, a}
+\]</div>
+<p>其中<span class="arithmatex">\(\{ f\}\)</span>为外施力列向量。</p>
+<hr />
+<h2 id="_1">个人理解</h2>
+<p>这部分内容是结构动力学中非常核心且非常优美的概念：<strong>模态分析 (Modal Analysis)</strong>。如果你觉得公式推导很抽象，完全正常。我们可以用一个更直观、更生活化的方式来理解它。想象一下，我们不再看这些矩阵和向量，而是把它想象成一个<strong>乐队</strong>。</p>
+<h3 id="1-the-problem-coupled-equations">1. 核心问题：混乱的合奏 (The Problem: Coupled Equations)</h3>
+<p>一个复杂的结构（比如一座桥、一栋楼）在振动时，内部有成千上万个点。每个点的运动都会影响到它周围的点。</p>
+<ul>
+<li><strong>物理坐标 <span class="arithmatex">\(\{x(t)\}\)</span></strong>：这就像是乐队里每个乐手的<strong>独立动作</strong>。比如，小提琴手在拉弓，鼓手在敲鼓，贝斯手在拨弦。</li>
+<li><strong>耦合的运动方程 <span class="arithmatex">\([m]\{\ddot{x}\} + [k]\{x\} = \{0\}\)</span></strong>：这代表了乐队的现状——<strong>一片混乱</strong>。每个乐手都在凭感觉演奏，他们的声音和节奏相互干扰，听起来非常嘈杂。你无法单独分析小提琴的声音，因为它完全混在了鼓声和贝斯声里。这就是“耦合”（Coupled）的含义：所有自由度的运动都搅在一起，无法分开处理。</li>
+</ul>
+<p>我们的目标是：<strong>把这团混乱的声音分离开，让它变得清晰有序。</strong></p>
+<hr />
+<h3 id="2-natural-modes">2. 解决方案第一步：找到“和弦” (Natural Modes / 振型)</h3>
+<p>乐队指挥发现，虽然乐手们在乱弹，但如果他们按照某些<strong>特定的节奏和模式</strong>一起演奏，声音会变得异常和谐、响亮。这些特定的、和谐的演奏模式，就是系统的<strong>自然模态 (Natural Modes)</strong>。</p>
+<ul>
+<li><strong>模态向量 (Modal Vector) <span class="arithmatex">\(\{u\}_r\)</span></strong>：这就是一个“和弦”的<strong>指法或乐谱</strong>。它规定了在第 <span class="arithmatex">\(r\)</span> 个和谐模式下，每个乐手（每个点）应该如何运动。比如，在第一种模式（基频）下，小提琴手动作幅度是1，鼓手是0.8，贝斯手是1.2，他们都以相同的节奏（频率 <span class="arithmatex">\(\omega_1\)</span>）运动。这个 <code>[1, 0.8, 1.2]</code> 的相对幅度关系就是模态向量 <span class="arithmatex">\(\{u\}_1\)</span>。</li>
+<li><strong>固有频率 (Natural Frequency) <span class="arithmatex">\(\omega_r\)</span></strong>：这是那个“和弦”听起来的<strong>音高</strong>。每个模态（和谐模式）都有一个自己固定的频率。</li>
+</ul>
+<hr />
+<h3 id="3-orthogonality">3. 解决方案第二步：神奇的“正交性”规则 (Orthogonality)</h3>
+<p>“正交性”是模态分析中最神奇的数学工具。它告诉我们一个惊人的事实：</p>
+<p><strong>任何两种不同的和谐模式（模态）之间，是完全“独立”或“不相关”的。</strong></p>
+<p>书中的公式：</p>
+<blockquote>
+<div class="arithmatex">\[
+\{u\}_2^T [m] \{u\}_1 = 0
+$$
+$$
+\{u\}_2^T [k] \{u\}_1 = 0
+\]</div>
+</blockquote>
+<ul>
+<li><strong>直观理解</strong>：这不像普通的几何垂直（<span class="arithmatex">\(\{a\}^T\{b\}=0\)</span>）。你可以把它理解为一种<strong>能量上的独立</strong>。当系统按照第1模态振动时，它产生的动能和势能，在第2模态的“视角”下看来，总和为零。反之亦然。</li>
+<li><strong>乐队比喻</strong>：这就像乐队的第一种“和弦”（比如C大调和弦）和第二种“和弦”（比如G大调和弦）是完全不同的。你不可能把C大调和弦的能量错误地算到G大调和弦上去。它们在音乐上是“正交”的。</li>
+</ul>
+<p>这个规则是进行下一步“解耦”的<strong>数学钥匙</strong>。</p>
+<hr />
+<h3 id="4-modal-coordinates">4. 解决方案第三步：用“和弦”来谱写“乐曲” (Modal Coordinates / 模态坐标)</h3>
+<p>现在我们知道系统有好几种和谐的振动模式（模态/和弦）。那么，系统任意时刻的复杂、混乱的振动，其实能不能看作是这几种和谐模式（和弦）的叠加呢？答案是肯定的！</p>
+<ul>
+<li><strong>物理坐标 <span class="arithmatex">\(\{x(t)\}\)</span></strong>：这是我们听到的<strong>最终的、复杂的乐曲</strong>。</li>
+<li><strong>模态向量 <span class="arithmatex">\(\{u\}_r\)</span></strong>：这是我们拥有的<strong>基础和弦</strong>（C大调，G大调等）。</li>
+<li><strong>模态坐标 (Modal Coordinate) <span class="arithmatex">\(q_r(t)\)</span></strong>：这才是最关键的概念！它代表在最终的乐曲中，<strong>每一种“和弦”在 <span class="arithmatex">\(t\)</span> 时刻贡献了多大的“音量”</strong>。</li>
+</ul>
+<p>书中的核心公式：</p>
+<blockquote>
+<div class="arithmatex">\[
+\{x(t)\} = \{u\}_1 q_1(t) + \{u\}_2 q_2(t) + \dots
+\]</div>
+</blockquote>
+<p>这就像在说：</p>
+<blockquote>
+<p><strong>最终乐曲 = (C和弦的指法) × (C和弦的音量随时间变化) + (G和弦的指法) × (G和弦的音量随时间变化) + ...</strong></p>
+</blockquote>
+<p>我们成功地把一个复杂的运动 <span class="arithmatex">\(\{x(t)\}\)</span>，分解成了几个简单模式的组合。我们不再直接分析每个乐手的复杂动作 <span class="arithmatex">\(\{x(t)\}\)</span>，而是转而去分析每种“和弦”的音量变化 <span class="arithmatex">\(q(t)\)</span>。</p>
+<hr />
+<h3 id="5-decoupling-modal-analysis">5. 最终结果：解耦与模态分析 (Decoupling &amp; Modal Analysis)</h3>
+<p>当我们把这个“坐标变换”代入原始的、混乱的运动方程，并利用前面提到的“正交性”这个神奇规则，奇迹发生了：</p>
+<p>原来耦合在一起的方程组，瞬间被拆散成了一系列独立的、简单的方程：</p>
+<blockquote>
+<div class="arithmatex">\[
+M_r \ddot{q}_r + K_r q_r = 0 \quad (r=1, 2, \dots)
+\]</div>
+</blockquote>
+<ul>
+<li><strong>发生了什么？</strong> 我们成功地将一个“多自由度耦合系统”（一个混乱的乐队）分解成了多个<strong>单自由度系统</strong>（多个可以独立分析的音轨）。</li>
+<li><strong><span class="arithmatex">\(M_r\)</span> (模态质量) 和 <span class="arithmatex">\(K_r\)</span> (模态刚度)</strong>：它们分别是第 <span class="arithmatex">\(r\)</span> 个“音轨”的等效质量和等效刚度。</li>
+<li><strong>模态分析 (Modal Analysis)</strong>：整个过程——从找到系统的和谐模式（模态），到利用这些模式作为新的“坐标系”来解耦运动方程——就叫做模态分析。</li>
+</ul>
+<h3 id="_2">总结与类比</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>专业术语</strong></th>
+<th style="text-align: left;"><strong>乐队类比</strong></th>
+<th style="text-align: left;"><strong>一句话解释</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>物理坐标 <span class="arithmatex">\(\{x\}\)</span></strong></td>
+<td style="text-align: left;">每个乐手的具体动作</td>
+<td style="text-align: left;">描述系统每个点的实际位移，非常复杂。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>耦合的运动方程</strong></td>
+<td style="text-align: left;">整个乐队的混乱合奏</td>
+<td style="text-align: left;">所有点的运动都相互关联，无法分开求解。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>模态/振型 <span class="arithmatex">\(\{u\}_r\)</span></strong></td>
+<td style="text-align: left;">一种和谐的“和弦”或“乐谱”</td>
+<td style="text-align: left;">系统固有的、和谐的振动形态。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>固有频率 <span class="arithmatex">\(\omega_r\)</span></strong></td>
+<td style="text-align: left;">“和弦”的音高</td>
+<td style="text-align: left;">该振动形态对应的特定频率。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>正交性</strong></td>
+<td style="text-align: left;">不同“和弦”在能量上相互独立</td>
+<td style="text-align: left;">保证了不同模态之间不会互相“串扰”的数学规则。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>模态坐标 <span class="arithmatex">\(q_r(t)\)</span></strong></td>
+<td style="text-align: left;">每种“和弦”随时间变化的“音量”</td>
+<td style="text-align: left;">描述了每个模态在总运动中所占的权重。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>解耦 (Decoupling)</strong></td>
+<td style="text-align: left;">将混乱的合奏分解成独立的音轨</td>
+<td style="text-align: left;">将复杂的耦合方程组变成多个简单的独立方程。</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>模态分析</strong></td>
+<td style="text-align: left;">整个音乐分析过程</td>
+<td style="text-align: left;"><strong>核心思想：</strong> 任何复杂的振动，都可以看作是系统自身几种基本振动模式的线性叠加。</td>
+</tr>
+</tbody>
+</table>
+<p>所以，理解模态分析的关键就是：<strong>换一个“视角”看问题</strong>。不要死盯着每个点的具体运动（物理坐标），而是从系统整体的、固有的振动模式（模态坐标）出发，问题就会迎刃而解。</p>
+<hr />
+<h5 id="4151">4.1.5.1 模态分析法求解</h5>
+<p>将(4.23, a)代入方程(4.31, a)，并在左侧乘以<span class="arithmatex">\({\left\lbrack  u\right\rbrack  }^{\mathrm{T}}\)</span>，得到</p>
+<div class="arithmatex">\[
+\left\lbrack  M\right\rbrack  \{ \ddot{q}\}  + \left\lbrack  K\right\rbrack  \{ q\}  = \{ F\} , \tag{4.32}
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+\{ F\}  = {\left\lbrack  u\right\rbrack  }^{\mathrm{T}}\{ f\}  \tag{4.33}
+\]</div>
+<p>为模态力列向量。</p>
+<p>对于谐波激励</p>
+<div class="arithmatex">\[
+\{ f\}  = \left\{  \widehat{f}\right\}  \cos {\omega t} \tag{4.34}
+\]</div>
+<p>稳态响应为</p>
+<div class="arithmatex">\[
+\{ x\}  = \{ \widehat{x}\} \cos {\omega t},\;\{ q\}  = \{ \widehat{q}\} \cos {\omega t}, \tag{4.35}
+\]</div>
+<p>其中字母上的尖帽表示幅值。</p>
+<p>将(4.34)和(4.35)代入(4.32)，得到</p>
+<div class="arithmatex">\[
+\left\lbrack  {-{\omega }^{2}\left\lbrack  M\right\rbrack   + \left\lbrack  K\right\rbrack  }\right\rbrack  \{ \widehat{q}\}  = {\left\lbrack  u\right\rbrack  }^{\mathrm{T}}\{ \widehat{f}\}  = \{ \widehat{F}\} , \tag{4.36}
+\]</div>
+<p>so that the amplitudes of modal coordinates are</p>
+<p>于是模态坐标的幅值为</p>
+<div class="arithmatex">\[
+{\widehat{q}}_{1} = \frac{{\widehat{F}}_{1}}{{K}_{1} - {\omega }^{2}{M}_{1}} = \frac{\{ u{\} }_{1}^{\mathrm{T}}\{ \widehat{f}\} }{\{ u{\} }_{1}^{\mathrm{T}}\left\lbrack  k\right\rbrack  \{ u{\} }_{1} - {\omega }^{2}\{ u{\} }_{1}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{1}}, \tag{4.37}
+\]</div>
+<div class="arithmatex">\[
+{\widehat{q}}_{2} = \frac{{\widehat{F}}_{2}}{{K}_{2} - {\omega }^{2}{M}_{2}} = \frac{\{ u{\} }_{2}^{\mathrm{T}}\{ \widehat{f}\} }{\{ u{\} }_{2}^{\mathrm{T}}\left\lbrack  k\right\rbrack  \{ u{\} }_{2} - {\omega }^{2}\{ u{\} }_{2}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{2}}. \tag{4.38}
+\]</div>
+<p>振幅的方程(4.23)变为</p>
+<div class="arithmatex">\[
+\{ \widehat{x}\}  = \{ u{\} }_{1}{\widehat{q}}_{1} + \{ u{\} }_{2}{\widehat{q}}_{2}. \tag{4.39}
+\]</div>
+<p>将(4.37)和(4.38)代入(4.39)，我们得到物理坐标下的振幅向量</p>
+<div class="arithmatex">\[
+\{ \widehat{x}\}  = \frac{\{ u{\} }_{1}^{\mathrm{T}}\{ \widehat{f}\} \{ u{\} }_{1}}{\{ u{\} }_{1}^{\mathrm{T}}\left\lbrack  k\right\rbrack  \{ u{\} }_{1} - {\omega }^{2}\{ u{\} }_{1}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{1}} + \frac{\{ u{\} }_{2}^{\mathrm{T}}\{ \widehat{f}\} \{ u{\} }_{2}}{\{ u{\} }_{2}^{\mathrm{T}}\left\lbrack  k\right\rbrack  \{ u{\} }_{2} - {\omega }^{2}\{ u{\} }_{2}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{2}}.
+\]</div>
+<p>(4.40)</p>
+<p>The elements of <span class="arithmatex">\(\{ \widehat{x}\}\)</span> are of the form</p>
+<p><span class="arithmatex">\(\{ \widehat{x}\}\)</span>的元素形式为</p>
+<div class="arithmatex">\[
+{\widehat{x}}_{1} = \frac{\{ u{\} }_{1}^{\mathrm{T}}\{ \widehat{f}\} }{{K}_{1} - {\omega }^{2}{M}_{1}}{u}_{11} + \frac{\{ u{\} }_{2}^{\mathrm{T}}\{ \widehat{f}\} }{{K}_{2} - {\omega }^{2}{M}_{2}}{u}_{12}, \tag{4.41}
+\]</div>
+<div class="arithmatex">\[
+{\widehat{x}}_{2} = \frac{\{ u{\} }_{1}^{\mathrm{T}}\{ \widehat{f}\} }{{K}_{1} - {\omega }^{2}{M}_{1}}{u}_{21} + \frac{\{ u{\} }_{2}^{\mathrm{T}}\{ \widehat{f}\} }{{K}_{2} - {\omega }^{2}{M}_{2}}{u}_{22}. \tag{4.42}
+\]</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../vibration14/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 第14篇">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                第14篇
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../vibration16/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第16篇">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                第16篇
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
