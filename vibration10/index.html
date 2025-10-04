@@ -1,0 +1,1076 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="洒家的动力学笔记">
+      
+      
+        <meta name="author" content="MEZhang">
+      
+      
+        <link rel="canonical" href="https://mezhangblog.github.io/MechanicalVibration/vibration10/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../vibration11/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>第10篇 - 洒家的动力学笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#247" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="洒家的动力学笔记" class="md-header__button md-logo" aria-label="洒家的动力学笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            洒家的动力学笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第10篇
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  学习笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="洒家的动力学笔记" class="md-nav__button md-logo" aria-label="洒家的动力学笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    洒家的动力学笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    学习笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第10篇
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第10篇
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#247" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.7 频率响应函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#248" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.8 粘性阻尼的位移导纳极坐标图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第11篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第12篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第13篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第14篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第15篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第16篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第17篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第18篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#247" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.7 频率响应函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#248" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.8 粘性阻尼的位移导纳极坐标图
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>第10篇</h1>
+
+<h4 id="247">2.4.7 频率响应函数</h4>
+<p>根据响应是位移、速度还是加速度，可定义多种频率响应函数(FRFs)，其为响应/激励或激励/响应的复数比值。以下定义几乎被普遍接受并已标准化:</p>
+<div class="arithmatex">\[
+\text{displacement / force} = \text{receptance,}
+\]</div>
+<div class="arithmatex">\[
+\text{velocity / force = mobility,}
+\]</div>
+<p>加速度/力<span class="arithmatex">\(=\)</span> 加速度导纳(或惯量)，</p>
+<p>力/位移<span class="arithmatex">\(=\)</span> 动刚度，</p>
+<p>力/速度<span class="arithmatex">\(=\)</span> 机械阻抗，</p>
+<p>力/加速度<span class="arithmatex">\(=\)</span> 视在质量。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_49_369_621_977_1169_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_49_369_621_977_1169_0.jpg" /></p>
+<p>图2.34</p>
+<p>由于所有相关参数均具有谐波特性，这些函数本质上包含关于振动系统的相同信息，并且可以在它们之间建立简单的关系。</p>
+<p>通常使用三种不同类型的图:</p>
+<p>a) FRF(频率响应函数)幅值-频率的Bodé图(Bodé diagram)以及FRF相位角-频率的Bodé图；</p>
+<p>b) FRF实部-频率图与FRF虚部-频率图；</p>
+<p>c) FRF实部对虚部的Nyquist图(Nyquist diagram)。</p>
+<p>对于具有结构阻尼的系统，图2.34给出了在固定结构阻尼因子下导纳(receptance)<span class="arithmatex">\(\bar{\alpha } = \bar{X}/{F}_{0}\)</span>的曲线。共振发生在点<span class="arithmatex">\(M\)</span>，而半功率点标记为<span class="arithmatex">\(B\)</span>和<span class="arithmatex">\(C\)</span>。</p>
+<p>Nyquist图(图2.34, e)是向量<span class="arithmatex">\(\bar{\alpha }\)</span>端点在复平面上的轨迹，呈圆形。它在单一图中同时包含幅值和相位角信息。在共振附近，频率刻度被最大程度地放大，因此半圆即表示半功率点之间的响应，与阻尼水平无关。降低阻尼的效果是增大圆的直径并进一步扩展频率刻度。</p>
+<p>共振由<span class="arithmatex">\(\alpha\)</span>(图2.34, a)和<span class="arithmatex">\(\left| {\alpha }_{I}\right|\)</span>(图<span class="arithmatex">\({2.34}, d)\)</span>)中的极大值，以及<span class="arithmatex">\(\theta\)</span>(图2.34, b)和<span class="arithmatex">\({\alpha }_{R}\)</span>(图2.34,<span class="arithmatex">\(c\)</span>)中的拐点(最大斜率或对<span class="arithmatex">\({\omega }^{2}\)</span>的最大导数)指示。<span class="arithmatex">\(\left| {\alpha }_{I}\right|\)</span>的峰值比<span class="arithmatex">\(\alpha\)</span>更尖锐。在共振时，<span class="arithmatex">\(\theta  =  - {90}^{0}\)</span>且<span class="arithmatex">\({\alpha }_{R} = 0\)</span>。在Nyquist图(图2.34,<span class="arithmatex">\(e\)</span>)中，共振发生在圆与虚轴相交处，此时弧长随频率的变化率达到最大。这一结论基于以下观察:</p>
+<div class="arithmatex">\[
+\frac{\mathrm{d}s}{\mathrm{\;d}\left( {{\omega }^{2}/{\omega }_{n}^{2}}\right) } =  - \frac{1}{h}\frac{\mathrm{d}\theta }{\mathrm{d}\left( {{\omega }^{2}/{\omega }_{n}^{2}}\right) } = \frac{1}{k\left\lbrack  {{\left( 1 - {\omega }^{2}/{\omega }_{n}^{2}\right) }^{2} + {g}^{2}}\right\rbrack  } = k{\alpha }^{2}\left( {2.83}\right)
+\]</div>
+<p>在共振时，该导数达到最大值。如果系统受谐波力激励，并以等频率增量<span class="arithmatex">\({\Delta \omega }\)</span>逐点绘制导纳，则相邻两点间的弧长<span class="arithmatex">\({\Delta s}\)</span>在共振处最大。该特性是Kennedy和Pancu提出的固有频率定位方法的基础。</p>
+<p>结构阻尼因子可由下式计算:</p>
+<div class="arithmatex">\[
+g = \frac{{\omega }_{2}^{2} - {\omega }_{1}^{2}}{{\omega }_{2}^{2} + {\omega }_{1}^{2}} \tag{2.84}
+\]</div>
+<p>其中<span class="arithmatex">\({\omega }_{1}\)</span>和<span class="arithmatex">\({\omega }_{2}\)</span>为<span class="arithmatex">\({\alpha }_{R}\left( \omega \right)\)</span>的峰值频率，或Nyquist图中与<span class="arithmatex">\({OM}\)</span>垂直的直径<span class="arithmatex">\({BC}\)</span>两端对应的频率。</p>
+<p>刚度可由共振处的值<span class="arithmatex">\({\alpha }_{\text{res }}\)</span>计算:</p>
+<div class="arithmatex">\[
+k = \frac{1}{g}\frac{1}{{\alpha }_{res}} = \frac{1}{g}\frac{{F}_{0}}{{X}_{res}}. \tag{2.85}
+\]</div>
+<p>因为在复平面中，速度比位移超前<span class="arithmatex">\({90}^{0}\)</span>相位，加速度又比速度超前<span class="arithmatex">\({90}^{0}\)</span>相位，所以导纳(mobility)和加速度导纳(accelerance)的Nyquist图相对于导纳(receptance)的极坐标图分别逆时针旋转<span class="arithmatex">\({90}^{0}\)</span>和<span class="arithmatex">\({180}^{0}\)</span>。</p>
+<p>导纳(mobility)<span class="arithmatex">\(\bar{M} = \mathrm{i}\omega \bar{X}/{F}_{0} = {M}_{R} + \mathrm{i}{M}_{I}\)</span>的Nyquist图(非圆形)如图2.35,<span class="arithmatex">\(a\)</span>所示，其方程如下:</p>
+<div class="arithmatex">\[
+{\left( {M}_{R}^{2} + {M}_{I}^{2}\right) }^{2} - \frac{{M}_{R}^{2}}{{g}^{2}{km}} + \frac{{M}_{R}{M}_{I}}{gkm} = 0.
+\]</div>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_51_314_1044_1021_503_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_51_314_1044_1021_503_0.jpg" /></p>
+<p>图2.35</p>
+<p>加速度导纳(accelerance)的奈奎斯特图(Nyquist plot)如图<span class="arithmatex">\({2.35}, b\)</span>所示，其轨迹为一个圆，方程为</p>
+<div class="arithmatex">\[
+{\left( {\eta }_{R} - \frac{1}{2m}\right) }^{2} + {\left( {\eta }_{I} - \frac{1}{2gm}\right) }^{2} = \frac{1 + {g}^{2}}{4{g}^{2}{m}^{2}}.
+\]</div>
+<p>半功率点与最大响应幅值点在两图中均有标示。</p>
+<h4 id="248">2.4.8 粘性阻尼的位移导纳极坐标图</h4>
+<p>位移导纳(receptance)可表示为复位移幅值<span class="arithmatex">\(\bar{X}\)</span>与力幅值<span class="arithmatex">\({F}_{0}\)</span>之比。若采用频率响应函数(frequency response functions)的通用记号<span class="arithmatex">\(H\left( {\mathrm{i}\omega }\right)\)</span>，而非<span class="arithmatex">\(\bar{\alpha }\)</span>，则对于粘性阻尼可得</p>
+<div class="arithmatex">\[
+H\left( {\mathrm{i}\omega }\right)  = \frac{\bar{X}}{{F}_{0}} = \frac{1}{k - m{\omega }^{2} + \mathrm{i}{\omega c}} = \frac{1/m}{{\omega }_{n}^{2} - {\omega }^{2} + \mathrm{i}{2\zeta \omega }{\omega }_{n}}. \tag{2.86}
+\]</div>
+<p>其奈奎斯特图并非圆形，这对系统参数辨识构成缺陷。然而，下文将证明该曲线可分解为两个圆。</p>
+<p>方程(2.86)可写成如下形式</p>
+<div class="arithmatex">\[
+H\left( {\mathrm{i}\omega }\right)  = \frac{1/m}{\left( {\mathrm{i}\omega  - {s}_{1}}\right) \left( {\mathrm{i}\omega  - {s}_{2}}\right) }. \tag{2.87}
+\]</div>
+<p>其中<span class="arithmatex">\({s}_{1,2} =  - \sigma  \pm  \mathrm{i}{\omega }_{d}\)</span> (2.48)为特征方程(2.39)的根。</p>
+<p>方程(2.87)可用部分分式表示</p>
+<div class="arithmatex">\[
+\frac{1/m}{\left( {\mathrm{i}\omega  - {s}_{1}}\right) \left( {\mathrm{i}\omega  - {s}_{2}}\right) } = \frac{{C}_{1}}{\mathrm{i}\omega  - {s}_{1}} + \frac{{C}_{2}}{\mathrm{i}\omega  - {s}_{2}}. \tag{2.88}
+\]</div>
+<p>将方程(2.88)两边同乘<span class="arithmatex">\(\left( {\mathrm{i}\omega  - {s}_{1}}\right)\)</span>，并在<span class="arithmatex">\(\mathrm{i}\omega  = {s}_{1}\)</span>处求值，得到</p>
+<div class="arithmatex">\[
+{\left. \frac{1/m}{\left( \mathrm{i}\omega  - {s}_{2}\right) }\right| }_{\mathrm{i}\omega  = {s}_{1}} = {C}_{1} + {C}_{2}{\left. \frac{\mathrm{i}\omega  - {s}_{1}}{\mathrm{i}\omega  - {s}_{2}}\right| }_{\mathrm{i}\omega  = {s}_{1}}.
+\]</div>
+<p>于是</p>
+<div class="arithmatex">\[
+{C}_{1} = \frac{1/m}{{s}_{1} - {s}_{2}} = \frac{1/m}{\left( {-\sigma  + \mathrm{i}{\omega }_{d}}\right)  - \left( {-\sigma  - \mathrm{i}{\omega }_{d}}\right) } = \frac{1/m}{\mathrm{i}2{\omega }_{d}}
+\]</div>
+<p>同理</p>
+<div class="arithmatex">\[
+{C}_{2} =  - \frac{1/m}{\mathrm{i}2{\omega }_{d}},
+\]</div>
+<p>因此，通过从<span class="arithmatex">\({C}_{1}\)</span>和<span class="arithmatex">\({C}_{2}\)</span>中提取常数<span class="arithmatex">\(\frac{1}{2\mathrm{i}}\)</span>，方程(2.88)可写成标准形式</p>
+<div class="arithmatex">\[
+H\left( {\mathrm{i}\omega }\right)  = \frac{R}{2\mathrm{i}\left( {\mathrm{i}\omega  - {s}_{1}}\right) } - \frac{{R}^{ * }}{2\mathrm{i}\left( {\mathrm{i}\omega  - {s}_{2}}\right) }. \tag{2.89}
+\]</div>
+<p>其中星号表示复共轭。</p>
+<p>在此情形下，留数为纯实数。</p>
+<div class="arithmatex">\[
+R = {R}^{ * } = \frac{1/m}{{\omega }_{d}}. \tag{2.90}
+\]</div>
+<p>对于多自由度系统，留数为复共轭对。</p>
+<p>方程(2.89)可写成</p>
+<div class="arithmatex">\[
+H\left( {\mathrm{i}\omega }\right)  = \frac{U}{\sigma  + \mathrm{i}\left( {\omega  - {\omega }_{d}}\right) } + \frac{{U}^{ * }}{\sigma  + \mathrm{i}\left( {\omega  + {\omega }_{d}}\right) }. \tag{2.91}
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+U =  - {U}^{ * } =  - \mathrm{i}\frac{1}{{2m}{\omega }_{d}}. \tag{2.92}
+\]</div>
+<p>分析由解析表达式(2.91)得到的奈奎斯特图(Nyquist plot)是有益的。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_53_309_1262_1034_433_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_53_309_1262_1034_433_0.jpg" /></p>
+<p>图2.36</p>
+<p>为了绘制求和中第一项的图像</p>
+<div class="arithmatex">\[
+\frac{U}{\sigma  + \mathrm{i}\left( {\omega  - {\omega }_{d}}\right) }, \tag{2.93}
+\]</div>
+<p>考虑绘制</p>
+<div class="arithmatex">\[
+\frac{1}{\sigma  + \mathrm{i}\left( {\omega  - {\omega }_{d}}\right) }. \tag{2.94}
+\]</div>
+<p>在复平面上，表达式(2.94)表示一个圆(图2.36, a)，其圆心为<span class="arithmatex">\(\left( {1/{2\sigma },0}\right)\)</span>，直径为<span class="arithmatex">\(1/\sigma\)</span>。在振幅最大的点<span class="arithmatex">\(M\)</span>，即圆与实轴的交点处，频率为<span class="arithmatex">\({\omega }_{d}\)</span>，即阻尼固有频率(damped natural frequency)。衰减率(decay rate)<span class="arithmatex">\(\sigma\)</span>等于从<span class="arithmatex">\(M\)</span>到点<span class="arithmatex">\(B\)</span>和<span class="arithmatex">\(C\)</span>的频率间隔，这些点的响应向量与<span class="arithmatex">\(M\)</span>的响应向量成<span class="arithmatex">\(\pm  {45}^{0}\)</span>角。对于负频率，圆用虚线绘制。</p>
+<p>接下来考虑虚数(imaginary number)<span class="arithmatex">\(U\)</span>在表达式(2.93)分子中的作用。将前一幅图乘以该虚数，会使图形顺时针旋转<span class="arithmatex">\({90}^{ \circ  }\)</span>，并按<span class="arithmatex">\(1/{2m}{\omega }_{d}\)</span>的比例放大或缩小(图2.36, b)。所得圆称为以正频率为主的圆(circle with predominantly positive frequencies)。该圆的圆心位于<span class="arithmatex">\(\left( {0, - \left| {U/{2\sigma }}\right| }\right)\)</span>，直径为<span class="arithmatex">\(\left| \frac{U}{\sigma }\right|  = \frac{1}{2k}\frac{1}{\zeta \sqrt{1 - {\zeta }^{2}}}\)</span>。虚线部分对应负频率。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_54_320_1234_1088_427_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_54_320_1234_1088_427_0.jpg" /></p>
+<p>图2.37</p>
+<p>现在考虑求和中的第二项</p>
+<div class="arithmatex">\[
+\frac{{U}^{ * }}{\sigma  + \mathrm{i}\left( {\omega  + {\omega }_{d}}\right) }. \tag{2.95}
+\]</div>
+<div class="arithmatex">\[
+\frac{1}{\sigma  + \mathrm{i}\left( {\omega  + {\omega }_{d}}\right) }. \tag{2.96}
+\]</div>
+<p>如图2.37所示，<span class="arithmatex">\(a\)</span>。</p>
+<p>表达式(2.95)同样表示一个圆(图2.37, b)，称为以负频率为主的圆。该圆与图2.36所示的圆直径相同，<span class="arithmatex">\(b\)</span>但相对于实轴逆时针旋转了<span class="arithmatex">\({90}^{ \circ  }\)</span>。对应于正频率的圆弧仅占圆的一小部分，其余对应负频率的部分用虚线绘制。</p>
+<p>将图2.36<span class="arithmatex">\(b\)</span>与图2.37<span class="arithmatex">\(b\)</span>的曲线合并，得到图2.38<span class="arithmatex">\(a\)</span>的奈奎斯特图(Nyquist plot)，它已不再是圆形。图2.38<span class="arithmatex">\(b\)</span>给出了多个这样的图，对应不同的<span class="arithmatex">\(\omega /{\omega }_{n}\)</span>和<span class="arithmatex">\(\zeta\)</span>值。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_55_289_829_1046_579_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_55_289_829_1046_579_0.jpg" /></p>
+<p>图2.38</p>
+<p>在阻尼固有频率处，频响函数(FRF)的值为</p>
+<div class="arithmatex">\[
+H\left( {\mathrm{i}{\omega }_{d}}\right)  = \frac{R/2\mathrm{i}}{\sigma } - \frac{{R}^{ * }/2\mathrm{i}}{\sigma  + \mathrm{i}2{\omega }_{d}},
+\]</div>
+<div class="arithmatex">\[
+H\left( {\mathrm{i}{\omega }_{d}}\right)  = \frac{1}{2\mathrm{i}}\left\lbrack  {\frac{1}{m{\omega }_{d}\sigma } - \frac{1}{m{\omega }_{d}\left( {\sigma  + \mathrm{i}2{\omega }_{d}}\right) }}\right\rbrack  . \tag{2.97}
+\]</div>
+<p>这可以近似为</p>
+<div class="arithmatex">\[
+H\left( {\mathrm{i}{\omega }_{d}}\right)  \cong  \frac{R}{\mathrm{i}{2\sigma }} = \frac{1}{\mathrm{i}{2\sigma }m{\omega }_{d}}. \tag{2.98}
+\]</div>
+<p>因为式(2.97)右侧第二项在<span class="arithmatex">\({\omega }_{d}\)</span>趋于无穷大时趋近于零。</p>
+<p>因此，许多单自由度模型可简化为</p>
+<div class="arithmatex">\[
+H\left( {\mathrm{i}\omega }\right)  \cong  \frac{R}{2\mathrm{i}\left( {\omega  - {s}_{1}}\right) } = \frac{R}{2\mathrm{i}\left\lbrack  {\omega  - \left( {\sigma  - \mathrm{i}{\omega }_{d}}\right) }\right\rbrack  }. \tag{2.99}
+\]</div>
+<h4 id="matlab-demo">Matlab Demo</h4>
+<p>下面提供一段代码，绘制了频率响应函数（FRF）绘制位移导纳的奈奎斯特图，将奈奎斯特图分解为两个理论圆的叠加，对比实际物理响应（正频率部分）与完整频率范围的理论特性，揭示其数学构成原理。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">%% 1. 初始化和参数定义 </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">clear</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">clc</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">close</span><span class="w"> </span><span class="s">all</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c">% 定义系统物理参数</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">m</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span><span class="w">      </span><span class="c">% 质量 (kg)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">k</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10000</span><span class="p">;</span><span class="w">    </span><span class="c">% 刚度 (N/m)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">zeta</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span><span class="w">   </span><span class="c">% 阻尼比 (无量纲)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">omega_n</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="n">k</span><span class="o">/</span><span class="n">m</span><span class="p">);</span><span class="w">                </span><span class="c">% 无阻尼固有频率 (rad/s)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">zeta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">k</span><span class="p">);</span><span class="w">           </span><span class="c">% 粘性阻尼系数 (Ns/m)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="n">omega_d</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">zeta</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="c">% 有阻尼固有频率 (rad/s)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c">% 定义物理系统的频率范围 (ω &gt;= 0)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">freq_hz</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">omega_n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2000</span><span class="p">);</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">pi</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">freq_hz</span><span class="p">;</span><span class="w"> </span><span class="c">% 角频率 (rad/s)</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c">%% 2. 计算物理系统的频率响应函数 (FRF) </span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">H_omega</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">omega</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>1<span class="nb">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">omega</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">);</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c">%% 3. 绘制标准的奈奎斯特图 </span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nb">figure</span><span class="p">(</span><span class="s">&#39;Name&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Nyquist Plot of Displacement Receptance&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="c">% 计算对称的坐标轴范围</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">max_abs_val</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">([</span><span class="nb">real</span><span class="p">(</span><span class="n">H_omega</span><span class="p">),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H_omega</span><span class="p">)]));</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">axis_limit</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">max_abs_val</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.1</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="nb">xlim</span><span class="p">([</span><span class="o">-</span><span class="n">axis_limit</span><span class="p">,</span><span class="w"> </span><span class="n">axis_limit</span><span class="p">]);</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="nb">ylim</span><span class="p">([</span><span class="o">-</span><span class="n">axis_limit</span><span class="p">,</span><span class="w"> </span><span class="n">axis_limit</span><span class="p">]);</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="c">% 绘制奈奎斯特曲线</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="nb">plot</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">H_omega</span><span class="p">),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H_omega</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="c">% 标记关键点</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="nb">plot</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span><span class="w"> </span><span class="s">&#39;ko&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerFaceColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;g&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="nb">text</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.05</span><span class="p">,</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.05</span><span class="o">*</span><span class="n">axis_limit</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;\omega = 0&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;g&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="p">[</span><span class="o">~</span><span class="p">,</span><span class="w"> </span><span class="n">idx_wn</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">min</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">omega</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">omega_n</span><span class="p">));</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="nb">plot</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="n">idx_wn</span><span class="p">)),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="n">idx_wn</span><span class="p">)),</span><span class="w"> </span><span class="s">&#39;rs&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerFaceColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="nb">text</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="n">idx_wn</span><span class="p">)),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="n">idx_wn</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.05</span><span class="o">*</span><span class="n">axis_limit</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;  \omega = \omega_n&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="p">[</span><span class="o">~</span><span class="p">,</span><span class="w"> </span><span class="n">idx_wd</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">min</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">omega</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">omega_d</span><span class="p">));</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="nb">plot</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="n">idx_wd</span><span class="p">)),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="n">idx_wd</span><span class="p">)),</span><span class="w"> </span><span class="s">&#39;md&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerFaceColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;m&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;MarkerSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">);</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="nb">text</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="n">idx_wd</span><span class="p">)),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H_omega</span><span class="p">(</span><span class="n">idx_wd</span><span class="p">))</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">0.05</span><span class="o">*</span><span class="n">axis_limit</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;  \omega = \omega_d&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;m&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="c">% 格式化图形</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="p">;</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="n">axis</span><span class="w"> </span><span class="s">equal</span><span class="p">;</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="nb">title</span><span class="p">([</span><span class="s">&#39;粘性阻尼位移导纳的奈奎斯特图 (\zeta = &#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">num2str</span><span class="p">(</span><span class="n">zeta</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;)&#39;</span><span class="p">],</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">);</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;Re(H(\omega)) - 实部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Im(H(\omega)) - 虚部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="nb">legend</span><span class="p">(</span><span class="s">&#39;位移导纳 H(\omega) [\omega \geq 0]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;northwest&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="n">ax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gca</span><span class="p">;</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="n">ax</span><span class="p">.</span><span class="n">XAxisLocation</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;origin&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="n">ax</span><span class="p">.</span><span class="n">YAxisLocation</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;origin&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="n">hold</span><span class="w"> </span><span class="s">off</span><span class="p">;</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="c">%% 4. 演示奈奎斯特图由两个圆合成</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="c">% 计算分解项的常数</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="n">sigma</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">zeta</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">omega_n</span><span class="p">;</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="n">U</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span>1<span class="nb">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">omega_d</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="n">U_star</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">conj</span><span class="p">(</span><span class="n">U</span><span class="p">);</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="n">omega_sym</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="n">omega_n</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">*</span><span class="n">omega_n</span><span class="p">,</span><span class="w"> </span><span class="mi">4000</span><span class="p">);</span><span class="w"> </span><span class="c">% 对称频率向量</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="c">% 使用对称频率范围计算H1和H2以绘制完整的圆</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="n">H1_full_circle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">U</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="p">(</span><span class="n">sigma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>1<span class="nb">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">omega_sym</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">omega_d</span><span class="p">));</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="n">H2_full_circle</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">U_star</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="p">(</span><span class="n">sigma</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>1<span class="nb">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">omega_sym</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">omega_d</span><span class="p">));</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="c">% --- 绘制分解图 ---</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="nb">figure</span><span class="p">(</span><span class="s">&#39;Name&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Decomposition of the Nyquist Plot&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="c">% 基于所有曲线（包括完整的理论圆）计算对称坐标轴</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="n">all_data</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="nb">real</span><span class="p">(</span><span class="n">H_omega</span><span class="p">),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H_omega</span><span class="p">),</span><span class="w"> </span><span class="nb">real</span><span class="p">(</span><span class="n">H1_full_circle</span><span class="p">),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H1_full_circle</span><span class="p">),</span><span class="w"> </span><span class="nb">real</span><span class="p">(</span><span class="n">H2_full_circle</span><span class="p">),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H2_full_circle</span><span class="p">)];</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="n">max_abs_val_all</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">all_data</span><span class="p">));</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="n">axis_limit_all</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">max_abs_val_all</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.1</span><span class="p">;</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a><span class="nb">xlim</span><span class="p">([</span><span class="o">-</span><span class="n">axis_limit_all</span><span class="p">,</span><span class="w"> </span><span class="n">axis_limit_all</span><span class="p">]);</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="nb">ylim</span><span class="p">([</span><span class="o">-</span><span class="n">axis_limit_all</span><span class="p">,</span><span class="w"> </span><span class="n">axis_limit_all</span><span class="p">]);</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a><span class="c">% 1. 绘制物理系统的FRF (ω &gt;= 0)，这才是实际测量的奈奎斯特图</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="nb">plot</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">H_omega</span><span class="p">),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H_omega</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;k--&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;总导纳 H(\omega) [物理响应, \omega \geq 0]&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>
+<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a><span class="c">% 2. 绘制完整的理论圆 H1 (&quot;以正频率为主的圆&quot;)</span>
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a><span class="nb">plot</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">H1_full_circle</span><span class="p">),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H1_full_circle</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;r-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;理论圆 H1&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>
+<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a><span class="c">% 3. 绘制完整的理论圆 H2 (&quot;以负频率为主的圆&quot;)</span>
+<a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a><span class="nb">plot</span><span class="p">(</span><span class="nb">real</span><span class="p">(</span><span class="n">H2_full_circle</span><span class="p">),</span><span class="w"> </span><span class="nb">imag</span><span class="p">(</span><span class="n">H2_full_circle</span><span class="p">),</span><span class="w"> </span><span class="s">&#39;g-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;理论圆 H2&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>
+<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a><span class="n">hold</span><span class="w"> </span><span class="s">off</span><span class="p">;</span>
+<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>
+<a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a><span class="c">% 格式化图形</span>
+<a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a><span class="nb">grid</span><span class="w"> </span><span class="n">on</span><span class="p">;</span>
+<a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a><span class="n">axis</span><span class="w"> </span><span class="s">equal</span><span class="p">;</span>
+<a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a><span class="nb">title</span><span class="p">(</span><span class="s">&#39;奈奎斯特图分解为两个圆&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">);</span>
+<a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;实部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;虚部&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a><span class="nb">legend</span><span class="p">(</span><span class="s">&#39;show&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;northeast&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a><span class="n">ax</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">gca</span><span class="p">;</span>
+<a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a><span class="n">ax</span><span class="p">.</span><span class="n">XAxisLocation</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;origin&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a><span class="n">ax</span><span class="p">.</span><span class="n">YAxisLocation</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&#39;origin&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="上一页: 首页">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                首页
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../vibration11/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第11篇">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                第11篇
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
