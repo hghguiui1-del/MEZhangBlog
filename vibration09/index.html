@@ -1,0 +1,1252 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="洒家的动力学笔记">
+      
+      
+        <meta name="author" content="MEZhang">
+      
+      
+        <link rel="canonical" href="https://mezhangblog.github.io/MechanicalVibration/vibration09/">
+      
+      
+        <link rel="prev" href="../vibration08/">
+      
+      
+        <link rel="next" href="../vibration10/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>第9篇 - 洒家的动力学笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#244" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="洒家的动力学笔记" class="md-header__button md-logo" aria-label="洒家的动力学笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            洒家的动力学笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第9篇
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../vibration01/" class="md-tabs__link">
+          
+  
+  
+  学习笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="洒家的动力学笔记" class="md-nav__button md-logo" aria-label="洒家的动力学笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    洒家的动力学笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    学习笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第1篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第2篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第3篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第4篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第5篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第6篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第7篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第8篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第9篇
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第9篇
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#244" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.4 半功率点法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#245-added-mass-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.5 附加质量法(Added Mass Method)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#246-complex-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.6 复代数解法(Complex Algebra)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第10篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第11篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第12篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第13篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第14篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第15篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第16篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第17篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第18篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#244" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.4 半功率点法
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#245-added-mass-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.5 附加质量法(Added Mass Method)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#246-complex-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.6 复代数解法(Complex Algebra)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>第9篇</h1>
+
+<h4 id="244">2.4.4 半功率点法</h4>
+<p>弹簧-质量-阻尼器系统的共振曲线可用于确定阻尼比(图2.32)。</p>
+<p>当<span class="arithmatex">\(\omega  = {\omega }_{n}\)</span>时，共振幅值为<span class="arithmatex">\({X}_{\text{res }} = \frac{{X}_{st}}{2\zeta }\)</span>。对于小阻尼，峰值<span class="arithmatex">\(M\)</span>与相位共振点重合。纵坐标为<span class="arithmatex">\(\left( {\sqrt{2}/2}\right) {X}_{\text{res }}\)</span>的点<span class="arithmatex">\(B\)</span>和<span class="arithmatex">\(C\)</span>称为半功率点。幅值平方为<span class="arithmatex">\(\left( {1/2}\right) {X}_{\text{res }}^{2}\)</span>，因此在对应频率<span class="arithmatex">\({\omega }_{1}\)</span>和<span class="arithmatex">\({\omega }_{2}\)</span>处由阻尼耗散的功率为共振时耗散功率的一半。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_45_598_659_532_549_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_45_598_659_532_549_0.jpg" /></p>
+<p>图2.32</p>
+<p>代入式(2.56)得</p>
+<div class="arithmatex">\[
+\frac{1}{2}{\left( \frac{1}{2\zeta }\right) }^{2} = \frac{1}{\sqrt{{\left( 1 - {\left( \omega /{\omega }_{n}\right) }^{2}\right) }^{2} + {\left( 2\zeta \omega /{\omega }_{n}\right) }^{2}}},
+\]</div>
+<p>从而得到方程</p>
+<div class="arithmatex">\[
+{\left( \omega /{\omega }_{n}\right) }^{4} - 2\left( {1 - 2{\zeta }^{2}}\right) {\left( \omega /{\omega }_{n}\right) }^{2} + \left( {1 - 8{\zeta }^{2}}\right)  = 0.
+\]</div>
+<p>求解后得到半功率点频率</p>
+<div class="arithmatex">\[
+{\left( \omega /{\omega }_{n}\right) }_{1,2}^{2} = \left( {1 - 2{\zeta }^{2}}\right)  \pm  {2\zeta }\sqrt{1 + {\zeta }^{2}}
+\]</div>
+<p>对于<span class="arithmatex">\(\zeta  &lt;  &lt; 1\)</span>可近似为</p>
+<div class="arithmatex">\[
+{\left( \omega /{\omega }_{n}\right) }_{1,2}^{2} \cong  1 \pm  {2\zeta }
+\]</div>
+<p>记<span class="arithmatex">\({\omega }_{1}^{2} \cong  {\omega }_{n}^{2}\left( {1 - {2\zeta }}\right)\)</span>和<span class="arithmatex">\({\omega }_{2}^{2} \cong  {\omega }_{n}^{2}\left( {1 + {2\zeta }}\right)\)</span>，得</p>
+<div class="arithmatex">\[
+{2\zeta } \cong  \frac{{\omega }_{2}^{2} - {\omega }_{1}^{2}}{{\omega }_{2}^{2} + {\omega }_{1}^{2}} \tag{2.68}
+\]</div>
+<p>或</p>
+<div class="arithmatex">\[
+{2\zeta } \cong  \frac{{\omega }_{2}^{2} - {\omega }_{1}^{2}}{2{\omega }_{n}^{2}} = \frac{{\omega }_{2} - {\omega }_{1}}{{\omega }_{n}}\frac{{\omega }_{2} + {\omega }_{1}}{2{\omega }_{n}} \cong  \frac{{\omega }_{2} - {\omega }_{1}}{{\omega }_{n}}
+\]</div>
+<p>因此阻尼比(damping ratio)为</p>
+<div class="arithmatex">\[
+\zeta  \cong  \frac{\Delta \omega }{2{\omega }_{n}} \tag{2.69}
+\]</div>
+<p>其中<span class="arithmatex">\({\Delta \omega } = {\omega }_{2} - {\omega }_{1}\)</span>为共振曲线(resonance curve)的带宽。</p>
+<p>仅凭共振曲线的形状很难判断阻尼是否真正属于粘性阻尼(viscous damping)。若仅考虑单自由度系统，且运动为简谐运动，最方便的做法是采用“等效粘性阻尼(equivalent viscous damping)”概念:使粘性阻尼系数取某一值，使得在特定幅值和频率的简谐位移循环中，系统耗散的能量与实际阻尼机制在同一位移循环中耗散的能量相等。在式(2.43)中，系数<span class="arithmatex">\(c\)</span>即为等效粘性阻尼系数。</p>
+<h4 id="245-added-mass-method">2.4.5 附加质量法(Added Mass Method)</h4>
+<p>在孤立共振(isolated resonance)附近，一般振动系统的行为类似于单自由度系统(single-degree-of-freedom system)的响应。替代系统的等效质量(equivalent mass)和等效刚度(equivalent stiffness)可通过附加质量法(additional mass method)确定。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_46_618_1478_454_377_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_46_618_1478_454_377_0.jpg" /></p>
+<p>图2.33</p>
+<p>实验绘制了两条频率响应曲线，一条对应实际系统，另一条对应附加已知质量<span class="arithmatex">\({m}_{a}\)</span>的系统(图2.33)。固有频率<span class="arithmatex">\({\omega }_{n1}\)</span>和<span class="arithmatex">\({\omega }_{n2}\)</span>由峰值位移幅值确定。</p>
+<p>由相应方程(2.4)可得</p>
+<div class="arithmatex">\[
+k = m{\omega }_{n1}^{2}, \tag{2.70}
+\]</div>
+<div class="arithmatex">\[
+k = \left( {m + {m}_{a}}\right) {\omega }_{n2}^{2}, \tag{2.71}
+\]</div>
+<p>可以获得等效质量</p>
+<div class="arithmatex">\[
+m = \frac{{m}_{a}}{\left( {{\omega }_{n1}^{2}/{\omega }_{n2}^{2}}\right)  - 1}, \tag{2.72}
+\]</div>
+<p>于是，由方程(2.70)可知，等效刚度<span class="arithmatex">\(k\)</span>。</p>
+<p>注意，由于实际系统的原因，附加质量后系统的共振响应更大</p>
+<div class="arithmatex">\[
+{X}_{{\text{res }}_{1}} = \frac{{F}_{0}}{k}\frac{1}{2{\zeta }_{1}} = \frac{{F}_{0}}{c{\omega }_{n1}} = \frac{{F}_{0}}{c}\sqrt{\frac{m}{k}}
+\]</div>
+<p>以及带有附加质量的系统</p>
+<div class="arithmatex">\[
+{X}_{{\text{res }}_{2}} = \frac{{F}_{0}}{k}\frac{1}{2{\zeta }_{2}} = \frac{{F}_{0}}{c{\omega }_{n2}} = \frac{{F}_{0}}{c}\sqrt{\frac{m + {m}_{a}}{k}}.
+\]</div>
+<p>如果系统的工作频率接近<span class="arithmatex">\({\omega }_{n1}\)</span>，则可通过增加质量<span class="arithmatex">\({m}_{a}\)</span>来降低振动系统的受迫响应。</p>
+<h4 id="246-complex-algebra">2.4.6 复代数解法(Complex Algebra)</h4>
+<p>对于简谐激励，作用于图2.26所示系统质量上的力可表示为</p>
+<div class="arithmatex">\[
+f\left( t\right)  = {F}_{0}{e}^{\mathrm{i}{\omega t}}, \tag{2.73}
+\]</div>
+<p>从而使稳态解(2.54)变为</p>
+<div class="arithmatex">\[
+x\left( t\right)  = \bar{X}{e}^{\mathrm{i}{\omega t}}, \tag{2.74}
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+\bar{X} = X{e}^{\mathrm{i}\theta } = {X}_{R} + \mathrm{i}{X}_{I} \tag{2.75}
+\]</div>
+<p>为复位移幅值。</p>
+<p>在式(2.75)中，<span class="arithmatex">\(X\)</span>为模量，<span class="arithmatex">\(\theta\)</span>为相位角，<span class="arithmatex">\({X}_{R}\)</span>为实部(同相)分量，<span class="arithmatex">\({X}_{I}\)</span>为虚部(正交)分量</p>
+<div class="arithmatex">\[
+{X}_{R} = X\cos \theta ,\;{X}_{I} = X\sin \theta , \tag{2.76}
+\]</div>
+<div class="arithmatex">\[
+X = \sqrt{{X}_{R}^{2} + {X}_{I}^{2}},\;\tan \theta  = {X}_{I}/{X}_{R}. \tag{2.77}
+\]</div>
+<p>对于结构阻尼，运动方程(2.63)变为</p>
+<div class="arithmatex">\[
+m\ddot{x} + \frac{h}{\omega }\dot{x} + {kx} = {F}_{0}{e}^{\mathrm{i}{\omega t}}. \tag{2.78}
+\]</div>
+<p>将(2.74)代入(2.78)得</p>
+<div class="arithmatex">\[
+\left( {-m{\omega }^{2} + \mathrm{i}h + k}\right) \bar{X} = {F}_{0}.
+\]</div>
+<p>复幅值<span class="arithmatex">\(\bar{X}\)</span>确定为</p>
+<div class="arithmatex">\[
+\bar{X} = \frac{{F}_{0}}{k - m{\omega }^{2} + \mathrm{i}h} = \frac{{X}_{st}}{1 - {\left( \omega /{\omega }_{n}\right) }^{2} + \mathrm{i}g}, \tag{2.79}
+\]</div>
+<p>其中<span class="arithmatex">\({\omega }_{n} = \sqrt{k/m}, g = h/k\)</span>，因此</p>
+<div class="arithmatex">\[
+{X}_{R} = \frac{1 - {\left( \omega /{\omega }_{n}\right) }^{2}}{\sqrt{{\left\lbrack  1 - {\left( \omega /{\omega }_{n}\right) }^{2}\right\rbrack  }^{2} + {g}^{2}}}{X}_{st},{X}_{I} = \frac{-g}{\sqrt{{\left\lbrack  1 - {\left( \omega /{\omega }_{n}\right) }^{2}\right\rbrack  }^{2} + {g}^{2}}}{X}_{st} \tag{2.80}
+\]</div>
+<div class="arithmatex">\[
+X = \frac{1}{\sqrt{{\left\lbrack  1 - {\left( \omega /{\omega }_{n}\right) }^{2}\right\rbrack  }^{2} + {g}^{2}}}{X}_{st},\;\tan \theta  = \frac{-g}{1 - {\left( \omega /{\omega }_{n}\right) }^{2}}. \tag{2.81}
+\]</div>
+<p>在<span class="arithmatex">\({X}_{R}\)</span>与<span class="arithmatex">\({X}_{I}\)</span>的表达式之间消去<span class="arithmatex">\(\omega\)</span>得</p>
+<div class="arithmatex">\[
+{\left( {X}_{I} + \frac{1}{2g}{X}_{st}\right) }^{2} + {X}_{R}^{2} = {\left( \frac{1}{2g}{X}_{st}\right) }^{2}. \tag{2.82}
+\]</div>
+<p>该圆为复平面上响应矢量端点的轨迹。</p>
+<h4 id="matlab-demo">Matlab Demo</h4>
+<p>附加质量对振动系统的核心影响是降低其固有频率。这一规律在系统的频响函数（FRF）上表现得尤为直观：随着质量的增加，FRF的共振峰会明确地向低频区域移动。若系统的物理阻尼系数保持不变，附加质量还会导致阻尼比下降，使共振峰变得更高更尖锐。</p>
+<p>这种物理现象与振动测试中传感器质量对被测系统的影响存在直接的对应关系。传感器本身具有质量，当它被安装到被测结构上时，就相当于一个“附加质量”，会不可避免地改变结构原有的动态特性。如果传感器质量相对于结构的等效质量过大，将会导致测得的固有频率偏低，从而引入显著的测量误差。因此，在动态测试中，选择轻量化的传感器是保证测量精度的关键。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">%% 1. 初始化和定义系统参数</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">clear</span><span class="p">;</span><span class="w">         </span><span class="c">% 清除工作区变量</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">clc</span><span class="p">;</span><span class="w">           </span><span class="c">% 清除命令窗口</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">close</span><span class="w"> </span><span class="nb">all</span><span class="p">;</span><span class="w">     </span><span class="c">% 关闭所有图形窗口</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c">% --- 定义原始系统物理属性 ---</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">m</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">10.0</span><span class="p">;</span><span class="w">      </span><span class="c">% 系统的等效质量 (kg)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">k</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">40000</span><span class="p">;</span><span class="w">     </span><span class="c">% 系统的等效刚度 (N/m)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">c</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w">        </span><span class="c">% 系统的等效粘性阻尼系数 (N-s/m)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">F0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w">       </span><span class="c">% 简谐激励力幅值 (N)</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c">% --- 定义附加质量 ---</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c">% 这可以代表一个传感器的质量</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">m_a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">5.0</span><span class="p">;</span><span class="w">     </span><span class="c">% 附加质量 (kg)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c">%% 2. 计算两种情况下的系统特性</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c">% --- 情况 1: 原始系统 ---</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">m1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">omega_n1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">m1</span><span class="p">);</span><span class="w"> </span><span class="c">% 原始系统的固有频率 (rad/s), 对应式 (2.70)</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">zeta1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m1</span><span class="p">));</span><span class="w"> </span><span class="c">% 原始系统的阻尼比</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c">% --- 情况 2: 带有附加质量的系统 ---</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="n">m2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">m_a</span><span class="p">;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">omega_n2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">m2</span><span class="p">);</span><span class="w"> </span><span class="c">% 附加质量后的新固有频率 (rad/s), 对应式 (2.71)</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">zeta2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m2</span><span class="p">));</span><span class="w"> </span><span class="c">% 附加质量后的新阻尼比</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c">% 在命令窗口显示计算出的固有频率</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;原始系统的固有频率 ω_n1: %.2f rad/s (%.2f Hz)\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">omega_n1</span><span class="p">,</span><span class="w"> </span><span class="n">omega_n1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="p">));</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;附加质量后的固有频率 ω_n2: %.2f rad/s (%.2f Hz)\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">omega_n2</span><span class="p">,</span><span class="w"> </span><span class="n">omega_n2</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="p">));</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c">%% 3. 生成频响函数 (FRF)</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="c">% 稳态响应的幅值X是激励频率ω的函数，其表达式为：</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="c">% X(ω) = (F0/k) / sqrt( (1 - (ω/ω_n)^2)^2 + (2*ζ*ω/ω_n)^2 )</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="c">% 定义用于绘图的激励频率范围</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="n">omega_range</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">1500</span><span class="p">);</span><span class="w"> </span><span class="c">% 频率向量 (rad/s)</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="c">% 计算静态位移</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="n">X_st</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">F0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">k</span><span class="p">;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="c">% 计算频率比</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="n">r1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_range</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">omega_n1</span><span class="p">;</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="n">r2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">omega_range</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">omega_n2</span><span class="p">;</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="c">% 计算两种情况下的响应幅值</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="n">X1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_st</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">((</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r1</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">zeta1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r1</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="n">X2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">X_st</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="nb">sqrt</span><span class="p">((</span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">r2</span><span class="o">.^</span><span class="mi">2</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">zeta2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">r2</span><span class="p">)</span><span class="o">.^</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="c">%% 4. 绘图与可视化</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="c">% 创建图形窗口并绘制两条频响曲线，类似于文档中的图2.33</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="nb">figure</span><span class="p">(</span><span class="s">&#39;Name&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;附加质量法对频响函数的影响&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="n">hold</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="c">% 绘制原始系统的FRF</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="nb">plot</span><span class="p">(</span><span class="n">omega_range</span><span class="p">,</span><span class="w"> </span><span class="n">X1</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;原始系统 (m)&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="c">% 绘制附加质量后的系统FRF</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="nb">plot</span><span class="p">(</span><span class="n">omega_range</span><span class="p">,</span><span class="w"> </span><span class="n">X2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r--&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="s">&#39;系统 + 附加质量 (m+m_a = &#39;</span><span class="w"> </span><span class="nb">num2str</span><span class="p">(</span><span class="n">m2</span><span class="p">)</span><span class="w"> </span><span class="s">&#39; kg)&#39;</span><span class="p">]);</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="c">% 标记共振峰对应的固有频率</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="nb">line</span><span class="p">([</span><span class="n">omega_n1</span><span class="p">,</span><span class="w"> </span><span class="n">omega_n1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">X1</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;blue&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">sprintf</span><span class="p">(</span><span class="s">&#39;ω_{n1} = %.2f rad/s&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">omega_n1</span><span class="p">));</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="nb">line</span><span class="p">([</span><span class="n">omega_n2</span><span class="p">,</span><span class="w"> </span><span class="n">omega_n2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">max</span><span class="p">(</span><span class="n">X2</span><span class="p">)],</span><span class="w"> </span><span class="s">&#39;Color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineStyle&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;:&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;DisplayName&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">sprintf</span><span class="p">(</span><span class="s">&#39;ω_{n2} = %.2f rad/s&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">omega_n2</span><span class="p">));</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="c">% --- 美化图形 ---</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="nb">title</span><span class="p">(</span><span class="s">&#39;附加质量对系统频响函数的影响&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">);</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;激励频率 ω (rad/s)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;响应幅值 X (m)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;FontSize&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="nb">legend</span><span class="p">(</span><span class="s">&#39;show&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Location&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;northeast&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="n">grid</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="n">box</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="n">hold</span><span class="w"> </span><span class="s">off</span><span class="p">;</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="c">%% 5. 理论验证</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="c">% 根据文档中的式(2.72)，利用两条曲线的峰值频率反算系统的原始质量</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="c">% m = m_a / ( (ω_n1^2 / ω_n2^2) - 1 )</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="n">m_calculated</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">m_a</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="n">omega_n1</span><span class="o">^</span><span class="mi">2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">omega_n2</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">);</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;\n--- 理论验证 ---\n&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;仿真中使用的原始质量: %.2f kg\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">);</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;根据峰值频率反算的质量 (式2.72): %.2f kg\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">m_calculated</span><span class="p">);</span>
+</code></pre></div>
+<p><img alt="附加质量对频响函数的影响" src="../images/vibration09%E9%99%84%E5%8A%A0%E8%B4%A8%E9%87%8F%E5%AF%B9%E7%B3%BB%E7%BB%9F%E9%A2%91%E5%93%8D%E5%87%BD%E6%95%B0%E5%BD%B1%E5%93%8D.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../vibration08/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 第8篇">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                第8篇
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../vibration10/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第10篇">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                第10篇
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
