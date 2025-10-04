@@ -1,0 +1,44 @@
+/* Giscus 评论系统样式 */
+
+/* 评论区标题 */
+#__comments {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+#__comments h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--md-default-fg-color);
+}
+
+/* Giscus 容器 */
+.giscus {
+    margin-top: 1rem;
+}
+
+/* 评论框优化 */
+.giscus-frame {
+    border: none;
+    width: 100%;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 76.1875em) {
+    #__comments {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+    }
+    
+    #__comments h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* 深色模式优化 */
+[data-md-color-scheme="slate"] #__comments {
+    border-top-color: var(--md-default-fg-color--lightest);
+}
+
