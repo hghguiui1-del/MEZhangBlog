@@ -1,0 +1,1351 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="洒家的动力学笔记">
+      
+      
+        <meta name="author" content="MEZhang">
+      
+      
+        <link rel="canonical" href="https://mezhangblog.github.io/MechanicalVibration/vibration20/">
+      
+      
+        <link rel="prev" href="../vibration19/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>第20篇 - 洒家的动力学笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/comments.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#434" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="洒家的动力学笔记" class="md-header__button md-logo" aria-label="洒家的动力学笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            洒家的动力学笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第20篇
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../vibration01/" class="md-tabs__link">
+          
+  
+  
+  机械振动
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="洒家的动力学笔记" class="md-nav__button md-logo" aria-label="洒家的动力学笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    洒家的动力学笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    机械振动
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            机械振动
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第1篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第2篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第3篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第4篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第5篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第6篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第7篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第8篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第9篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第10篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第11篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第12篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第13篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第14篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第15篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第16篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第17篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第18篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第19篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第20篇
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第20篇
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#434" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4 自由振动
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      例4.6
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例4.6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#434" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4 自由振动
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      例4.6
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例4.6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>第20篇</h1>
+
+<h4 id="434">4.3.4 自由振动</h4>
+<p>令</p>
+<div class="arithmatex">\[
+\left\lbrack  u\right\rbrack   = \left\lbrack  {\{ u{\} }_{1}\;\{ u{\} }_{2}}\right\rbrack   = \left\lbrack  \begin{array}{ll} {u}_{11} &amp; {u}_{12} \\  {u}_{21} &amp; {u}_{22} \end{array}\right\rbrack   \tag{4.88}
+\]</div>
+<p>表示归一化模态振型矩阵(模态矩阵)。</p>
+<p>实际挠度，下文用<span class="arithmatex">\(\{ x\}\)</span>而非<span class="arithmatex">\(\{ y\}\)</span>表示，可按式(4.23)用模态坐标表达</p>
+<div class="arithmatex">\[
+\{ x\}  = \left\lbrack  u\right\rbrack  \{ q\}  = \{ u{\} }_{1}{q}_{1} + \{ u{\} }_{2}{q}_{2} = \mathop{\sum }\limits_{{i = 1}}^{2}{C}_{i}\cos \left( {{\omega }_{i}t - {\varphi }_{i}}\right) \{ u{\} }_{i}. \tag{4.89}
+\]</div>
+<p>常数<span class="arithmatex">\({C}_{i}\)</span>和<span class="arithmatex">\({\varphi }_{i}\)</span>可由运动的初始条件求出</p>
+<div class="arithmatex">\[
+\{ x\left( 0\right) \}  = \mathop{\sum }\limits_{{i = 1}}^{2}{C}_{i}\cos {\varphi }_{i}\{ u{\} }_{i}, \tag{4.90}
+\]</div>
+<div class="arithmatex">\[
+\{ \dot{x}\left( 0\right) \}  = \mathop{\sum }\limits_{{i = 1}}^{2}{\omega }_{i}{C}_{i}\sin {\varphi }_{i}\{ u{\} }_{i}. \tag{4.91}
+\]</div>
+<p>将式(4.90)和(4.91)前乘<span class="arithmatex">\(\{ u{\} }_{j}^{\mathrm{T}}\left\lbrack  m\right\rbrack\)</span>，利用正交关系(4.18)-(4.19)以及模态质量定义(4.25)和(4.28)</p>
+<div class="arithmatex">\[
+\{ u{\} }_{j}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{i} = 0,\;i \neq  j\;{M}_{i} = \{ u{\} }_{i}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ u{\} }_{i},\;i = 1,2 \tag{4.92}
+\]</div>
+<p>我们得到</p>
+<div class="arithmatex">\[
+\{ u{\} }_{j}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ x\left( 0\right) \}  = {C}_{j}{M}_{j}\cos {\varphi }_{j},\;j = 1,2 \tag{4.93}
+\]</div>
+<div class="arithmatex">\[
+\{ u{\} }_{j}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ \dot{x}\left( 0\right) \}  = {\omega }_{j}{C}_{j}{M}_{j}\sin {\varphi }_{j}.\;j = 1,2 \tag{4.94}
+\]</div>
+<p>合并式(4.93)和(4.94)并重命名指标得</p>
+<div class="arithmatex">\[
+\tan {\varphi }_{i} = \frac{\{ u{\} }_{i}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ \dot{x}\left( 0\right) \} }{{\omega }_{i}\{ u{\} }_{i}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ x\left( 0\right) \} },\;i = 1,2 \tag{4.95}
+\]</div>
+<p>以及</p>
+<div class="arithmatex">\[
+{C}_{i} = \frac{\{ u{\} }_{i}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ x\left( 0\right) \} }{{M}_{i}\cos {\varphi }_{i}} = \frac{\{ u{\} }_{i}^{\mathrm{T}}\left\lbrack  m\right\rbrack  \{ \dot{x}\left( 0\right) \} }{{\omega }_{i}{M}_{i}\sin {\varphi }_{i}}.\;i = 1,2 \tag{4.96}
+\]</div>
+<h2 id="46">例4.6</h2>
+<p>对于图4.17所示系统:a) 确定固有振型；b) 当质量具有初始竖向速度<span class="arithmatex">\(v\)</span>时，推导自由振动方程并计算质量的运动轨迹。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_131_605_1296_416_345_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_131_605_1296_416_345_0.jpg" /></p>
+<p>图4.17</p>
+<p>解。a) 设<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>为质量<span class="arithmatex">\(m\)</span>瞬时位移的竖向和水平分量。</p>
+<p>柔度系数为</p>
+<div class="arithmatex">\[
+{\delta }_{yy} = 4{\ell }^{3}/{3EI},{\delta }_{yz} = {\delta }_{zy} = {\ell }^{3}/{2EI},\;{\delta }_{zz} = {\ell }^{3}/{3EI}.
+\]</div>
+<p>运动方程可写为</p>
+<div class="arithmatex">\[
+\frac{4{\ell }^{3}}{3EI}m\ddot{y} + \frac{{\ell }^{3}}{2EI}m\ddot{z} + y = 0,
+\]</div>
+<div class="arithmatex">\[
+\frac{{\ell }^{3}}{2EI}m\ddot{y} + \frac{{\ell }^{3}}{3EI}m\ddot{z} + z = 0.
+\]</div>
+<p>寻找如下形式的解</p>
+<div class="arithmatex">\[
+y\left( t\right)  = {u}_{1}\cos \left( {{\omega t} - \varphi }\right) ,\;z\left( t\right)  = {u}_{2}\cos \left( {{\omega t} - \varphi }\right)
+\]</div>
+<p>我们得到</p>
+<div class="arithmatex">\[
+\left( {8 - \beta }\right) {u}_{1} + 3{u}_{2} = 0,
+\]</div>
+<div class="arithmatex">\[
+3{u}_{1} + \left( {2 - \beta }\right) {u}_{2} = 0,
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+\beta  = {6EI}/m{\ell }^{3}{\omega }^{2}.
+\]</div>
+<p>频率方程为</p>
+<div class="arithmatex">\[
+\left| \begin{matrix} 8 - \beta &amp; 3 \\  3 &amp; 2 - \beta  \end{matrix}\right|  = 0,\;{\beta }^{2} - {10\beta } + 7 = 0,
+\]</div>
+<p>其解为</p>
+<div class="arithmatex">\[
+{\beta }_{1} = {9.2426},\;{\beta }_{2} = {0.7574}.
+\]</div>
+<p>固有频率为</p>
+<div class="arithmatex">\[
+{\omega }_{1} = {0.8057}\sqrt{{EI}/m{\ell }^{3}},\;{\omega }_{2} = {2.8146}\sqrt{{EI}/m{\ell }^{3}}.
+\]</div>
+<p>振型由下式给出</p>
+<div class="arithmatex">\[
+{\mu }_{1} = {\left( \frac{{u}_{2}}{{u}_{1}}\right) }_{1} = \frac{{u}_{21}}{{u}_{11}} = \frac{{\beta }_{1} - 8}{3} = {0.4142},\;{\mu }_{2} = {\left( \frac{{u}_{2}}{{u}_{1}}\right) }_{2} = \frac{{u}_{22}}{{u}_{12}} = \frac{{\beta }_{2} - 8}{3} =  - {2.4142}.
+\]</div>
+<p>以第一元素为单位进行归一化的模态向量为</p>
+<div class="arithmatex">\[
+\{ u{\} }_{1} = \left\{  \begin{matrix} 1 \\  {0.4142} \end{matrix}\right\}  ,\;\{ u{\} }_{2} = \left\{  \begin{matrix} 1 \\   - {2.4142} \end{matrix}\right\}  .
+\]</div>
+<p>可以看出</p>
+<div class="arithmatex">\[
+\frac{{u}_{21}}{{u}_{11}} = \tan {\gamma }_{1} = {0.4142},\;{\gamma }_{1} = {22.5}^{0},
+\]</div>
+<div class="arithmatex">\[
+\frac{{u}_{22}}{{u}_{12}} = \tan {\gamma }_{2} =  - {2.4142},\;{\gamma }_{2} = {112.5}^{0} = {\gamma }_{1} + {90}^{0}.
+\]</div>
+<p>质量<span class="arithmatex">\(m\)</span>在固有振型中作单向运动。模态向量<span class="arithmatex">\(\{ u{\} }_{1}^{\mathrm{T}}\{ u{\} }_{2} = 0\)</span>正交。第一阶振型的运动方向为方向1，与垂直方向成<span class="arithmatex">\({22.5}^{0}\)</span>角。第二阶振型的运动方向为方向2，与方向1垂直，夹角为<span class="arithmatex">\({122.5}^{0}\)</span>。这是因为模态坐标下的运动沿主柔度(principal flexibilities)方向进行。</p>
+<p>柔度矩阵</p>
+<div class="arithmatex">\[
+\left\lbrack  \delta \right\rbrack   = \frac{{\ell }^{3}}{6EI}\left\lbrack  \begin{array}{ll} 8 &amp; 3 \\  3 &amp; 2 \end{array}\right\rbrack
+\]</div>
+<p>表示在质量作用点处，位移分量<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>与作用力分量<span class="arithmatex">\({f}_{y}\)</span>和<span class="arithmatex">\({f}_{z}\)</span>之间的位移-力关系</p>
+<div class="arithmatex">\[
+\left\{  \begin{array}{l} y \\  z \end{array}\right\}   = \left\lbrack  \begin{array}{ll} {\delta }_{yy} &amp; {\delta }_{yz} \\  {\delta }_{zy} &amp; {\delta }_{zz} \end{array}\right\rbrack  \left\{  \begin{array}{l} {f}_{y} \\  {f}_{z} \end{array}\right\}  .
+\]</div>
+<p>考虑参考坐标系<span class="arithmatex">\({y}^{ * }O{z}^{ * }\)</span>相对于坐标系<span class="arithmatex">\({yOz}\)</span>旋转角度<span class="arithmatex">\(\gamma\)</span>。位移的变换可写为</p>
+<div class="arithmatex">\[
+\left\{  \begin{array}{l} {y}^{ * } \\  {z}^{ * } \end{array}\right\}   = \left\lbrack  \begin{matrix} \cos \gamma &amp; \sin \gamma \\   - \sin \gamma &amp; \cos \gamma  \end{matrix}\right\rbrack  \left\{  \begin{array}{l} y \\  z \end{array}\right\}
+\]</div>
+<p>力的变换定义为</p>
+<div class="arithmatex">\[
+\left\{  \begin{array}{l} {f}_{y}^{ * } \\  {f}_{z}^{ * } \end{array}\right\}   = \left\lbrack  \begin{matrix} \cos \gamma &amp; \sin \gamma \\   - \sin \gamma &amp; \cos \gamma  \end{matrix}\right\rbrack  \left\{  \begin{array}{l} {f}_{y} \\  {f}_{z} \end{array}\right\}  .
+\]</div>
+<p>新的位移-力关系为</p>
+<div class="arithmatex">\[
+\left\{  \begin{array}{l} {y}^{ * } \\  {z}^{ * } \end{array}\right\}   = \left\lbrack  {\delta }^{ * }\right\rbrack  \left\{  \begin{array}{l} {f}_{y}^{ * } \\  {f}_{z}^{ * } \end{array}\right\}
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+\left\lbrack  {\delta }^{ * }\right\rbrack   = \left\lbrack  \begin{matrix} c &amp; s \\   - s &amp; c \end{matrix}\right\rbrack  \left\lbrack  \delta \right\rbrack  \left\lbrack  \begin{matrix} c &amp;  - s \\  s &amp; c \end{matrix}\right\rbrack
+\]</div>
+<p>与<span class="arithmatex">\(c = \cos \gamma\)</span>和<span class="arithmatex">\(s = \sin \gamma\)</span>。</p>
+<p>旋转参考系中的柔度矩阵(flexibility matrix)为</p>
+<div class="arithmatex">\[
+\left\lbrack  {\delta }^{ * }\right\rbrack   = \left\lbrack  \begin{matrix} {\delta }_{yy}{c}^{2} + {\delta }_{zz}{s}^{2} + 2{\delta }_{yz}{cs} &amp; \left( {{\delta }_{zz} - {\delta }_{yy}}\right) {sc} + {\delta }_{yz}\left( {{c}^{2} - {s}^{2}}\right) \\  \left( {{\delta }_{zz} - {\delta }_{yy}}\right) {sc} + {\delta }_{yz}\left( {{c}^{2} - {s}^{2}}\right) &amp; {\delta }_{yy}{s}^{2} + {\delta }_{zz}{c}^{2} - 2{\delta }_{yz}{cs} \end{matrix}\right\rbrack  .
+\]</div>
+<p>可以看出，存在两个角度<span class="arithmatex">\({\gamma }^{ * }\)</span>使非对角元素为零，其表达式为</p>
+<div class="arithmatex">\[
+\tan 2{\gamma }^{ * } = \frac{2{\delta }_{yz}}{{\delta }_{yy} - {\delta }_{zz}} = \frac{2 \cdot  3}{8 - 2} = 1,\;{\gamma }_{1}^{ * } = {22.5}^{0},\;{\gamma }_{2}^{ * } = {112.5}^{0}.
+\]</div>
+<p>这两个解<span class="arithmatex">\({\gamma }_{1}^{ * }\)</span>和<span class="arithmatex">\({\gamma }_{2}^{ * }\)</span>定义了柔度的主方向(principal directions of flexibility)。将这些角度代入对角元素表达式，我们得到主柔度(principal flexibilities)</p>
+<div class="arithmatex">\[
+{\delta }_{1,2} = \frac{{\delta }_{yy} + {\delta }_{zz}}{2} \pm  \sqrt{{\left( \frac{{\delta }_{yy} - {\delta }_{zz}}{2}\right) }^{2} + {\delta }_{yz}^{2}} = \frac{5 \pm  3\sqrt{2}}{6}\frac{{\ell }^{3}}{EI},
+\]</div>
+<div class="arithmatex">\[
+{\delta }_{1} = {1.5404}\frac{{\ell }^{3}}{EI},\;{\delta }_{2} = {0.1262}\frac{{\ell }^{3}}{EI}.
+\]</div>
+<p>其含义显而易见。沿1(或2)方向施加的力仅产生沿1(或2)方向的挠度。柔度的主方向与固有振动模态(principal modes of vibration)中的振动方向一致。</p>
+<p>固有频率(natural frequencies)由下式给出</p>
+<div class="arithmatex">\[
+{\omega }_{1} = \sqrt{\frac{1}{m{\delta }_{1}}} = \frac{1}{\sqrt{1.5404}}\sqrt{\frac{EI}{m{\ell }^{3}}} = {0.805}\sqrt{\frac{EI}{m{\ell }^{3}}},
+\]</div>
+<div class="arithmatex">\[
+{\omega }_{2} = \sqrt{\frac{1}{m{\delta }_{2}}} = \frac{1}{\sqrt{0.1262}}\sqrt{\frac{EI}{m{\ell }^{3}}} = {2.815}\sqrt{\frac{EI}{m{\ell }^{3}}}.
+\]</div>
+<p>b) 为确定对速度<span class="arithmatex">\(v\)</span>的竖向脉冲的自由响应，首先计算模态质量(modal masses)</p>
+<div class="arithmatex">\[
+{M}_{1} = m\left( {{u}_{11}^{2} + {u}_{21}^{2}}\right)  = m\left( {1 + {0.4142}^{2}}\right)  = {1.1716m},
+\]</div>
+<div class="arithmatex">\[
+{M}_{2} = m\left( {{u}_{12}^{2} + {u}_{22}^{2}}\right)  = m\left( {1 + {2.4142}^{2}}\right)  = {6.8284m}.
+\]</div>
+<p>初始条件为</p>
+<div class="arithmatex">\[
+\{ x\left( 0\right) \}  = \left\{  \begin{array}{l} 0 \\  0 \end{array}\right\}  ,\{ \dot{x}\left( 0\right) \}  = \left\{  \begin{array}{l} v \\  0 \end{array}\right\}  .
+\]</div>
+<p>由(4.93)和(4.96)可得</p>
+<div class="arithmatex">\[
+\cos {\varphi }_{1} = 0,\;\cos {\varphi }_{2} = 0,
+\]</div>
+<div class="arithmatex">\[
+{C}_{1}\sin {\varphi }_{1} = \frac{mv}{{\omega }_{1}{M}_{1}},\;{C}_{2}\sin {\varphi }_{2} = \frac{mv}{{\omega }_{2}{M}_{2}}.
+\]</div>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_135_305_649_1109_443_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_135_305_649_1109_443_0.jpg" /></p>
+<p>图4.18</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_135_583_1197_465_366_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_135_583_1197_465_366_0.jpg" /></p>
+<p>图4.19</p>
+<p>瞬时位移的竖向分量为</p>
+<div class="arithmatex">\[
+y\left( t\right)  = {C}_{1}\cos \left( {{\omega }_{1}t - {\varphi }_{1}}\right) {u}_{11} + {C}_{2}\cos \left( {{\omega }_{2}t - {\varphi }_{2}}\right) {u}_{12},
+\]</div>
+<div class="arithmatex">\[
+y\left( t\right)  = \frac{mv}{{\omega }_{1}{M}_{1}}\sin {\omega }_{1}t + \frac{mv}{{\omega }_{2}{M}_{2}}\sin {\omega }_{2}t,
+\]</div>
+<div class="arithmatex">\[
+y\left( t\right)  = C\left( {{1.0593}\sin {\omega }_{1}t + {0.0520}\sin {\omega }_{2}t}\right) ,
+\]</div>
+<div class="arithmatex">\[
+C = v\sqrt{\frac{m{\ell }^{3}}{EI}},{\omega }_{1} = {0.805v}/C,{\omega }_{2} = {2.815v}/C.
+\]</div>
+<p>瞬时位移的水平分量为</p>
+<div class="arithmatex">\[
+z\left( t\right)  = {C}_{1}\cos \left( {{\omega }_{1}t - {\varphi }_{1}}\right) {u}_{21} + {C}_{2}\cos \left( {{\omega }_{2}t - {\varphi }_{2}}\right) {u}_{22},
+\]</div>
+<div class="arithmatex">\[
+z\left( t\right)  = \frac{mv}{{\omega }_{1}{M}_{1}}{u}_{21}\sin {\omega }_{1}t + \frac{mv}{{\omega }_{2}{M}_{2}}{u}_{22}\sin {\omega }_{2}t,
+\]</div>
+<div class="arithmatex">\[
+z\left( t\right)  = C\left( {{0.4387}\sin {\omega }_{1}t - {0.1256}\sin {\omega }_{2}t}\right) .
+\]</div>
+<p>质量<span class="arithmatex">\(m\)</span>的轨迹绘制于图4.18，<span class="arithmatex">\(a\)</span>对应时间持续<span class="arithmatex">\({2\pi }/{\omega }_{1}\)</span>，<span class="arithmatex">\(b\)</span>对应<span class="arithmatex">\({4\pi }/{\omega }_{1}\)</span>。两个分量<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>随时间变化绘制于图4.19。可见水平分量近似为简谐振动，第二分量幅值相对较小。</p>
+<h4 id="matlab-demo">Matlab Demo</h4>
+<p>简单写了一个例题的示例代码</p>
+<p><img alt="图片1" src="../images/vibration20%E5%9B%BE1.png" />
+<img alt="图片2" src="../images/vibration20%E5%9B%BE2.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c">%% 1. 初始化环境</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">clear</span><span class="p">;</span><span class="w">      </span><span class="c">% 清除工作区变量</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">clc</span><span class="p">;</span><span class="w">        </span><span class="c">% 清除命令行窗口</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">close</span><span class="w"> </span><span class="nb">all</span><span class="p">;</span><span class="w">  </span><span class="c">% 关闭所有已打开的图像窗口</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c">%% 2. 定义系统参数 (源自教材方程)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c">% y(t)/C = 1.0593*sin(w1*t) + 0.0520*sin(w2*t)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c">% z(t)/C = 0.4387*sin(w1*t) - 0.1256*sin(w2*t)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c">% 无量纲化的固有频率</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">w1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">0.8057</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">w2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">2.8146</span><span class="p">;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c">% 定义y(t)和z(t)方程中的系数</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">y_coeffs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1.0593</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0520</span><span class="p">];</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">z_coeffs</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0.4387</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.1256</span><span class="p">];</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c">%% 3. 设置时间向量</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">T1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">pi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">w1</span><span class="p">;</span><span class="w"> </span><span class="c">% 约 7.7989秒</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="n">t_short</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">T1</span><span class="p">,</span><span class="w"> </span><span class="mi">1500</span><span class="p">);</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">t_long</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">3000</span><span class="p">);</span><span class="w"> </span><span class="c">% 时间上限为16秒</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c">%% 4. 根据方程计算位移</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="c">% --- 计算原始位移 ---</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="n">y_calc_short</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">y_coeffs</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">w1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t_short</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y_coeffs</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">w2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t_short</span><span class="p">);</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">z_calc_short_orig</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">z_coeffs</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">w1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t_short</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z_coeffs</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">w2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t_short</span><span class="p">);</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">y_calc_long</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">y_coeffs</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">w1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t_long</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y_coeffs</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">w2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t_long</span><span class="p">);</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="n">z_calc_long_orig</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">z_coeffs</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">w1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t_long</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z_coeffs</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="n">w2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t_long</span><span class="p">);</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c">% *** 物理方向修正 ***:</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c">% 初始的向下(+y)冲击会使结构向左(-z)偏转。原始方程计算出的z初始方向</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="c">% 为微弱正向，与物理不符。因此乘以-1进行修正。</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="n">z_calc_short</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">z_calc_short_orig</span><span class="p">;</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="n">z_calc_long</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">z_calc_long_orig</span><span class="p">;</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="c">%% 5. 绘图部分</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="c">% --- 绘制图4.18: 运动轨迹 ---</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="nb">figure</span><span class="p">(</span><span class="s">&#39;Name&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;图4.18: 运动轨迹 (最终修正版)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NumberTitle&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;off&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="c">% 子图 (a): 一个周期内的轨迹</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="nb">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="nb">plot</span><span class="p">(</span><span class="n">z_calc_short</span><span class="p">,</span><span class="w"> </span><span class="n">y_calc_short</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="n">grid</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"> </span><span class="n">axis</span><span class="w"> </span><span class="s">equal</span><span class="p">;</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="nb">title</span><span class="p">(</span><span class="s">&#39;a)&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;z&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;y&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="nb">xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">]);</span><span class="w"> </span><span class="nb">ylim</span><span class="p">([</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">]);</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="nb">set</span><span class="p">(</span><span class="nb">gca</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;XTick&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.8</span><span class="p">:</span><span class="mf">0.2</span><span class="p">:</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;YTick&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mf">1.5</span><span class="p">);</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="c">% 子图 (b): 16秒内的轨迹</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="nb">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="nb">plot</span><span class="p">(</span><span class="n">z_calc_long</span><span class="p">,</span><span class="w"> </span><span class="n">y_calc_long</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="n">grid</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"> </span><span class="n">axis</span><span class="w"> </span><span class="s">equal</span><span class="p">;</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="nb">title</span><span class="p">(</span><span class="s">&#39;b)&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;z&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;y&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="nb">xlim</span><span class="p">([</span><span class="o">-</span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">]);</span><span class="w"> </span><span class="nb">ylim</span><span class="p">([</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">]);</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="nb">set</span><span class="p">(</span><span class="nb">gca</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;XTick&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">0.8</span><span class="p">:</span><span class="mf">0.2</span><span class="p">:</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;YTick&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mf">1.5</span><span class="p">);</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="nb">sgtitle</span><span class="p">(</span><span class="s">&#39;图4.18&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="c">% --- 绘制图4.19: 位移时程图 ---</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="nb">figure</span><span class="p">(</span><span class="s">&#39;Name&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;图4.19: 位移时程图 (最终修正版)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;NumberTitle&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;off&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="c">% 上方子图 (y -&gt; 复杂波形 -&gt; 修正后的z_calc_long)</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="nb">plot</span><span class="p">(</span><span class="n">t_long</span><span class="p">,</span><span class="w"> </span><span class="n">z_calc_long</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;r-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">);</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="n">grid</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"> </span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;y&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="nb">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">]);</span><span class="w"> </span><span class="nb">ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]);</span><span class="w">     </span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="nb">set</span><span class="p">(</span><span class="nb">gca</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;XTick&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;YTick&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mf">0.5</span><span class="p">:</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="c">% 下方子图 (z -&gt; 简单波形 -&gt; y_calc_long)</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="nb">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="nb">plot</span><span class="p">(</span><span class="n">t_long</span><span class="p">,</span><span class="w"> </span><span class="n">y_calc_long</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;b-&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;LineWidth&#39;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">);</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="n">grid</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"> </span><span class="nb">title</span><span class="p">(</span><span class="s">&#39;&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="nb">xlabel</span><span class="p">(</span><span class="s">&#39;time&#39;</span><span class="p">);</span><span class="w"> </span><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;z&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="nb">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">]);</span><span class="w"> </span><span class="nb">ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]);</span><span class="w">     </span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="nb">set</span><span class="p">(</span><span class="nb">gca</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;XTick&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;YTick&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="nb">sgtitle</span><span class="p">(</span><span class="s">&#39;图4.19&#39;</span><span class="p">);</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Giscus 评论系统 -->
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../vibration19/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 第19篇">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                第19篇
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
