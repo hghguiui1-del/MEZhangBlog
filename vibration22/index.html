@@ -1,0 +1,1612 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="洒家的动力学笔记">
+      
+      
+        <meta name="author" content="MEZhang">
+      
+      
+        <link rel="canonical" href="https://mezhangblog.github.io/MechanicalVibration/vibration22/">
+      
+      
+        <link rel="prev" href="../vibration21/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>第22篇 - 洒家的动力学笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/comments.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#5" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="洒家的动力学笔记" class="md-header__button md-logo" aria-label="洒家的动力学笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            洒家的动力学笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第22篇
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../vibration01/" class="md-tabs__link">
+          
+  
+  
+  机械振动
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  学习笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="洒家的动力学笔记" class="md-nav__button md-logo" aria-label="洒家的动力学笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    洒家的动力学笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    机械振动
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            机械振动
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第1篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第2篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第3篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第4篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第5篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第6篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第7篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第8篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第9篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第10篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第11篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第12篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第13篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第14篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第15篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第16篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第17篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第18篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第19篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第20篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第21篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    学习笔记
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            学习笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第22篇
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第22篇
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 多自由度系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 多自由度系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-lumped-mass-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 集中质量系统Lumped Mass Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 集中质量系统Lumped Mass Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1 带集中质量的梁
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.1 带集中质量的梁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5111" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1.1 线位移
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5112" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1.2 线位移与角位移
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5113-flexibility-coefficients" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1.3 柔度系数(Flexibility Coefficients)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      例5.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例5.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5114-dunkerleys-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1.4 邓克利公式(Dunkerley's Formula)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      例5.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例5.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5115-rayleighs-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1.5 瑞利公式(Rayleigh's Formula)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例5.3
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 多自由度系统
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 多自由度系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-lumped-mass-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 集中质量系统Lumped Mass Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 集中质量系统Lumped Mass Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1 带集中质量的梁
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.1 带集中质量的梁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5111" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1.1 线位移
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5112" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1.2 线位移与角位移
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5113-flexibility-coefficients" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1.3 柔度系数(Flexibility Coefficients)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      例5.1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例5.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5114-dunkerleys-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1.4 邓克利公式(Dunkerley's Formula)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      例5.2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例5.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5115-rayleighs-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1.5 瑞利公式(Rayleigh's Formula)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例5.3
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>第22篇</h1>
+
+<h2 id="5">5. 多自由度系统</h2>
+<p>上一章将两自由度系统视为多自由度系统(multi-degree-of-freedom systems)的最简情形并予以介绍。若系统在任何时刻的构形均可由<span class="arithmatex">\(n\)</span>个独立坐标描述，则该系统具有<span class="arithmatex">\(n\)</span>个自由度。通常，在构形空间中，坐标为直线平移和转动，但也可使用速度和加速度。</p>
+<p>具有有限自由度的系统称为离散系统(discrete systems)。工程实践中，通常用有限个坐标来描述连续系统的振动。离散系统的每个元素本身仍是连续系统，但其最低阶固有频率远高于理想化离散系统的相应频率。</p>
+<p>最简单的方法是采用集中参数系统(lumped parameter systems)，由集中质量或圆盘、弹簧和阻尼器组成。其动态特性由标量定义。各元素可用刚度矩阵和阻尼矩阵描述，这些矩阵将端部力与元素两端的位移和速度联系起来。</p>
+<p>另一种离散化技术是有限元法(finite element method)，可视为瑞利-里兹法(Rayleigh-Ritz method)。它通过有限个形函数(shape functions)与待定系数的乘积级数，近似求解无已知封闭解的微分特征值问题。在有限元法中，形函数为局部低次多项式，系数为节点位移，其取值使系统的瑞利商(Rayleigh quotient)取驻值。对每种元素类型定义单元矩阵，可组装成整体质量、刚度和阻尼矩阵。</p>
+<p>获得整体矩阵后，可写出运动方程。假设同步谐波解，方程转化为齐次代数方程组，等价于代数特征值问题。求解该特征值问题可得固有频率及相应的模态振型(mode shapes)。也可通过最小化瑞利商求得固有频率。</p>
+<p>离散系统的动态响应可用联立常微分方程描述。若选取合适的坐标——主坐标或模态坐标(principal or modal coordinates)，方程可解耦并独立求解。模态坐标是实际位移的线性组合。反之，运动也可视为由各模态坐标定义的自然模态振动的叠加。自然模态下的振动在所有系统坐标上同步且呈谐波形式。</p>
+<p>有限自由度系统会同时以若干自然模态振动，其数量与自由度相同。只有在特定初始条件或外力组合下，系统才会仅以单一模态振动。然而，在阻尼系统中，自由振动主要由少数低阶模态主导，有时仅由最低阶模态主导；而受迫振动可表示为在关注频率范围内发生共振的模态之和，再加上因频率低于或高于工作范围而产生的残余项。</p>
+<p>本章讨论的低阶离散系统与下一章讨论的高阶离散系统之间并无本质区别，只是后者求解特征值问题需要更高效的计算方法。</p>
+<h3 id="51-lumped-mass-systems">5.1 集中质量系统Lumped Mass Systems</h3>
+<p>由杆、轴或梁等一维构件组成的系统，可用由集中质量通过无质量弹性元件连接的简化系统建模。构件的分布质量被集中到任意选定的离散点上，而不考虑沿构件的振幅变化。</p>
+<h4 id="511">5.1.1 带集中质量的梁</h4>
+<p>带集中质量的梁可仅具有线横向位移的点质量，或同时具有平移和转动自由度的刚性圆盘。</p>
+<h5 id="5111">5.1.1.1 线位移</h5>
+<p>图5.1给出了表示均匀梁单元的两种常用方式。Duncan模型(图5.1，<span class="arithmatex">\(b\)</span>)将所有质量集中于重心。Rayleigh模型(图5.1，<span class="arithmatex">\(c\)</span>)将每段质量的一半置于两端。图中<span class="arithmatex">\({m}_{0} = {\rho A}\)</span>为单位长度质量，其中<span class="arithmatex">\(\rho\)</span>为质量密度，<span class="arithmatex">\(A\)</span>为横截面积。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_180_431_562_805_499_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_180_431_562_805_499_0.jpg" />
+图5.1</p>
+<p>比较两种模型可见，Duncan模型忽略了绕中点的转动惯量，而Rayleigh模型则考虑了<span class="arithmatex">\(2\frac{{m}_{0}\ell }{2}{\left( \frac{\ell }{2}\right) }^{2} \neq  0\)</span>。因此，采用Duncan模型集中质量通常得到较高的固有频率，而Rayleigh模型得到较低的固有频率。随着单元数量增加，两种模型计算出的频率差异减小。</p>
+<p>对于阶梯梁，Rayleigh模型还具有优势:当梁的弯曲刚度<span class="arithmatex">\({EI}\)</span>在单元端部发生变化时，该集中质量模型可保持各段截面恒定。</p>
+<p>通过两个示例可以说明使用瑞利(Rayleigh)模型计算所得固有频率值之间的差异。</p>
+<p>当图5.2中的简支梁<span class="arithmatex">\(a\)</span>被划分为两段时(图5.2, b)，其固有频率与具有分布质量的梁的真实值(6.14)之比为<span class="arithmatex">\({\omega }_{1}/{\omega }_{10} = {0.995}\)</span>。当梁被划分为四段时(图5.2,<span class="arithmatex">\(c\)</span>)，所得三自由度系统的固有频率分别为<span class="arithmatex">\({\omega }_{1}/{\omega }_{10} = {0.98},{\omega }_{2}/{\omega }_{20} = {0.995}\)</span>和<span class="arithmatex">\({\omega }_{3}/{\omega }_{30} = {0.995}\)</span>。</p>
+<p>对于图5.3所示的悬臂梁，<span class="arithmatex">\(a\)</span>该近似值偏低。对于单段模型(图5.3，b)，固有频率与真实值(6.16)之比为<span class="arithmatex">\({\omega }_{1}/{\omega }_{10} = {0.7}\)</span>。当梁被分为两段时(图5.3，<span class="arithmatex">\(c\)</span>)，第一阶固有频率之比为<span class="arithmatex">\({\omega }_{1}/{\omega }_{10} = {0.9}\)</span>。当梁被分为三段时(图5.2，d)，第一阶固有频率之比为<span class="arithmatex">\({\omega }_{1}/{\omega }_{10} = {0.95}\)</span></p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_181_335_605_993_620_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_181_335_605_993_620_0.jpg" /></p>
+<h5 id="5112">5.1.1.2 线位移与角位移</h5>
+<p>图5.1<span class="arithmatex">\(d\)</span>展示了Duncan模型(邓肯模型)的扩展，其中梁单元的质量与质量惯性矩集中于中点。</p>
+<p>对于均质梁单元，总质量为</p>
+<div class="arithmatex">\[
+m = {\rho A}\ell  = {m}_{0}\ell , \tag{5.1}
+\]</div>
+<p>总质量惯性矩为</p>
+<div class="arithmatex">\[
+J = \frac{{m}_{0}{\ell }^{3}}{12} + {m}_{0}\ell \frac{I}{A} = \frac{{\rho A}{\ell }^{3}}{12} + \rho \ell I \tag{5.2}
+\]</div>
+<p>其中<span class="arithmatex">\(I\)</span>为截面二次矩(cross-section second moment of area)。</p>
+<p>对于直径为<span class="arithmatex">\(d\)</span>、长度为<span class="arithmatex">\(\ell\)</span>的圆柱形梁单元</p>
+<div class="arithmatex">\[
+J = \frac{{m}_{0}\ell }{12}\left( {\frac{3{d}^{2}}{4} + {\ell }^{2}}\right) . \tag{5.3}
+\]</div>
+<p>总质量惯性矩由两部分组成。第一部分<span class="arithmatex">\(m{\ell }^{2}/{12}\)</span>源于单元质量沿梁长度方向分布于中性轴层面。第二部分，即“转动惯量”<span class="arithmatex">\(\rho \ell I\)</span>，源于梁质量同时分布于远离梁中性轴的位置。该部分仅由旋转激发，而非由平移激发。</p>
+<p>在瑞利模型(Rayleigh's model)的扩展中(图5.1，e)，一半质量和一个负的质量惯性矩被集中到左右两端。通过这种分布，质量和对中点的总质量惯性矩的守恒均得到满足。可利用平行轴的惠更斯-施泰纳定理(Huygens-Steiner theorem)计算后者以验证这一点。</p>
+<div class="arithmatex">\[
+J = 2\left( {\frac{{m}_{0}\ell }{2}\frac{{\ell }^{2}}{4} - \frac{{m}_{0}{\ell }^{3}}{12}}\right)  = \frac{{m}_{0}{\ell }^{3}}{12}.
+\]</div>
+<p>上述区分在有限元分析(finite element analysis)中至关重要。常用的两种对角集中质量矩阵(diagonal lumped-mass matrices)包括:用于平移惯性(translational inertia)的单元质量矩阵(element mass matrix)</p>
+<div class="arithmatex">\[
+\left\lbrack  {m}_{t}^{e}\right\rbrack   = {m}_{0}\ell \left\lbrack  \begin{matrix} 1/2 &amp; 0 &amp; 0 &amp; 0 \\  0 &amp;  - {\ell }^{2}/{12} &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 1/2 &amp; 0 \\  0 &amp; 0 &amp; 0 &amp;  - {\ell }^{2}/{12} \end{matrix}\right\rbrack   \tag{5.4}
+\]</div>
+<p>以及一个考虑转动惯量(rotatory inertia)的单元质量矩阵</p>
+<div class="arithmatex">\[
+\left\lbrack  {m}_{r}^{e}\right\rbrack   = {m}_{0}\ell \left\lbrack  \begin{matrix} 0 &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; {i}^{2} &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; {i}^{2} \end{matrix}\right\rbrack  , \tag{5.5}
+\]</div>
+<p>其中<span class="arithmatex">\(i = \sqrt{I/A}\)</span>。</p>
+<h5 id="5113-flexibility-coefficients">5.1.1.3 柔度系数(Flexibility Coefficients)</h5>
+<p>如第4.3节所示，对于具有集中质量的弯曲系统，使用柔度系数(flexibility coefficients)而非刚度(stiffnesses)来书写运动方程更为简便。</p>
+<p>若将集中质量的线位移作为定义系统运动的坐标，则质量位移向量<span class="arithmatex">\(\{ y\}\)</span>与作用于集中质量的力向量<span class="arithmatex">\(\{ f\}\)</span>通过柔度矩阵<span class="arithmatex">\(\left\lbrack  \delta \right\rbrack\)</span>按方程(4.78)关联</p>
+<div class="arithmatex">\[
+\{ y\}  = \left\lbrack  \delta \right\rbrack  \{ f\} . \tag{5.6}
+\]</div>
+<p>自由振动的运动方程(4.82)可写为</p>
+<div class="arithmatex">\[
+\left\lbrack  \delta \right\rbrack  \left\lbrack  m\right\rbrack  \{ \ddot{y}\}  + \{ y\}  = \{ 0\} . \tag{5.7}
+\]</div>
+<p>对应的特征值问题(4.85)为</p>
+<div class="arithmatex">\[
+\left( {\left\lbrack  \delta \right\rbrack  \left\lbrack  m\right\rbrack   - \frac{1}{{\omega }^{2}}\left\lbrack  I\right\rbrack  }\right) \{ a\}  = \{ 0\} . \tag{5.8}
+\]</div>
+<p>存在非平凡解的条件给出频率方程</p>
+<div class="arithmatex">\[
+\det \left( {\left\lbrack  \delta \right\rbrack  \left\lbrack  m\right\rbrack   - \frac{1}{{\omega }^{2}}\left\lbrack  I\right\rbrack  }\right)  = 0 \tag{5.9}
+\]</div>
+<p>其解即为系统的固有频率<span class="arithmatex">\({\omega }_{r}\)</span></p>
+<p>模态形状由满足齐次线性方程组的模态向量<span class="arithmatex">\(\{ a{\} }_{r}\)</span>定义</p>
+<div class="arithmatex">\[
+\left( {\left\lbrack  \delta \right\rbrack  \left\lbrack  m\right\rbrack   - \frac{1}{{\omega }_{r}^{2}}\left\lbrack  I\right\rbrack  }\right) \{ a{\} }_{r} = \{ 0\} . \tag{5.10}
+\]</div>
+<h2 id="51">例5.1</h2>
+<p>计算图5.4所示三质量梁的横向振动固有频率，<span class="arithmatex">\(a\)</span>，其中<span class="arithmatex">\({EI} =\)</span>为常数</p>
+<p>解:参照图5.4，<span class="arithmatex">\(b\)</span>，距右端<span class="arithmatex">\(b\)</span>处作用集中载荷<span class="arithmatex">\(F\)</span>时，任意点<span class="arithmatex">\(x\)</span>的挠度可由方程确定</p>
+<div class="arithmatex">\[
+v\left( x\right)  = \frac{Fbx}{{6EI}\ell }\left( {{\ell }^{2} - {x}^{2} - {b}^{2}}\right) .
+\]</div>
+<p>柔度系数为</p>
+<div class="arithmatex">\[
+{\delta }_{ij} = \frac{{b}_{j}{x}_{i}}{{6EI}\ell }\left( {{\ell }^{2} - {x}_{i}^{2} - {b}_{j}^{2}}\right) .
+\]</div>
+<p>由于<span class="arithmatex">\({x}_{1} = {b}_{3} = \ell /4,{x}_{2} = {b}_{2} = \ell /2,{x}_{3} = {b}_{1} = 3\ell /4\)</span>，柔度矩阵为</p>
+<div class="arithmatex">\[
+\left\lbrack  \delta \right\rbrack   = \frac{{\ell }^{3}}{768EI}\left\lbrack  \begin{matrix} 9 &amp; {11} &amp; 7 \\  {11} &amp; {16} &amp; {11} \\  7 &amp; {11} &amp; 9 \end{matrix}\right\rbrack   \tag{5.11}
+\]</div>
+<p>方程(5.8)可写为</p>
+<div class="arithmatex">\[
+\left\lbrack  \begin{matrix} 9 &amp; {11} &amp; 7 \\  {11} &amp; {16} &amp; {11} \\  7 &amp; {11} &amp; 9 \end{matrix}\right\rbrack  \left\{  \begin{array}{l} {a}_{1} \\  {a}_{2} \\  {a}_{3} \end{array}\right\}   = \lambda \left\{  \begin{array}{l} {a}_{1} \\  {a}_{2} \\  {a}_{3} \end{array}\right\}
+\]</div>
+<p>其中</p>
+<div class="arithmatex">\[
+\lambda  = {768EI}/m{\ell }^{3}{\omega }^{2}.
+\]</div>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_184_891_757_475_495_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_184_891_757_475_495_0.jpg" /></p>
+<p>图5.5</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_184_352_822_425_354_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_184_352_822_425_354_0.jpg" /></p>
+<p>图5.4</p>
+<p>频率方程为</p>
+<div class="arithmatex">\[
+{\lambda }^{3} - {34}{\lambda }^{2} + {78\lambda } - {28} = 0
+\]</div>
+<p>带根</p>
+<div class="arithmatex">\[
+{\lambda }_{1} = {31.5563},\;{\lambda }_{2} = 2,\;{\lambda }_{3} = {0.4436}.
+\]</div>
+<p>固有频率(natural frequencies)为</p>
+<div class="arithmatex">\[
+{\omega }_{1} = {4.933}\sqrt{{EI}/m{\ell }^{3}},{\omega }_{2} = {19.596}\sqrt{{EI}/m{\ell }^{3}},{\omega }_{3} = {41.606}\sqrt{{EI}/m{\ell }^{3}}.
+\]</div>
+<p>模态向量(modal vectors)为</p>
+<div class="arithmatex">\[
+\{ a{\} }_{1} = \left\{  \begin{matrix} 1 \\  {1.4142} \\  1 \end{matrix}\right\}  ,\{ a{\} }_{2} = \left\{  \begin{matrix} 1 \\  0 \\   - 1 \end{matrix}\right\}  ,\{ a{\} }_{3} = \left\{  \begin{matrix} 1 \\   - {1.4142} \\  1 \end{matrix}\right\}  .
+\]</div>
+<h5 id="5114-dunkerleys-formula">5.1.1.4 邓克利公式(Dunkerley's Formula)</h5>
+<p>对许多振动系统而言，第二阶及以上模态的固有频率往往远高于基模的固有频率。这一事实使得可用简单公式估算基频。</p>
+<p>若</p>
+<div class="arithmatex">\[
+{\alpha }_{0}{\lambda }^{n} + {\alpha }_{1}{\lambda }^{n - 1} + \ldots  + {\alpha }_{n - 1}\lambda  + {\alpha }_{n} = 0
+\]</div>
+<p>为一代数方程，则其根之和为</p>
+<div class="arithmatex">\[
+\mathop{\sum }\limits_{{i = 1}}^{n}{\lambda }_{i} =  - \frac{{\alpha }_{1}}{{\alpha }_{0}}.
+\]</div>
+<p>考虑频率方程(5.9)，可写出</p>
+<div class="arithmatex">\[
+\mathop{\sum }\limits_{{i = 1}}^{n}\frac{1}{{\omega }_{i}^{2}} =  - \frac{{\alpha }_{1}}{{\alpha }_{0}} = \mathop{\sum }\limits_{{i = 1}}^{n}{\delta }_{ii}{m}_{i} = \mathop{\sum }\limits_{{i = 1}}^{n}\frac{1}{{\omega }_{ii}^{2}},
+\]</div>
+<p>其中<span class="arithmatex">\({\omega }_{ii}^{2}\)</span>为仅含质量<span class="arithmatex">\({m}_{i}\)</span>的“孤立”系统的固有频率平方。该频率基于孤立单质量系统的精确挠度曲线计算，其构型与分析系统相同，但已去除其余质量。</p>
+<p>由于<span class="arithmatex">\({\omega }_{1} &lt; {\omega }_{2} &lt; \ldots  &lt; {\omega }_{n}\)</span>，在近似确定基频时可略去第一求和项中除第一项外的所有项</p>
+<div class="arithmatex">\[
+\frac{1}{{\omega }_{1}^{2}} \cong  \mathop{\sum }\limits_{{i = 1}}^{n}\frac{1}{{\omega }_{i}^{2}} = \mathop{\sum }\limits_{{i = 1}}^{n}\frac{1}{{\omega }_{ii}^{2}}
+\]</div>
+<p>或</p>
+<div class="arithmatex">\[
+\frac{1}{{\omega }_{1}^{2}} \cong  \frac{1}{{\omega }_{11}^{2}} + \frac{1}{{\omega }_{22}^{2}} + \frac{1}{{\omega }_{33}^{2}} + \ldots  \tag{5.12}
+\]</div>
+<p>于是，基频平方的倒数可通过将各孤立频率平方的倒数相加得到。式(5.12)称为邓克利公式(Dunkerley's formula)。该公式由S. Dunkerley于1895年通过实验发现并发表，后由R. V. Southwell于1921年从理论上加以证明。</p>
+<p>它无需求解相关特征值问题即可估算系统的基频。该公式仅适用于接地系统，即不能用于自由-自由系统。一般而言，它给出的基频估计值偏低。</p>
+<p>对于图5.3所示悬臂梁，<span class="arithmatex">\(a\)</span>基频(6.16)的真值为<span class="arithmatex">\({\omega }_{10} = {3.52}\sqrt{{EI}/m{\ell }^{3}}\)</span>。若模型仅取一段(图<span class="arithmatex">\({5.3}, b)\)</span>)，最低固有频率为<span class="arithmatex">\({\omega }_{1} = {2.44}\sqrt{{EI}/m{\ell }^{3}}\)</span>，比真值低<span class="arithmatex">\({30.7}\%\)</span>。若将梁分为两段(图5.3, c)，第一阶固有频率为<span class="arithmatex">\({\omega }_{1} = {3.098}\sqrt{{EI}/m{\ell }^{3}}\)</span>，比真值低<span class="arithmatex">\({12}\%\)</span>。若分为三段(图5.2, d)，第一阶固有频率为<span class="arithmatex">\({\omega }_{1} = {3.286}\sqrt{{EI}/m{\ell }^{3}}\)</span>，低<span class="arithmatex">\({7.12}\%\)</span>；若分为四段，则比真值低4.5%。</p>
+<h2 id="52">例5.2</h2>
+<p>用邓克利公式计算例5.1中三质量梁(图5.5, a)的横向振动基频。</p>
+<p>解:由柔度矩阵(5.11)得</p>
+<div class="arithmatex">\[
+{\delta }_{11} = {\delta }_{33} = \frac{9{\ell }^{3}}{768EI},\;{\delta }_{22} = \frac{{16}{\ell }^{3}}{768EI}.
+\]</div>
+<p>对于仅含孤立质量的单自由度系统(图5.5, b,<span class="arithmatex">\(c, d)\)</span>)，其固有频率平方分别为</p>
+<div class="arithmatex">\[
+{\omega }_{11}^{2} = \frac{1}{m{\delta }_{11}} = \frac{768EI}{{9m}{\ell }^{3}},
+\]</div>
+<div class="arithmatex">\[
+{\omega }_{22}^{2} = \frac{1}{m{\delta }_{22}} = \frac{768EI}{{16m}{\ell }^{3}},
+\]</div>
+<div class="arithmatex">\[
+{\omega }_{33}^{2} = \frac{1}{m{\delta }_{33}} = \frac{768EI}{{9m}{\ell }^{3}},
+\]</div>
+<p>于是邓克利公式(5.12)给出</p>
+<div class="arithmatex">\[
+\frac{1}{{\omega }_{1}^{2}} \cong  \frac{1}{{\omega }_{11}^{2}} + \frac{1}{{\omega }_{22}^{2}} + \frac{1}{{\omega }_{33}^{2}} = \frac{{9m}{\ell }^{3}}{768EI} + \frac{{16m}{\ell }^{3}}{768EI} + \frac{{9m}{\ell }^{3}}{768EI} = \frac{{34m}{\ell }^{3}}{768EI}.
+\]</div>
+<p>估计的基频固有频率为</p>
+<div class="arithmatex">\[
+{\omega }_{1} \cong  {4.7527}\sqrt{{EI}/m{\ell }^{3}},
+\]</div>
+<p>比示例5.1中计算的真实值低3.6%。</p>
+<h5 id="5115-rayleighs-formula">5.1.1.5 瑞利公式(Rayleigh's Formula)</h5>
+<p>当梁用集中质量模型表示时，由一系列集中质量<span class="arithmatex">\({m}_{i}\left( {i = 1,\ldots , n}\right)\)</span>在横坐标<span class="arithmatex">\({x}_{i}\)</span>处连接于无质量梁上，瑞利公式(2.19)变为</p>
+<div class="arithmatex">\[
+{\omega }_{1}^{2} = \frac{\int {EI}{\left( {\partial }^{2}v/\partial {x}^{2}\right) }^{2}{dx}}{\mathop{\sum }\limits_{{i = 1}}^{n}{m}_{i}{v}_{i}^{2}}, \tag{5.13}
+\]</div>
+<p>其中<span class="arithmatex">\({v}_{i} = v\left( {x}_{i}\right)\)</span>为质量位置处的静挠度。</p>
+<p>若应变能由相应集中重量<span class="arithmatex">\({m}_{i}g\)</span>所做的功确定，则<span class="arithmatex">\({U}_{\max } = \frac{1}{2}\mathop{\sum }\limits_{{i = 1}}^{n}{m}_{i}g \cdot  {v}_{i}\)</span>，于是瑞利公式(5.13)变为</p>
+<div class="arithmatex">\[
+{\omega }_{1}^{2} = \frac{g\mathop{\sum }\limits_{{i = 1}}^{n}{m}_{i}{v}_{i}}{\mathop{\sum }\limits_{{i = 1}}^{n}{m}_{i}{v}_{i}^{2}}. \tag{5.14}
+\]</div>
+<p>其中<span class="arithmatex">\(g\)</span>为重力加速度。</p>
+<p>如2.1.5节所述，若假设振动系统的真实挠度曲线，则瑞利公式求得的基频即为正确频率；对任何其他曲线，该方法确定的频率将高于真实频率。</p>
+<p>若需更高精度，可用动态荷载代替静重以获得更接近动态挠度曲线的近似。由于动态荷载为<span class="arithmatex">\({m}_{i}{\omega }^{2}{v}_{i}\)</span>，与挠度成正比，故可用修正后的重量<span class="arithmatex">\({m}_{1}g,{m}_{2}g\frac{{v}_{2}}{{v}_{1}},{m}_{3}g\frac{{v}_{3}}{{v}_{1}}\)</span>重新计算挠度。</p>
+<h2 id="53">示例5.3</h2>
+<p>利用瑞利公式(5.14)计算示例5.1中三质量梁(图5.4，a)的横向振动基频。</p>
+<p>解:利用柔度系数并应用叠加原理，任一质量的位移可表示为相应位置柔度系数与对应重量乘积之和。</p>
+<p>方程(5.6)可写成</p>
+<div class="arithmatex">\[
+\left\{  \begin{array}{l} {v}_{1} \\  {v}_{2} \\  {v}_{3} \end{array}\right\}   = \left\lbrack  \delta \right\rbrack  \left\{  \begin{array}{l} {mg} \\  {mg} \\  {mg} \end{array}\right\}   = {mg}\left\lbrack  \delta \right\rbrack  \left\{  \begin{array}{l} 1 \\  1 \\  1 \end{array}\right\}
+\]</div>
+<p>由此可得</p>
+<div class="arithmatex">\[
+{v}_{1} = {mg}\left( {{\delta }_{11} + {\delta }_{12} + {\delta }_{13}}\right)  = \frac{{27}{\ell }^{3}}{768EI}{mg},
+\]</div>
+<div class="arithmatex">\[
+{v}_{2} = {mg}\left( {{\delta }_{21} + {\delta }_{22} + {\delta }_{23}}\right)  = \frac{{38}{\ell }^{3}}{768EI}{mg},
+\]</div>
+<div class="arithmatex">\[
+{v}_{3} = {v}_{1}\text{.}
+\]</div>
+<p>Substitution in (5.14) yields</p>
+<p>代入(5.14)得</p>
+<div class="arithmatex">\[
+{\omega }_{1}^{2} = \frac{768EI}{m{\ell }^{3}}\frac{{27} + {38} + {27}}{{27}^{2} + {38}^{2} + {27}^{2}} = \frac{768EI}{{9m}{\ell }^{3}}\frac{92}{2902} = \frac{768}{31.54348}\frac{EI}{m{\ell }^{3}}
+\]</div>
+<p>或</p>
+<div class="arithmatex">\[
+{\omega }_{1} = {4.9343}\sqrt{{EI}/m{\ell }^{3}},
+\]</div>
+<p>仅比示例5.1计算的真值高0.02%。</p>
+<p>若<span class="arithmatex">\(m = {m}_{0}\ell /4\)</span>，则图5.4中的系统<span class="arithmatex">\(a\)</span>与图5.2中的梁<span class="arithmatex">\(c\)</span>相同。将该值代入上式得</p>
+<div class="arithmatex">\[
+{\omega }_{1} = {4.9343} \cdot  2\sqrt{\frac{EI}{{m}_{0}{\ell }^{4}}} = \frac{9.8686}{{\ell }^{2}}\sqrt{\frac{EI}{{m}_{0}}},
+\]</div>
+<p>低于连续梁所得真值(6.14)</p>
+<div class="arithmatex">\[
+{\omega }_{\text{true }} = \frac{{\pi }^{2}}{{\ell }^{2}}\sqrt{\frac{EI}{{m}_{0}}} = \frac{9.8696}{{\ell }^{2}}\sqrt{\frac{EI}{{m}_{0}}},
+\]</div>
+<p>由于集中质量过程中总质量未守恒。</p>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Giscus 评论系统 -->
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../vibration21/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 第21篇">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                第21篇
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
