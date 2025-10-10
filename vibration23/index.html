@@ -1327,21 +1327,32 @@ i =  - \frac{{n}_{2}}{{n}_{1}} = \frac{r}{{r}^{\prime }} =  - \frac{{\theta }^{\
 <p>固有频率的数值如下:<span class="arithmatex">\({f}_{1} = 0,{f}_{2} = {14.26}\)</span>、<span class="arithmatex">\({f}_{3} = {22.98},{f}_{4} = {35.34},{f}_{5} = {41.98},{f}_{6} = {50.52},{f}_{7} = {75.17}\mathrm{\;{Hz}}\)</span>。</p>
 <h4 id="matlab-demo">Matlab Demo</h4>
 <p><img alt="vibration23" src="../images/vibration23.png" /></p>
-<p>这两幅图表展示了柴油发电机组在两个最低的固有频率下，系统上各个部件（发电机、飞轮、气缸、减振器）扭转振动的相对形态。振幅经过“<strong>归一化</strong>”处理，即选取振幅最大的点定为 <code>1.000</code>，其他点的振幅则表示与该点的相对大小和方向。</p>
+<p>这两幅图表展示了柴油发电机组在两个最低的固有频率下，系统上各个部件（发电机、飞轮、气缸、减振器）扭转振动的相对形态。振幅经过“归一化”处理，即选取振幅最大的点定为1.000，其他点的振幅则表示与该点的相对大小和方向。</p>
+<hr />
 <h4 id="55226-rads"><strong>第一阶振型 (基频: 552.26 rad/s)</strong></h4>
 <p>这是系统最容易发生的、能量最低的振动模式。</p>
 <ul>
-<li><strong>关键特征：</strong> 整个系统存在 <strong>一个节点</strong>（振幅为零的点），该节点位于 <code>飞轮 (J₂)</code> 和 <code>气缸4 (J₃)</code> 之间。</li>
+<li><strong>关键特征：</strong> 整个系统存在 <strong>一个节点</strong>（振幅为零的点），该节点位于 <strong>飞轮 (J₂) 和 气缸4 (J₃) 之间</strong>。</li>
 <li><strong>物理运动描述：</strong><ul>
 <li>在此振型下，系统明显分为两大部分，它们以相反的方向进行扭转。</li>
-<li><strong>第一部分：</strong> <code>发电机 (J₁, 振幅+1.000)</code> 和 <code>飞轮 (J₂, 振幅+0.946)</code> 同向扭转，构成振动的主体，振幅最大。</li>
-<li><strong>第二部分：</strong> <code>所有气缸 (J₃ 到 J₆)</code> 和 <code>减振器 (J₇)</code> 作为另一组，以相反方向扭转。它们的振幅相对小很多，从 <code>J₃</code> 的 <code>-0.053</code> 变化到 <code>J₇</code> 的 <code>-0.198</code>。</li>
+<li><strong>第一部分：</strong> <strong>发电机 (J₁, 振幅+1.000)</strong> 和 <strong>飞轮 (J₂, 振幅+0.946)</strong> 同向扭转，构成振动的主体，振幅最大。</li>
+<li><strong>第二部分：</strong> <strong>所有气缸 (J₃ 到 J₆)</strong> 和 <strong>减振器 (J₇)</strong> 作为另一组，以相反方向扭转。它们的振幅相对小很多，从 J₃ 的 -0.053 变化到 J₇ 的 -0.198。</li>
 </ul>
 </li>
 <li><strong>结论：</strong> 这种“一头大一头小”的单节点振动是典型的曲轴-发电机系统的基频振型。</li>
 </ul>
+<hr />
 <h4 id="114518-rads"><strong>第二阶振型 (1145.18 rad/s)</strong></h4>
-<p>这是一个更高阶、能量更高的振</p>
+<p>这是一个更高阶、能量更高的振动模式，形态更为复杂。</p>
+<ul>
+<li><strong>关键特征：</strong> 系统同样存在 <strong>一个节点</strong>，但位置向后移动，位于 <strong>气缸4 (J₃) 和 气缸3 (J₄) 之间</strong>。</li>
+<li><strong>物理运动描述：</strong><ul>
+<li><strong>第一部分：</strong> <strong>发电机 (J₁, 振幅+1.000)</strong>、<strong>飞轮 (J₂, 振幅+0.485)</strong> 和 <strong>气缸4 (J₃, 振幅+0.076)</strong> 共同以相同的方向扭转，但振幅从发电机端开始急剧衰减。</li>
+<li><strong>第二部分：</strong> <strong>气缸3 (J₄) 到 减振器 (J₇)</strong> 的所有部件以相反方向扭转。其中，<strong>减振器 (J₇)</strong> 的反向振幅最大，达到了 <strong>-0.428</strong>，说明它在抑制这种高频振动时起到了关键作用。</li>
+</ul>
+</li>
+<li><strong>结论：</strong> 在第二阶振型中，曲轴本身出现了更复杂的扭转变形。发电机端和减振器端的反向运动幅度都比较大，这对曲轴的疲劳寿命和减振器的性能提出了更高的要求。</li>
+</ul>
 
 
 
