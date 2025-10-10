@@ -943,15 +943,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#513-torsional-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1.3 Torsional Systems
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#513" class="md-nav__link">
     <span class="md-ellipsis">
       5.1.3 扭转系统
@@ -1011,6 +1002,39 @@
       例5.6
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="例5.6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55226-rads" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一阶振型 (基频: 552.26 rad/s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114518-rads" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二阶振型 (1145.18 rad/s)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1064,15 +1088,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#513-torsional-systems" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1.3 Torsional Systems
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#513" class="md-nav__link">
     <span class="md-ellipsis">
       5.1.3 扭转系统
@@ -1133,6 +1148,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="例5.6">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matlab-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matlab Demo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55226-rads" class="md-nav__link">
+    <span class="md-ellipsis">
+      第一阶振型 (基频: 552.26 rad/s)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114518-rads" class="md-nav__link">
+    <span class="md-ellipsis">
+      第二阶振型 (1145.18 rad/s)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1168,74 +1216,51 @@ k = \frac{{12E} \cdot  {2I}}{{\ell }^{3}} = \frac{24EI}{{\ell }^{3}}, \tag{5.15}
 <p><img alt="bo_d34j0n3ef24c73b3tujg_189_431_1203_805_584_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_189_431_1203_805_584_0.jpg" /></p>
 <p>图5.6</p>
 <p>利用达朗贝尔原理(d'Alembert's principle)，根据图5.6<span class="arithmatex">\(b\)</span>的受力图，令作用于各质量上的力之和为零，即可方便地得到运动方程。第4.1.1节已针对两自由度系统说明该过程。</p>
-<h4 id="513-torsional-systems">5.1.3 Torsional Systems</h4>
 <h4 id="513">5.1.3 扭转系统</h4>
-<p>Torsional vibrations of multicylinder reciprocating machines are studied with a simplified lumped mass torsional system (Fig. 5.7) obtained by lumping the inertias of rotating and reciprocating parts from each cylinder at discrete points on a main equivalent shaft. The parts mounted on the shafting, like the flywheel, the torsional damper, the coupling and the driven rotor or the propeller can also be modelled as rigid discs.</p>
 <p>多缸往复机械的扭转振动通过简化的集中质量扭转系统(图5.7)研究，该系统将每缸旋转与往复部件的惯量集中于等效主轴上的离散点。安装于轴系上的部件，如飞轮、扭振减振器、联轴器及被驱动转子或螺旋桨，亦可建模为刚性圆盘。</p>
 <p><img alt="bo_d34j0n3ef24c73b3tujg_190_420_756_816_315_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_190_420_756_816_315_0.jpg" /></p>
-<p>Fig. 5.7</p>
 <p>图5.7</p>
-<p>The connecting rod is replaced by an equivalent dynamical system comprised of two concentrated masses, one at the crank end, the other at the piston end.</p>
 <p>连杆由等效动力学系统替代，该系统由两个集中质量组成，一个位于曲柄端，另一个位于活塞端。</p>
-<p>In each cylinder there is a reciprocating mass, <span class="arithmatex">\({m}_{rec}\)</span> , consisting of the piston mass and the reduced mass of the connecting rod, and a rotating mass, consisting of the crank throw, counterweight and the reduced mass of the connecting rod, having an inertia <span class="arithmatex">\({J}_{\text{rot }}\)</span> . The average inertia per cylinder is</p>
 <p>每个气缸内均有一个往复质量<span class="arithmatex">\({m}_{rec}\)</span>，由活塞质量与连杆的等效质量组成；另有一个旋转质量，由曲柄臂、平衡重及连杆的等效质量组成，其惯量为<span class="arithmatex">\({J}_{\text{rot }}\)</span>。每缸的平均惯量为</p>
 <div class="arithmatex">\[
 J = {J}_{\text{rot }} + \frac{1}{2}{m}_{\text{rec }}{r}^{2},
 \]</div>
-<p>where <span class="arithmatex">\(r\)</span> is the crank throw radius.</p>
 <p>其中<span class="arithmatex">\(r\)</span>为曲柄臂半径(crank throw radius)。</p>
-<p>The torsional stiffness of crankshaft between cylinders, arising from the combined effect of crank pin twisting and crank web bending, can be either approximated numerically or measured experimentally. The same for the stiffness of the crankshaft between the last cylinder and the flywheel, for the coupling and the driven shaft. The whole system can then be reduced to a torsional model with a series of rigid discs connected by massless flexible shafts, as in Fig. 5.7.</p>
 <p>气缸间曲轴的扭转刚度源于曲柄销扭转与曲柄臂弯曲的耦合效应，可通过数值近似或实验测定。同样方法适用于测定末缸与飞轮间曲轴、联轴器及从动轴的刚度。整个系统可简化为图5.7所示的扭转模型:一系列刚性圆盘由无质量柔性轴串联而成。</p>
 <h2 id="example-54">Example 5.4</h2>
 <h2 id="54">例5.4</h2>
-<p>A diesel-motor-generator set has been reduced to the equivalent system shown in Fig. 5.8, with the <span class="arithmatex">\(J\)</span> values in <span class="arithmatex">\(\mathrm{{kg}} \cdot  {\mathrm{m}}^{2}\)</span> , and with <span class="arithmatex">\(K\)</span> values in <span class="arithmatex">\({10}^{6} \times  \mathrm{{Nm}}/\mathrm{{rad}} : \;{J}_{1} = {11.863},\;{J}_{2} = {2.011},\;{J}_{3} = {J}_{4} = {J}_{5} = {J}_{6} = {0.167}\)</span> , <span class="arithmatex">\({J}_{7} = {0.897},\;{K}_{1} = {1.062},\;{K}_{2} = {6.101},\;{K}_{3} = {K}_{4} = {K}_{5} = {3.05},\;{K}_{6} = {4.067}.\)</span> Estimate the fundamental- and second-mode natural frequencies of torsional vibrations. Plot the corresponding mode shapes.</p>
 <p>某柴油发电机组已简化为图5.8所示的等效系统，其中<span class="arithmatex">\(J\)</span>值单位为<span class="arithmatex">\(\mathrm{{kg}} \cdot  {\mathrm{m}}^{2}\)</span>，<span class="arithmatex">\(K\)</span>值单位为<span class="arithmatex">\({10}^{6} \times  \mathrm{{Nm}}/\mathrm{{rad}} : \;{J}_{1} = {11.863},\;{J}_{2} = {2.011},\;{J}_{3} = {J}_{4} = {J}_{5} = {J}_{6} = {0.167}\)</span>，<span class="arithmatex">\({J}_{7} = {0.897},\;{K}_{1} = {1.062},\;{K}_{2} = {6.101},\;{K}_{3} = {K}_{4} = {K}_{5} = {3.05},\;{K}_{6} = {4.067}.\)</span>。试估算扭转振动的基频与第二阶固有频率，并绘制相应振型。</p>
-<p>Solution. <span class="arithmatex">\({\omega }_{1} = {552}\mathrm{{rad}}/\mathrm{{sec}},{\omega }_{2} = {1145}\mathrm{{rad}}/\mathrm{{sec}}\)</span> . The mode shapes are shown in Fig. 5.8.</p>
 <p>解:<span class="arithmatex">\({\omega }_{1} = {552}\mathrm{{rad}}/\mathrm{{sec}},{\omega }_{2} = {1145}\mathrm{{rad}}/\mathrm{{sec}}\)</span>。振型如图5.8所示。</p>
 <p><img alt="bo_d34j0n3ef24c73b3tujg_191_483_737_714_915_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_191_483_737_714_915_0.jpg" /></p>
-<p>Fig. 5.8</p>
 <p>图5.8</p>
-<p>Geared systems and car engine-driving train systems are modelled likewise. Geared-branched systems can be modelled as in Section 4.2.4. It is convenient to use an equivalent system which has no gears (or has gears that effect no change of speed) and whose natural frequencies are the same as the frequencies of the original system. This is possible because, while the gears effect a change of rotary speed given by the transmission ratio, the vibration is transmitted through the gears without change in frequency, but with proper change of amplitude.</p>
 <p>齿轮传动系统和汽车发动机驱动链系统亦按此方式建模。齿轮分支系统可按4.2.4节方法建模。通常采用一个无齿轮(或齿轮不改变转速)的等效系统，其固有频率与原系统相同。这是因为齿轮虽按传动比改变转速，但振动经齿轮传递时频率不变，仅振幅按相应比例变化。</p>
-<p>In Section 4.2.4, the actual system with branches of different rotary speeds was reduced to an equivalent system with all parts having the same speed, usually equal to that of the reference shaft. Progressing away from that shaft to other branch through a gear of transmission ratio <span class="arithmatex">\(i\)</span> , the actual <span class="arithmatex">\(J\)</span> ’s and <span class="arithmatex">\(K\)</span> ’s occurring beyond are multiplied by <span class="arithmatex">\({i}^{2}\)</span> . If several gears are passed, the subsequent <span class="arithmatex">\(J\)</span> ’s and <span class="arithmatex">\(K\)</span> ’s are multiplied by the squares of the respective gear ratios. For the mating gears, the total inertia is obtained by adding to the moment of inertia of the reference gear the moment(s) of inertia of the (two) reduced gear(s) multiplied by <span class="arithmatex">\({i}^{2}\)</span> .</p>
 <p>在4.2.4节中，实际具有不同转速分支的系统被简化为所有部件转速相同的等效系统，通常取参考轴的转速。自该轴经传动比为<span class="arithmatex">\(i\)</span>的齿轮进入其他分支时，实际<span class="arithmatex">\(J\)</span>和<span class="arithmatex">\(K\)</span>需乘以<span class="arithmatex">\({i}^{2}\)</span>。若经过多级齿轮，则后续<span class="arithmatex">\(J\)</span>和<span class="arithmatex">\(K\)</span>需乘以各级齿轮比的平方。对于啮合齿轮，总惯量为参考齿轮的转动惯量加上(两个)折算齿轮的转动惯量乘以<span class="arithmatex">\({i}^{2}\)</span>。</p>
-<p>The equivalent model so obtained has the same natural frequencies as the actual system, as well as the same position of nodes. However, in the reduced branches, the amplitude of angular displacements is divided by <span class="arithmatex">\(- i\)</span> , while the torque in the branch is multiplied by <span class="arithmatex">\(- i\)</span> .</p>
 <p>所得等效模型与原系统具有相同的固有频率及节点位置。但在简化分支中，角位移幅值需除以<span class="arithmatex">\(- i\)</span>，而分支扭矩需乘以<span class="arithmatex">\(- i\)</span>。</p>
-<p>A more straightforward approach is given in the following. In the equivalent model, each shaft and disc has the actual speed, only the driven gear is condensed out.</p>
 <p>以下给出更直接的方法:在等效模型中，每根轴和每个圆盘保持实际转速，仅将从动齿轮凝聚消去。</p>
 <p><img alt="bo_d34j0n3ef24c73b3tujg_192_562_1062_554_523_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_192_562_1062_554_523_0.jpg" /></p>
-<p>Fig. 5.9</p>
 <p>图5.9</p>
-<p>Consider part of a geared-branched system (Fig. 5.9, a) where (the driving) shaft1and (the driven) shaft 2 are connected by two gears with inertias <span class="arithmatex">\(J,{J}^{\prime }\)</span> and of pitch circle radii <span class="arithmatex">\(r\)</span> and <span class="arithmatex">\({r}^{\prime }\)</span> , respectively. Apart from shaft stiffnesses <span class="arithmatex">\({K}_{1}\)</span> and <span class="arithmatex">\({K}_{2}\)</span> , and disc mass moments of inertia <span class="arithmatex">\({J}_{1}\)</span> and <span class="arithmatex">\({J}_{2}\)</span> , the angular displacements and torques acting on each disc are shown in the figure.</p>
 <p>考虑齿轮分支系统的一部分(图5.9a)，其中(主动)轴1与(从动)轴2通过两个齿轮连接，齿轮惯量分别为<span class="arithmatex">\(J,{J}^{\prime }\)</span>，节圆半径分别为<span class="arithmatex">\(r\)</span>和<span class="arithmatex">\({r}^{\prime }\)</span>。除轴刚度<span class="arithmatex">\({K}_{1}\)</span>和<span class="arithmatex">\({K}_{2}\)</span>以及圆盘转动惯量<span class="arithmatex">\({J}_{1}\)</span>和<span class="arithmatex">\({J}_{2}\)</span>外，图中还示出了各圆盘上的角位移与作用扭矩。</p>
-<p>The system motion is described by four torques and four angular displacements. However, only three of each of them are independent, due to the compatibility conditions between the mating gears. Thus it would be useful to consider the torque <span class="arithmatex">\({M}^{\prime }\)</span> and the angular displacement <span class="arithmatex">\({\theta }^{\prime }\)</span> as dependent variables and eliminate them, replacing the given system by the equivalent model shown in Fig. 5.9, <span class="arithmatex">\(b\)</span> . Shaft 1 is taken as the reference shaft.</p>
 <p>系统的运动由四个转矩和四个角位移描述。然而，由于啮合齿轮之间的相容性条件，它们各自只有三个是独立的。因此，将转矩<span class="arithmatex">\({M}^{\prime }\)</span>和角位移<span class="arithmatex">\({\theta }^{\prime }\)</span>视为因变量并消去它们是有益的，从而用图5.9<span class="arithmatex">\(b\)</span>所示的等效模型替代原系统。轴1被选为参考轴。</p>
-<p>Compatibility of the angular displacements requires that</p>
 <p>角位移的相容性要求</p>
 <div class="arithmatex">\[
 {r\theta } =  - {r}^{\prime }{\theta }^{\prime },
 \]</div>
-<p>while compatibility of torques requires</p>
 <p>而转矩的相容性要求</p>
 <div class="arithmatex">\[
 \frac{M}{r} =  - \frac{{M}^{\prime }}{{r}^{\prime }}\;\text{ or }\;{M\theta } = {M}^{\prime }{\theta }^{\prime }.
 \]</div>
-<p>The transmissibility ratio is defined as</p>
 <p>传递率定义为</p>
 <div class="arithmatex">\[
 i =  - \frac{{n}_{2}}{{n}_{1}} = \frac{r}{{r}^{\prime }} =  - \frac{{\theta }^{\prime }}{\theta } =  - \frac{M}{{M}^{\prime }}. \tag{5.16}
 \]</div>
-<p>In the original system, the stiffness matrix of shaft 2 is defined by</p>
 <p>在原系统中，轴2的刚度矩阵定义为</p>
 <div class="arithmatex">\[
 \left\{  \begin{array}{l} {M}^{\prime } \\  {M}_{2} \end{array}\right\}   = \left\lbrack  \begin{matrix} {K}_{2} &amp;  - {K}_{2} \\   - {K}_{2} &amp; {K}_{2} \end{matrix}\right\rbrack  \left\{  \begin{array}{l} {\theta }^{\prime } \\  {\theta }_{2} \end{array}\right\}  .
 \]</div>
-<p>Using the transformation equations, based on (5.16),</p>
 <p>利用基于(5.16)的变换方程，</p>
 <div class="arithmatex">\[
 \left\{  \begin{matrix} M \\  {M}_{2} \end{matrix}\right\}   = \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\{  \begin{array}{l} {M}^{\prime } \\  {M}_{2} \end{array}\right\}  ,\;\left\{  \begin{array}{l} {\theta }^{\prime } \\  {\theta }_{2} \end{array}\right\}   = \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\{  \begin{array}{l} \theta \\  {\theta }_{2} \end{array}\right\}  ,
 \]</div>
-<p>the stiffness matrix of shaft 2 in the equivalent model is defined as follows</p>
 <p>等效模型中轴2的刚度矩阵定义如下</p>
 <div class="arithmatex">\[
 \left\{  \begin{matrix} M \\  {M}_{2} \end{matrix}\right\}   = \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\lbrack  \begin{matrix} {K}_{2} &amp;  - {K}_{2} \\   - {K}_{2} &amp; {K}_{2} \end{matrix}\right\rbrack  \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\{  \begin{matrix} \theta \\  {\theta }_{2} \end{matrix}\right\}  ,
@@ -1243,7 +1268,6 @@ i =  - \frac{{n}_{2}}{{n}_{1}} = \frac{r}{{r}^{\prime }} =  - \frac{{\theta }^{\
 <div class="arithmatex">\[
 \left\{  \begin{matrix} M \\  {M}_{2} \end{matrix}\right\}   = \left\lbrack  \begin{matrix} {i}^{2}{K}_{2} &amp; i{K}_{2} \\  i{K}_{2} &amp; {K}_{2} \end{matrix}\right\rbrack  \left\{  \begin{matrix} \theta \\  {\theta }_{2} \end{matrix}\right\}  .
 \]</div>
-<p>The mass matrix is defined likewise</p>
 <p>质量矩阵同样定义</p>
 <div class="arithmatex">\[
 \left\{  \begin{matrix} M \\  {M}_{2} \end{matrix}\right\}   = \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\lbrack  \begin{matrix} {J}^{\prime } &amp; 0 \\  0 &amp; {J}_{2} \end{matrix}\right\rbrack  \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\{  \begin{matrix} \ddot{\theta } \\  {\ddot{\theta }}_{2} \end{matrix}\right\}  ,
@@ -1251,76 +1275,73 @@ i =  - \frac{{n}_{2}}{{n}_{1}} = \frac{r}{{r}^{\prime }} =  - \frac{{\theta }^{\
 <div class="arithmatex">\[
 \left\{  \begin{matrix} M \\  {M}_{2} \end{matrix}\right\}   = \left\lbrack  \begin{matrix} {i}^{2}{J}^{\prime } &amp; 0 \\  0 &amp; {J}_{2} \end{matrix}\right\rbrack  \left\{  \begin{matrix} \ddot{\theta } \\  {\ddot{\theta }}_{2} \end{matrix}\right\}  .
 \]</div>
-<p>In the following, two rotating discs coupled by an elastic shaft segment are considered as a finite element. For an element of the driven shaft, the element matrices are</p>
 <p>下文将两个由弹性轴段耦合的旋转圆盘视为一个有限元。对于从动轴的一个单元，单元矩阵为</p>
 <div class="arithmatex">\[
 \left\lbrack  {k}^{e}\right\rbrack   = \left\lbrack  \begin{matrix} {i}^{2}{K}_{e} &amp; i{K}_{e} \\  i{K}_{e} &amp; {K}_{e} \end{matrix}\right\rbrack  ,\left\lbrack  {m}^{e}\right\rbrack   = \left\lbrack  \begin{matrix} {i}^{2}{J}_{e}^{\prime } &amp; 0 \\  0 &amp; {J}_{e} \end{matrix}\right\rbrack  . \tag{5.17}
 \]</div>
-<p>The element matrices for the shaft 1 in Fig.5.9 are</p>
 <p>图5.9中轴1的单元矩阵为</p>
 <div class="arithmatex">\[
 \left\lbrack  {k}^{1}\right\rbrack   = \left\lbrack  \begin{matrix} {K}_{1} &amp;  - {K}_{1} \\   - {K}_{1} &amp; {K}_{1} \end{matrix}\right\rbrack  ,\left\lbrack  {m}^{1}\right\rbrack   = \left\lbrack  \begin{matrix} {J}_{1} &amp; 0 \\  0 &amp; J \end{matrix}\right\rbrack  .
 \]</div>
-<p>They can be obtained from the general expressions (5.17) substituting <span class="arithmatex">\(i =  - 1\)</span> . In general, for elements not adjacent to the gears, one of the end inertias is zero.</p>
 <p>它们可通过将<span class="arithmatex">\(i =  - 1\)</span>代入通用表达式(5.17)获得。一般而言，对于不紧邻齿轮的单元，其中一个端部惯量为零。</p>
-<p>Another approach is to condense the system matrices based on the constraint equations expressing the compatibility of the angular displacements of mating gears.</p>
 <p>另一种方法是基于表示啮合齿轮角位移相容性的约束方程对系统矩阵进行凝聚。</p>
 <h2 id="example-55">Example 5.5</h2>
 <h2 id="55">例5.5</h2>
-<p>The geared-branched system shown in Fig. 5.10, <span class="arithmatex">\(a\)</span> consists of three rigid discs having mass moments of inertia <span class="arithmatex">\({J}_{1},{J}_{5}\)</span> and <span class="arithmatex">\({J}_{6}\)</span> and three rigid gears of radii <span class="arithmatex">\(r, r/2\)</span> and <span class="arithmatex">\(r/3\)</span> having mass moments of inertia <span class="arithmatex">\({J}_{2},{J}_{3}\)</span> and <span class="arithmatex">\({J}_{4}\)</span> which are connected by three light shafts having torsional stiffnesses <span class="arithmatex">\({K}_{1},{K}_{2}\)</span> and <span class="arithmatex">\({K}_{3}\)</span> . Derive the equations of free vibration.</p>
 <p>图5.10<span class="arithmatex">\(a\)</span>所示的齿轮分支系统由三个转动惯量为<span class="arithmatex">\({J}_{1},{J}_{5}\)</span>和<span class="arithmatex">\({J}_{6}\)</span>的刚性圆盘以及三个半径为<span class="arithmatex">\(r, r/2\)</span>和<span class="arithmatex">\(r/3\)</span>、转动惯量为<span class="arithmatex">\({J}_{2},{J}_{3}\)</span>和<span class="arithmatex">\({J}_{4}\)</span>的刚性齿轮组成，它们通过三根扭转刚度为<span class="arithmatex">\({K}_{1},{K}_{2}\)</span>和<span class="arithmatex">\({K}_{3}\)</span>的轻质轴连接。推导自由振动方程。</p>
-<p>Solution. In the upper branch, the speed ratio is <span class="arithmatex">\(i =  - 2\)</span> . In the lower branch, the speed ratio is <span class="arithmatex">\(i =  - 3\)</span> . For the equivalent system shown in Fig. 5.10, <span class="arithmatex">\(b\)</span> the element matrices are calculated from equations (5.17).</p>
 <p>解:在上分支，速比为<span class="arithmatex">\(i =  - 2\)</span>。在下分支，速比为<span class="arithmatex">\(i =  - 3\)</span>。对于图5.10<span class="arithmatex">\(b\)</span>所示的等效系统，单元矩阵由方程(5.17)计算。</p>
-<p>The global matrices are assembled using the direct stiffness approach, obtaining:</p>
 <p>利用直接刚度法组装全局矩阵，得到:</p>
 <div class="arithmatex">\[
 \left\lbrack  K\right\rbrack   = \left\lbrack  \begin{matrix} {K}_{1} &amp;  - {K}_{1} &amp; 0 &amp; 0 \\   - {K}_{1} &amp; {K}_{1} + 4{K}_{2} + 9{K}_{3} &amp; 2{K}_{2} &amp; 3{K}_{3} \\  0 &amp; 2{K}_{2} &amp; {K}_{2} &amp; 0 \\  0 &amp; 3{K}_{3} &amp; 0 &amp; {K}_{3} \end{matrix}\right\rbrack
 \]</div>
-<p>and</p>
 <p>和</p>
 <div class="arithmatex">\[
 \left\lbrack  M\right\rbrack   = \left\lbrack  \begin{matrix} {J}_{1} &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; {J}_{2} + 4{J}_{3} + 9{J}_{4} &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; {J}_{5} &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; {J}_{6} \end{matrix}\right\rbrack  .
 \]</div>
-<p>The global vector of angular displacements is</p>
 <p>角位移的全局向量</p>
 <div class="arithmatex">\[
 \{ \Theta \}  = {\left\{  \begin{array}{llll} {\theta }_{1} &amp; {\theta }_{2} &amp; {\theta }_{3} &amp; {\theta }_{4} \end{array}\right\}  }^{T}.
 \]</div>
-<p>The equations of motion can be written</p>
 <p>运动方程可写为</p>
 <div class="arithmatex">\[
 \left\lbrack  M\right\rbrack  \{ \ddot{\Theta }\}  + \left\lbrack  K\right\rbrack  \{ \Theta \}  = \{ 0\} .
 \]</div>
-<p>They are used for the estimation of natural frequencies.</p>
 <p>它们用于估算固有频率。</p>
 <p><img alt="bo_d34j0n3ef24c73b3tujg_195_560_735_554_611_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_195_560_735_554_611_0.jpg" /></p>
-<p>Fig. 5.10</p>
 <p>图5.10</p>
-<p>The arrangement in Fig. 5.10 is a simplified model of a typical marine propulsion drive, with the propeller <span class="arithmatex">\({J}_{1}\)</span> driven by a low-pressure turbine <span class="arithmatex">\({J}_{5}\)</span> and a high pressure turbine <span class="arithmatex">\({J}_{6}\)</span> .</p>
 <p>图5.10所示的布置是一个典型船舶推进传动的简化模型，其中螺旋桨<span class="arithmatex">\({J}_{1}\)</span>由低压涡轮<span class="arithmatex">\({J}_{5}\)</span>和高压涡轮<span class="arithmatex">\({J}_{6}\)</span>驱动。</p>
-<p>The calculated natural frequencies are compared to the excitation frequencies. Usually the main excitation factor is the variation of the torque on propeller due to the variation of the water forces on the blades during their rotation. The frequency of this variation is called the blade frequency. It is the propeller frequency (once per shaft revolution) multiplied by the number of blades.</p>
 <p>计算出的固有频率与激励频率进行比较。通常，主要激励因素是螺旋桨扭矩的变化，该变化由叶片旋转时水动力的变化引起。这种变化的频率称为叶频(blade frequency)，其值为轴每转一圈的螺旋桨频率乘以叶片数。</p>
 <h2 id="example-56">Example 5.6</h2>
 <h2 id="56">例5.6</h2>
-<p>The geared-branched system shown in Fig. 5.11 has the following parameters: <span class="arithmatex">\({J}_{1} = {950},{J}_{2} = {542},{J}_{3} = {406.7},{J}_{4} = {J}_{5} = {6.78},{J}_{7} = {13.55}\)</span> , <span class="arithmatex">\({J}_{6} = {J}_{8} = {J}_{9} = {27.12}\left\lbrack  {\mathrm{\;{kg}} \cdot  {\mathrm{m}}^{2}}\right\rbrack  , i = {76}/{24},{K}_{1} = {20.336} \cdot  {10}^{6},{K}_{2} = {8.135} \cdot  {10}^{6}\)</span> , <span class="arithmatex">\({K}_{3} = {1.22} \cdot  {10}^{6},{K}_{4} = {0.407} \cdot  {10}^{6},{K}_{5} = {1.63} \cdot  {10}^{6},{K}_{6} = {2.44} \cdot  {10}^{6}\;\left\lbrack  {\mathrm{{Nm}}/\mathrm{{rad}}}\right\rbrack  .\)</span> Calculate the natural frequencies of torsional vibrations.</p>
 <p>图5.11所示的齿轮分支系统具有以下参数:<span class="arithmatex">\({J}_{1} = {950},{J}_{2} = {542},{J}_{3} = {406.7},{J}_{4} = {J}_{5} = {6.78},{J}_{7} = {13.55}\)</span>、<span class="arithmatex">\({J}_{6} = {J}_{8} = {J}_{9} = {27.12}\left\lbrack  {\mathrm{\;{kg}} \cdot  {\mathrm{m}}^{2}}\right\rbrack  , i = {76}/{24},{K}_{1} = {20.336} \cdot  {10}^{6},{K}_{2} = {8.135} \cdot  {10}^{6}\)</span>、<span class="arithmatex">\({K}_{3} = {1.22} \cdot  {10}^{6},{K}_{4} = {0.407} \cdot  {10}^{6},{K}_{5} = {1.63} \cdot  {10}^{6},{K}_{6} = {2.44} \cdot  {10}^{6}\;\left\lbrack  {\mathrm{{Nm}}/\mathrm{{rad}}}\right\rbrack  .\)</span>，计算其扭转振动的固有频率。</p>
 <p><img alt="bo_d34j0n3ef24c73b3tujg_196_507_566_630_461_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_196_507_566_630_461_0.jpg" /></p>
-<p>Fig. 5.11</p>
 <p>图5.11</p>
-<p>Solution. The actual system is reduced to an equivalent model in which the two pinions are condensed out. The element matrices (5.17) are calculated for each segment, then assembled into the global stiffness and mass matrices.</p>
 <p>解:将实际系统简化为等效模型，其中两个小齿轮被凝聚掉。对每个区段计算单元矩阵(5.17)，然后组装成全局刚度矩阵和质量矩阵。</p>
-<p>The global stiffness matrix is</p>
 <p>全局刚度矩阵为</p>
 <div class="arithmatex">\[
 \left\lbrack  K\right\rbrack   = \left\lbrack  \begin{matrix} {K}_{1} &amp;  - {K}_{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\   - {K}_{1} &amp; {K}_{1} + {K}_{2} &amp;  - {K}_{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\  0 &amp;  - {K}_{2} &amp; {K}_{2} + {i}^{2}{K}_{3} + {i}^{2}{K}_{5} &amp; i{K}_{3} &amp; 0 &amp; i{K}_{5} &amp; 0 \\  0 &amp; 0 &amp; i{K}_{3} &amp; {K}_{3} + {K}_{4} &amp;  - {K}_{4} &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 &amp;  - {K}_{4} &amp; {K}_{4} &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; i{K}_{5} &amp; 0 &amp; 0 &amp; {K}_{5} + {K}_{6} &amp;  - {K}_{6} \\  0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp;  - {K}_{6} &amp; {K}_{6} \end{matrix}\right\rbrack
 \]</div>
-<p>The global mass matrix is</p>
 <p>全局质量矩阵为</p>
 <div class="arithmatex">\[
 \left\lbrack  M\right\rbrack   = \left\lbrack  \begin{matrix} {J}_{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; {J}_{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; {J}_{3} + {i}^{2}{J}_{4} + {i}^{2}{J}_{5} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; {J}_{6} &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; 0 &amp; {J}_{7} &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; {J}_{8} &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; {J}_{9} \end{matrix}\right\rbrack
 \]</div>
-<p>The natural frequencies have the following values: <span class="arithmatex">\({f}_{1} = 0,{f}_{2} = {14.26}\)</span> , <span class="arithmatex">\({f}_{3} = {22.98},{f}_{4} = {35.34},{f}_{5} = {41.98},{f}_{6} = {50.52},{f}_{7} = {75.17}\mathrm{\;{Hz}}\)</span> .</p>
 <p>固有频率的数值如下:<span class="arithmatex">\({f}_{1} = 0,{f}_{2} = {14.26}\)</span>、<span class="arithmatex">\({f}_{3} = {22.98},{f}_{4} = {35.34},{f}_{5} = {41.98},{f}_{6} = {50.52},{f}_{7} = {75.17}\mathrm{\;{Hz}}\)</span>。</p>
+<h4 id="matlab-demo">Matlab Demo</h4>
+<p><img alt="vibration23" src="../images/vibration23.png" /></p>
+<p>这两幅图表展示了柴油发电机组在两个最低的固有频率下，系统上各个部件（发电机、飞轮、气缸、减振器）扭转振动的相对形态。振幅经过“<strong>归一化</strong>”处理，即选取振幅最大的点定为 <code>1.000</code>，其他点的振幅则表示与该点的相对大小和方向。</p>
+<h4 id="55226-rads"><strong>第一阶振型 (基频: 552.26 rad/s)</strong></h4>
+<p>这是系统最容易发生的、能量最低的振动模式。</p>
+<ul>
+<li><strong>关键特征：</strong> 整个系统存在 <strong>一个节点</strong>（振幅为零的点），该节点位于 <code>飞轮 (J₂)</code> 和 <code>气缸4 (J₃)</code> 之间。</li>
+<li><strong>物理运动描述：</strong><ul>
+<li>在此振型下，系统明显分为两大部分，它们以相反的方向进行扭转。</li>
+<li><strong>第一部分：</strong> <code>发电机 (J₁, 振幅+1.000)</code> 和 <code>飞轮 (J₂, 振幅+0.946)</code> 同向扭转，构成振动的主体，振幅最大。</li>
+<li><strong>第二部分：</strong> <code>所有气缸 (J₃ 到 J₆)</code> 和 <code>减振器 (J₇)</code> 作为另一组，以相反方向扭转。它们的振幅相对小很多，从 <code>J₃</code> 的 <code>-0.053</code> 变化到 <code>J₇</code> 的 <code>-0.198</code>。</li>
+</ul>
+</li>
+<li><strong>结论：</strong> 这种“一头大一头小”的单节点振动是典型的曲轴-发电机系统的基频振型。</li>
+</ul>
+<h4 id="114518-rads"><strong>第二阶振型 (1145.18 rad/s)</strong></h4>
+<p>这是一个更高阶、能量更高的振</p>
 
 
 
