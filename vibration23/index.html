@@ -1,0 +1,1417 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="洒家的动力学笔记">
+      
+      
+        <meta name="author" content="MEZhang">
+      
+      
+        <link rel="canonical" href="https://mezhangblog.github.io/MechanicalVibration/vibration23/">
+      
+      
+        <link rel="prev" href="../vibration22/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>第23篇 - 洒家的动力学笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/comments.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#512" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="洒家的动力学笔记" class="md-header__button md-logo" aria-label="洒家的动力学笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            洒家的动力学笔记
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第23篇
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../vibration01/" class="md-tabs__link">
+          
+  
+  
+  机械振动
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="洒家的动力学笔记" class="md-nav__button md-logo" aria-label="洒家的动力学笔记" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    洒家的动力学笔记
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MEZhangBlog/MechanicalVibration" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MEZhangBlog/MechanicalVibration
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    机械振动
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            机械振动
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第1篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第2篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第3篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第4篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第5篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第6篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第7篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration08/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第8篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration09/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第9篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第10篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第11篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第12篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第13篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第14篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第15篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第16篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第17篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第18篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第19篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第20篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第21篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibration22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第22篇
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第23篇
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第23篇
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2 多层框架剪切型建筑
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#513-torsional-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.3 Torsional Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#513" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.3 扭转系统
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-54" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 5.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      例5.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-55" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 5.5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      例5.5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-56" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 5.6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      例5.6
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2 多层框架剪切型建筑
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#513-torsional-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.3 Torsional Systems
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#513" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.3 扭转系统
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-54" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 5.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      例5.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-55" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 5.5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      例5.5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-56" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 5.6
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    <span class="md-ellipsis">
+      例5.6
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>第23篇</h1>
+
+<h4 id="512">5.1.2 多层框架剪切型建筑</h4>
+<p>剪切型建筑(shear building)是一种在楼层水平截面处无转动的结构。变形后的建筑形似仅受剪力作用的悬臂梁，因而得名。</p>
+<p>图5.6<span class="arithmatex">\(a\)</span>展示了一个三层剪切型建筑，被建模为具有三个自由度的框架。仅考虑框架在其平面内的侧移，由框架平面内竖向构件的弯曲变形引起。</p>
+<p>为实现此类建筑变形，作如下假设:a) 所有楼板为刚性，仅可水平运动，故楼板梁与柱节点处无转动；b) 所有柱不可伸长且无质量；c) 建筑质量集中于楼层，从而将多层建筑的振动简化为有限自由度系统的振动。</p>
+<p>将剪切型建筑简化为单跨模型较为方便。水平构件的位移由柱的弹性恢复力抵抗。若将柱视为等截面梁，采用固定端梁一端相对另一端下沉的标准分析方法，可得柱的总弯曲刚度为</p>
+<div class="arithmatex">\[
+k = \frac{{12E} \cdot  {2I}}{{\ell }^{3}} = \frac{24EI}{{\ell }^{3}}, \tag{5.15}
+\]</div>
+<p>其中<span class="arithmatex">\(E\)</span>为材料杨氏模量(Young’s modulus)，<span class="arithmatex">\(I\)</span>为一根柱的截面二次矩，<span class="arithmatex">\(\ell\)</span>为层高(柱长)。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_189_431_1203_805_584_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_189_431_1203_805_584_0.jpg" /></p>
+<p>图5.6</p>
+<p>利用达朗贝尔原理(d'Alembert's principle)，根据图5.6<span class="arithmatex">\(b\)</span>的受力图，令作用于各质量上的力之和为零，即可方便地得到运动方程。第4.1.1节已针对两自由度系统说明该过程。</p>
+<h4 id="513-torsional-systems">5.1.3 Torsional Systems</h4>
+<h4 id="513">5.1.3 扭转系统</h4>
+<p>Torsional vibrations of multicylinder reciprocating machines are studied with a simplified lumped mass torsional system (Fig. 5.7) obtained by lumping the inertias of rotating and reciprocating parts from each cylinder at discrete points on a main equivalent shaft. The parts mounted on the shafting, like the flywheel, the torsional damper, the coupling and the driven rotor or the propeller can also be modelled as rigid discs.</p>
+<p>多缸往复机械的扭转振动通过简化的集中质量扭转系统(图5.7)研究，该系统将每缸旋转与往复部件的惯量集中于等效主轴上的离散点。安装于轴系上的部件，如飞轮、扭振减振器、联轴器及被驱动转子或螺旋桨，亦可建模为刚性圆盘。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_190_420_756_816_315_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_190_420_756_816_315_0.jpg" /></p>
+<p>Fig. 5.7</p>
+<p>图5.7</p>
+<p>The connecting rod is replaced by an equivalent dynamical system comprised of two concentrated masses, one at the crank end, the other at the piston end.</p>
+<p>连杆由等效动力学系统替代，该系统由两个集中质量组成，一个位于曲柄端，另一个位于活塞端。</p>
+<p>In each cylinder there is a reciprocating mass, <span class="arithmatex">\({m}_{rec}\)</span> , consisting of the piston mass and the reduced mass of the connecting rod, and a rotating mass, consisting of the crank throw, counterweight and the reduced mass of the connecting rod, having an inertia <span class="arithmatex">\({J}_{\text{rot }}\)</span> . The average inertia per cylinder is</p>
+<p>每个气缸内均有一个往复质量<span class="arithmatex">\({m}_{rec}\)</span>，由活塞质量与连杆的等效质量组成；另有一个旋转质量，由曲柄臂、平衡重及连杆的等效质量组成，其惯量为<span class="arithmatex">\({J}_{\text{rot }}\)</span>。每缸的平均惯量为</p>
+<div class="arithmatex">\[
+J = {J}_{\text{rot }} + \frac{1}{2}{m}_{\text{rec }}{r}^{2},
+\]</div>
+<p>where <span class="arithmatex">\(r\)</span> is the crank throw radius.</p>
+<p>其中<span class="arithmatex">\(r\)</span>为曲柄臂半径(crank throw radius)。</p>
+<p>The torsional stiffness of crankshaft between cylinders, arising from the combined effect of crank pin twisting and crank web bending, can be either approximated numerically or measured experimentally. The same for the stiffness of the crankshaft between the last cylinder and the flywheel, for the coupling and the driven shaft. The whole system can then be reduced to a torsional model with a series of rigid discs connected by massless flexible shafts, as in Fig. 5.7.</p>
+<p>气缸间曲轴的扭转刚度源于曲柄销扭转与曲柄臂弯曲的耦合效应，可通过数值近似或实验测定。同样方法适用于测定末缸与飞轮间曲轴、联轴器及从动轴的刚度。整个系统可简化为图5.7所示的扭转模型:一系列刚性圆盘由无质量柔性轴串联而成。</p>
+<h2 id="example-54">Example 5.4</h2>
+<h2 id="54">例5.4</h2>
+<p>A diesel-motor-generator set has been reduced to the equivalent system shown in Fig. 5.8, with the <span class="arithmatex">\(J\)</span> values in <span class="arithmatex">\(\mathrm{{kg}} \cdot  {\mathrm{m}}^{2}\)</span> , and with <span class="arithmatex">\(K\)</span> values in <span class="arithmatex">\({10}^{6} \times  \mathrm{{Nm}}/\mathrm{{rad}} : \;{J}_{1} = {11.863},\;{J}_{2} = {2.011},\;{J}_{3} = {J}_{4} = {J}_{5} = {J}_{6} = {0.167}\)</span> , <span class="arithmatex">\({J}_{7} = {0.897},\;{K}_{1} = {1.062},\;{K}_{2} = {6.101},\;{K}_{3} = {K}_{4} = {K}_{5} = {3.05},\;{K}_{6} = {4.067}.\)</span> Estimate the fundamental- and second-mode natural frequencies of torsional vibrations. Plot the corresponding mode shapes.</p>
+<p>某柴油发电机组已简化为图5.8所示的等效系统，其中<span class="arithmatex">\(J\)</span>值单位为<span class="arithmatex">\(\mathrm{{kg}} \cdot  {\mathrm{m}}^{2}\)</span>，<span class="arithmatex">\(K\)</span>值单位为<span class="arithmatex">\({10}^{6} \times  \mathrm{{Nm}}/\mathrm{{rad}} : \;{J}_{1} = {11.863},\;{J}_{2} = {2.011},\;{J}_{3} = {J}_{4} = {J}_{5} = {J}_{6} = {0.167}\)</span>，<span class="arithmatex">\({J}_{7} = {0.897},\;{K}_{1} = {1.062},\;{K}_{2} = {6.101},\;{K}_{3} = {K}_{4} = {K}_{5} = {3.05},\;{K}_{6} = {4.067}.\)</span>。试估算扭转振动的基频与第二阶固有频率，并绘制相应振型。</p>
+<p>Solution. <span class="arithmatex">\({\omega }_{1} = {552}\mathrm{{rad}}/\mathrm{{sec}},{\omega }_{2} = {1145}\mathrm{{rad}}/\mathrm{{sec}}\)</span> . The mode shapes are shown in Fig. 5.8.</p>
+<p>解:<span class="arithmatex">\({\omega }_{1} = {552}\mathrm{{rad}}/\mathrm{{sec}},{\omega }_{2} = {1145}\mathrm{{rad}}/\mathrm{{sec}}\)</span>。振型如图5.8所示。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_191_483_737_714_915_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_191_483_737_714_915_0.jpg" /></p>
+<p>Fig. 5.8</p>
+<p>图5.8</p>
+<p>Geared systems and car engine-driving train systems are modelled likewise. Geared-branched systems can be modelled as in Section 4.2.4. It is convenient to use an equivalent system which has no gears (or has gears that effect no change of speed) and whose natural frequencies are the same as the frequencies of the original system. This is possible because, while the gears effect a change of rotary speed given by the transmission ratio, the vibration is transmitted through the gears without change in frequency, but with proper change of amplitude.</p>
+<p>齿轮传动系统和汽车发动机驱动链系统亦按此方式建模。齿轮分支系统可按4.2.4节方法建模。通常采用一个无齿轮(或齿轮不改变转速)的等效系统，其固有频率与原系统相同。这是因为齿轮虽按传动比改变转速，但振动经齿轮传递时频率不变，仅振幅按相应比例变化。</p>
+<p>In Section 4.2.4, the actual system with branches of different rotary speeds was reduced to an equivalent system with all parts having the same speed, usually equal to that of the reference shaft. Progressing away from that shaft to other branch through a gear of transmission ratio <span class="arithmatex">\(i\)</span> , the actual <span class="arithmatex">\(J\)</span> ’s and <span class="arithmatex">\(K\)</span> ’s occurring beyond are multiplied by <span class="arithmatex">\({i}^{2}\)</span> . If several gears are passed, the subsequent <span class="arithmatex">\(J\)</span> ’s and <span class="arithmatex">\(K\)</span> ’s are multiplied by the squares of the respective gear ratios. For the mating gears, the total inertia is obtained by adding to the moment of inertia of the reference gear the moment(s) of inertia of the (two) reduced gear(s) multiplied by <span class="arithmatex">\({i}^{2}\)</span> .</p>
+<p>在4.2.4节中，实际具有不同转速分支的系统被简化为所有部件转速相同的等效系统，通常取参考轴的转速。自该轴经传动比为<span class="arithmatex">\(i\)</span>的齿轮进入其他分支时，实际<span class="arithmatex">\(J\)</span>和<span class="arithmatex">\(K\)</span>需乘以<span class="arithmatex">\({i}^{2}\)</span>。若经过多级齿轮，则后续<span class="arithmatex">\(J\)</span>和<span class="arithmatex">\(K\)</span>需乘以各级齿轮比的平方。对于啮合齿轮，总惯量为参考齿轮的转动惯量加上(两个)折算齿轮的转动惯量乘以<span class="arithmatex">\({i}^{2}\)</span>。</p>
+<p>The equivalent model so obtained has the same natural frequencies as the actual system, as well as the same position of nodes. However, in the reduced branches, the amplitude of angular displacements is divided by <span class="arithmatex">\(- i\)</span> , while the torque in the branch is multiplied by <span class="arithmatex">\(- i\)</span> .</p>
+<p>所得等效模型与原系统具有相同的固有频率及节点位置。但在简化分支中，角位移幅值需除以<span class="arithmatex">\(- i\)</span>，而分支扭矩需乘以<span class="arithmatex">\(- i\)</span>。</p>
+<p>A more straightforward approach is given in the following. In the equivalent model, each shaft and disc has the actual speed, only the driven gear is condensed out.</p>
+<p>以下给出更直接的方法:在等效模型中，每根轴和每个圆盘保持实际转速，仅将从动齿轮凝聚消去。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_192_562_1062_554_523_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_192_562_1062_554_523_0.jpg" /></p>
+<p>Fig. 5.9</p>
+<p>图5.9</p>
+<p>Consider part of a geared-branched system (Fig. 5.9, a) where (the driving) shaft1and (the driven) shaft 2 are connected by two gears with inertias <span class="arithmatex">\(J,{J}^{\prime }\)</span> and of pitch circle radii <span class="arithmatex">\(r\)</span> and <span class="arithmatex">\({r}^{\prime }\)</span> , respectively. Apart from shaft stiffnesses <span class="arithmatex">\({K}_{1}\)</span> and <span class="arithmatex">\({K}_{2}\)</span> , and disc mass moments of inertia <span class="arithmatex">\({J}_{1}\)</span> and <span class="arithmatex">\({J}_{2}\)</span> , the angular displacements and torques acting on each disc are shown in the figure.</p>
+<p>考虑齿轮分支系统的一部分(图5.9a)，其中(主动)轴1与(从动)轴2通过两个齿轮连接，齿轮惯量分别为<span class="arithmatex">\(J,{J}^{\prime }\)</span>，节圆半径分别为<span class="arithmatex">\(r\)</span>和<span class="arithmatex">\({r}^{\prime }\)</span>。除轴刚度<span class="arithmatex">\({K}_{1}\)</span>和<span class="arithmatex">\({K}_{2}\)</span>以及圆盘转动惯量<span class="arithmatex">\({J}_{1}\)</span>和<span class="arithmatex">\({J}_{2}\)</span>外，图中还示出了各圆盘上的角位移与作用扭矩。</p>
+<p>The system motion is described by four torques and four angular displacements. However, only three of each of them are independent, due to the compatibility conditions between the mating gears. Thus it would be useful to consider the torque <span class="arithmatex">\({M}^{\prime }\)</span> and the angular displacement <span class="arithmatex">\({\theta }^{\prime }\)</span> as dependent variables and eliminate them, replacing the given system by the equivalent model shown in Fig. 5.9, <span class="arithmatex">\(b\)</span> . Shaft 1 is taken as the reference shaft.</p>
+<p>系统的运动由四个转矩和四个角位移描述。然而，由于啮合齿轮之间的相容性条件，它们各自只有三个是独立的。因此，将转矩<span class="arithmatex">\({M}^{\prime }\)</span>和角位移<span class="arithmatex">\({\theta }^{\prime }\)</span>视为因变量并消去它们是有益的，从而用图5.9<span class="arithmatex">\(b\)</span>所示的等效模型替代原系统。轴1被选为参考轴。</p>
+<p>Compatibility of the angular displacements requires that</p>
+<p>角位移的相容性要求</p>
+<div class="arithmatex">\[
+{r\theta } =  - {r}^{\prime }{\theta }^{\prime },
+\]</div>
+<p>while compatibility of torques requires</p>
+<p>而转矩的相容性要求</p>
+<div class="arithmatex">\[
+\frac{M}{r} =  - \frac{{M}^{\prime }}{{r}^{\prime }}\;\text{ or }\;{M\theta } = {M}^{\prime }{\theta }^{\prime }.
+\]</div>
+<p>The transmissibility ratio is defined as</p>
+<p>传递率定义为</p>
+<div class="arithmatex">\[
+i =  - \frac{{n}_{2}}{{n}_{1}} = \frac{r}{{r}^{\prime }} =  - \frac{{\theta }^{\prime }}{\theta } =  - \frac{M}{{M}^{\prime }}. \tag{5.16}
+\]</div>
+<p>In the original system, the stiffness matrix of shaft 2 is defined by</p>
+<p>在原系统中，轴2的刚度矩阵定义为</p>
+<div class="arithmatex">\[
+\left\{  \begin{array}{l} {M}^{\prime } \\  {M}_{2} \end{array}\right\}   = \left\lbrack  \begin{matrix} {K}_{2} &amp;  - {K}_{2} \\   - {K}_{2} &amp; {K}_{2} \end{matrix}\right\rbrack  \left\{  \begin{array}{l} {\theta }^{\prime } \\  {\theta }_{2} \end{array}\right\}  .
+\]</div>
+<p>Using the transformation equations, based on (5.16),</p>
+<p>利用基于(5.16)的变换方程，</p>
+<div class="arithmatex">\[
+\left\{  \begin{matrix} M \\  {M}_{2} \end{matrix}\right\}   = \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\{  \begin{array}{l} {M}^{\prime } \\  {M}_{2} \end{array}\right\}  ,\;\left\{  \begin{array}{l} {\theta }^{\prime } \\  {\theta }_{2} \end{array}\right\}   = \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\{  \begin{array}{l} \theta \\  {\theta }_{2} \end{array}\right\}  ,
+\]</div>
+<p>the stiffness matrix of shaft 2 in the equivalent model is defined as follows</p>
+<p>等效模型中轴2的刚度矩阵定义如下</p>
+<div class="arithmatex">\[
+\left\{  \begin{matrix} M \\  {M}_{2} \end{matrix}\right\}   = \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\lbrack  \begin{matrix} {K}_{2} &amp;  - {K}_{2} \\   - {K}_{2} &amp; {K}_{2} \end{matrix}\right\rbrack  \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\{  \begin{matrix} \theta \\  {\theta }_{2} \end{matrix}\right\}  ,
+\]</div>
+<div class="arithmatex">\[
+\left\{  \begin{matrix} M \\  {M}_{2} \end{matrix}\right\}   = \left\lbrack  \begin{matrix} {i}^{2}{K}_{2} &amp; i{K}_{2} \\  i{K}_{2} &amp; {K}_{2} \end{matrix}\right\rbrack  \left\{  \begin{matrix} \theta \\  {\theta }_{2} \end{matrix}\right\}  .
+\]</div>
+<p>The mass matrix is defined likewise</p>
+<p>质量矩阵同样定义</p>
+<div class="arithmatex">\[
+\left\{  \begin{matrix} M \\  {M}_{2} \end{matrix}\right\}   = \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\lbrack  \begin{matrix} {J}^{\prime } &amp; 0 \\  0 &amp; {J}_{2} \end{matrix}\right\rbrack  \left\lbrack  \begin{matrix}  - i &amp; 0 \\  0 &amp; 1 \end{matrix}\right\rbrack  \left\{  \begin{matrix} \ddot{\theta } \\  {\ddot{\theta }}_{2} \end{matrix}\right\}  ,
+\]</div>
+<div class="arithmatex">\[
+\left\{  \begin{matrix} M \\  {M}_{2} \end{matrix}\right\}   = \left\lbrack  \begin{matrix} {i}^{2}{J}^{\prime } &amp; 0 \\  0 &amp; {J}_{2} \end{matrix}\right\rbrack  \left\{  \begin{matrix} \ddot{\theta } \\  {\ddot{\theta }}_{2} \end{matrix}\right\}  .
+\]</div>
+<p>In the following, two rotating discs coupled by an elastic shaft segment are considered as a finite element. For an element of the driven shaft, the element matrices are</p>
+<p>下文将两个由弹性轴段耦合的旋转圆盘视为一个有限元。对于从动轴的一个单元，单元矩阵为</p>
+<div class="arithmatex">\[
+\left\lbrack  {k}^{e}\right\rbrack   = \left\lbrack  \begin{matrix} {i}^{2}{K}_{e} &amp; i{K}_{e} \\  i{K}_{e} &amp; {K}_{e} \end{matrix}\right\rbrack  ,\left\lbrack  {m}^{e}\right\rbrack   = \left\lbrack  \begin{matrix} {i}^{2}{J}_{e}^{\prime } &amp; 0 \\  0 &amp; {J}_{e} \end{matrix}\right\rbrack  . \tag{5.17}
+\]</div>
+<p>The element matrices for the shaft 1 in Fig.5.9 are</p>
+<p>图5.9中轴1的单元矩阵为</p>
+<div class="arithmatex">\[
+\left\lbrack  {k}^{1}\right\rbrack   = \left\lbrack  \begin{matrix} {K}_{1} &amp;  - {K}_{1} \\   - {K}_{1} &amp; {K}_{1} \end{matrix}\right\rbrack  ,\left\lbrack  {m}^{1}\right\rbrack   = \left\lbrack  \begin{matrix} {J}_{1} &amp; 0 \\  0 &amp; J \end{matrix}\right\rbrack  .
+\]</div>
+<p>They can be obtained from the general expressions (5.17) substituting <span class="arithmatex">\(i =  - 1\)</span> . In general, for elements not adjacent to the gears, one of the end inertias is zero.</p>
+<p>它们可通过将<span class="arithmatex">\(i =  - 1\)</span>代入通用表达式(5.17)获得。一般而言，对于不紧邻齿轮的单元，其中一个端部惯量为零。</p>
+<p>Another approach is to condense the system matrices based on the constraint equations expressing the compatibility of the angular displacements of mating gears.</p>
+<p>另一种方法是基于表示啮合齿轮角位移相容性的约束方程对系统矩阵进行凝聚。</p>
+<h2 id="example-55">Example 5.5</h2>
+<h2 id="55">例5.5</h2>
+<p>The geared-branched system shown in Fig. 5.10, <span class="arithmatex">\(a\)</span> consists of three rigid discs having mass moments of inertia <span class="arithmatex">\({J}_{1},{J}_{5}\)</span> and <span class="arithmatex">\({J}_{6}\)</span> and three rigid gears of radii <span class="arithmatex">\(r, r/2\)</span> and <span class="arithmatex">\(r/3\)</span> having mass moments of inertia <span class="arithmatex">\({J}_{2},{J}_{3}\)</span> and <span class="arithmatex">\({J}_{4}\)</span> which are connected by three light shafts having torsional stiffnesses <span class="arithmatex">\({K}_{1},{K}_{2}\)</span> and <span class="arithmatex">\({K}_{3}\)</span> . Derive the equations of free vibration.</p>
+<p>图5.10<span class="arithmatex">\(a\)</span>所示的齿轮分支系统由三个转动惯量为<span class="arithmatex">\({J}_{1},{J}_{5}\)</span>和<span class="arithmatex">\({J}_{6}\)</span>的刚性圆盘以及三个半径为<span class="arithmatex">\(r, r/2\)</span>和<span class="arithmatex">\(r/3\)</span>、转动惯量为<span class="arithmatex">\({J}_{2},{J}_{3}\)</span>和<span class="arithmatex">\({J}_{4}\)</span>的刚性齿轮组成，它们通过三根扭转刚度为<span class="arithmatex">\({K}_{1},{K}_{2}\)</span>和<span class="arithmatex">\({K}_{3}\)</span>的轻质轴连接。推导自由振动方程。</p>
+<p>Solution. In the upper branch, the speed ratio is <span class="arithmatex">\(i =  - 2\)</span> . In the lower branch, the speed ratio is <span class="arithmatex">\(i =  - 3\)</span> . For the equivalent system shown in Fig. 5.10, <span class="arithmatex">\(b\)</span> the element matrices are calculated from equations (5.17).</p>
+<p>解:在上分支，速比为<span class="arithmatex">\(i =  - 2\)</span>。在下分支，速比为<span class="arithmatex">\(i =  - 3\)</span>。对于图5.10<span class="arithmatex">\(b\)</span>所示的等效系统，单元矩阵由方程(5.17)计算。</p>
+<p>The global matrices are assembled using the direct stiffness approach, obtaining:</p>
+<p>利用直接刚度法组装全局矩阵，得到:</p>
+<div class="arithmatex">\[
+\left\lbrack  K\right\rbrack   = \left\lbrack  \begin{matrix} {K}_{1} &amp;  - {K}_{1} &amp; 0 &amp; 0 \\   - {K}_{1} &amp; {K}_{1} + 4{K}_{2} + 9{K}_{3} &amp; 2{K}_{2} &amp; 3{K}_{3} \\  0 &amp; 2{K}_{2} &amp; {K}_{2} &amp; 0 \\  0 &amp; 3{K}_{3} &amp; 0 &amp; {K}_{3} \end{matrix}\right\rbrack
+\]</div>
+<p>and</p>
+<p>和</p>
+<div class="arithmatex">\[
+\left\lbrack  M\right\rbrack   = \left\lbrack  \begin{matrix} {J}_{1} &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; {J}_{2} + 4{J}_{3} + 9{J}_{4} &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; {J}_{5} &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; {J}_{6} \end{matrix}\right\rbrack  .
+\]</div>
+<p>The global vector of angular displacements is</p>
+<p>角位移的全局向量</p>
+<div class="arithmatex">\[
+\{ \Theta \}  = {\left\{  \begin{array}{llll} {\theta }_{1} &amp; {\theta }_{2} &amp; {\theta }_{3} &amp; {\theta }_{4} \end{array}\right\}  }^{T}.
+\]</div>
+<p>The equations of motion can be written</p>
+<p>运动方程可写为</p>
+<div class="arithmatex">\[
+\left\lbrack  M\right\rbrack  \{ \ddot{\Theta }\}  + \left\lbrack  K\right\rbrack  \{ \Theta \}  = \{ 0\} .
+\]</div>
+<p>They are used for the estimation of natural frequencies.</p>
+<p>它们用于估算固有频率。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_195_560_735_554_611_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_195_560_735_554_611_0.jpg" /></p>
+<p>Fig. 5.10</p>
+<p>图5.10</p>
+<p>The arrangement in Fig. 5.10 is a simplified model of a typical marine propulsion drive, with the propeller <span class="arithmatex">\({J}_{1}\)</span> driven by a low-pressure turbine <span class="arithmatex">\({J}_{5}\)</span> and a high pressure turbine <span class="arithmatex">\({J}_{6}\)</span> .</p>
+<p>图5.10所示的布置是一个典型船舶推进传动的简化模型，其中螺旋桨<span class="arithmatex">\({J}_{1}\)</span>由低压涡轮<span class="arithmatex">\({J}_{5}\)</span>和高压涡轮<span class="arithmatex">\({J}_{6}\)</span>驱动。</p>
+<p>The calculated natural frequencies are compared to the excitation frequencies. Usually the main excitation factor is the variation of the torque on propeller due to the variation of the water forces on the blades during their rotation. The frequency of this variation is called the blade frequency. It is the propeller frequency (once per shaft revolution) multiplied by the number of blades.</p>
+<p>计算出的固有频率与激励频率进行比较。通常，主要激励因素是螺旋桨扭矩的变化，该变化由叶片旋转时水动力的变化引起。这种变化的频率称为叶频(blade frequency)，其值为轴每转一圈的螺旋桨频率乘以叶片数。</p>
+<h2 id="example-56">Example 5.6</h2>
+<h2 id="56">例5.6</h2>
+<p>The geared-branched system shown in Fig. 5.11 has the following parameters: <span class="arithmatex">\({J}_{1} = {950},{J}_{2} = {542},{J}_{3} = {406.7},{J}_{4} = {J}_{5} = {6.78},{J}_{7} = {13.55}\)</span> , <span class="arithmatex">\({J}_{6} = {J}_{8} = {J}_{9} = {27.12}\left\lbrack  {\mathrm{\;{kg}} \cdot  {\mathrm{m}}^{2}}\right\rbrack  , i = {76}/{24},{K}_{1} = {20.336} \cdot  {10}^{6},{K}_{2} = {8.135} \cdot  {10}^{6}\)</span> , <span class="arithmatex">\({K}_{3} = {1.22} \cdot  {10}^{6},{K}_{4} = {0.407} \cdot  {10}^{6},{K}_{5} = {1.63} \cdot  {10}^{6},{K}_{6} = {2.44} \cdot  {10}^{6}\;\left\lbrack  {\mathrm{{Nm}}/\mathrm{{rad}}}\right\rbrack  .\)</span> Calculate the natural frequencies of torsional vibrations.</p>
+<p>图5.11所示的齿轮分支系统具有以下参数:<span class="arithmatex">\({J}_{1} = {950},{J}_{2} = {542},{J}_{3} = {406.7},{J}_{4} = {J}_{5} = {6.78},{J}_{7} = {13.55}\)</span>、<span class="arithmatex">\({J}_{6} = {J}_{8} = {J}_{9} = {27.12}\left\lbrack  {\mathrm{\;{kg}} \cdot  {\mathrm{m}}^{2}}\right\rbrack  , i = {76}/{24},{K}_{1} = {20.336} \cdot  {10}^{6},{K}_{2} = {8.135} \cdot  {10}^{6}\)</span>、<span class="arithmatex">\({K}_{3} = {1.22} \cdot  {10}^{6},{K}_{4} = {0.407} \cdot  {10}^{6},{K}_{5} = {1.63} \cdot  {10}^{6},{K}_{6} = {2.44} \cdot  {10}^{6}\;\left\lbrack  {\mathrm{{Nm}}/\mathrm{{rad}}}\right\rbrack  .\)</span>，计算其扭转振动的固有频率。</p>
+<p><img alt="bo_d34j0n3ef24c73b3tujg_196_507_566_630_461_0.jpg" src="../images/bo_d34j0n3ef24c73b3tujg_196_507_566_630_461_0.jpg" /></p>
+<p>Fig. 5.11</p>
+<p>图5.11</p>
+<p>Solution. The actual system is reduced to an equivalent model in which the two pinions are condensed out. The element matrices (5.17) are calculated for each segment, then assembled into the global stiffness and mass matrices.</p>
+<p>解:将实际系统简化为等效模型，其中两个小齿轮被凝聚掉。对每个区段计算单元矩阵(5.17)，然后组装成全局刚度矩阵和质量矩阵。</p>
+<p>The global stiffness matrix is</p>
+<p>全局刚度矩阵为</p>
+<div class="arithmatex">\[
+\left\lbrack  K\right\rbrack   = \left\lbrack  \begin{matrix} {K}_{1} &amp;  - {K}_{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\   - {K}_{1} &amp; {K}_{1} + {K}_{2} &amp;  - {K}_{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\  0 &amp;  - {K}_{2} &amp; {K}_{2} + {i}^{2}{K}_{3} + {i}^{2}{K}_{5} &amp; i{K}_{3} &amp; 0 &amp; i{K}_{5} &amp; 0 \\  0 &amp; 0 &amp; i{K}_{3} &amp; {K}_{3} + {K}_{4} &amp;  - {K}_{4} &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 &amp;  - {K}_{4} &amp; {K}_{4} &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; i{K}_{5} &amp; 0 &amp; 0 &amp; {K}_{5} + {K}_{6} &amp;  - {K}_{6} \\  0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp;  - {K}_{6} &amp; {K}_{6} \end{matrix}\right\rbrack
+\]</div>
+<p>The global mass matrix is</p>
+<p>全局质量矩阵为</p>
+<div class="arithmatex">\[
+\left\lbrack  M\right\rbrack   = \left\lbrack  \begin{matrix} {J}_{1} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; {J}_{2} &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; {J}_{3} + {i}^{2}{J}_{4} + {i}^{2}{J}_{5} &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; {J}_{6} &amp; 0 &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; 0 &amp; {J}_{7} &amp; 0 &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; {J}_{8} &amp; 0 \\  0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; {J}_{9} \end{matrix}\right\rbrack
+\]</div>
+<p>The natural frequencies have the following values: <span class="arithmatex">\({f}_{1} = 0,{f}_{2} = {14.26}\)</span> , <span class="arithmatex">\({f}_{3} = {22.98},{f}_{4} = {35.34},{f}_{5} = {41.98},{f}_{6} = {50.52},{f}_{7} = {75.17}\mathrm{\;{Hz}}\)</span> .</p>
+<p>固有频率的数值如下:<span class="arithmatex">\({f}_{1} = 0,{f}_{2} = {14.26}\)</span>、<span class="arithmatex">\({f}_{3} = {22.98},{f}_{4} = {35.34},{f}_{5} = {41.98},{f}_{6} = {50.52},{f}_{7} = {75.17}\mathrm{\;{Hz}}\)</span>。</p>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Giscus 评论系统 -->
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../vibration22/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 第22篇">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                第22篇
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
